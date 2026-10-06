@@ -69,3 +69,18 @@ Edit the files and commit to your Pages publishing branch. Check the Actions tab
 ## Applying this color update to an existing site
 
 If you already uploaded the original template, replace styles.css, favicon.svg, and 404.html with these versions. In index.html, update the theme-color meta tag to #b2cada (or replace index.html too if you have not customized its content). This preserves any wedding details you have added. Hard-refresh the live page after deployment to see the new colors.
+
+
+## Photo redesign (latest version)
+
+Upload ALL files in this ZIP, including the assets folder, to your publishing folder. The homepage now uses your supplied black-and-white image, a reference-inspired header, sky blue, and brighter metallic yellow-gold accents. CSS visually crops the screenshot edges; the original photo bytes are unchanged. For the sharpest full-screen image, replace assets/couple.png with a high-resolution original photo without slideshow controls.
+
+The stylesheet and script links include ?v=3 to help browsers load the new design. The actual filenames remain styles.css and script.js. If you already changed other text on GitHub, keep a copy first and merge those edits into this new index.html.
+
+Ceremony: Holy Name Catholic Church, Ebensburg, Pennsylvania.
+Reception: The Willow, Johnstown, Pennsylvania.
+Times remain unannounced. Map links search by the supplied venue names and towns; confirm their destinations before sharing with guests.
+
+Wedding party: search for id="wedding-party" in index.html. Edit the three placeholder cards with names and roles, duplicate or remove cards as needed, and replace each party-portrait div with an image when photos are ready. No people's names or roles have been invented.
+
+The day countdown uses America/New_York calendar dates and refreshes every minute. It displays Today on July 24, 2027, then Married afterward. With JavaScript disabled, the wedding date remains visible. The count is days to the date, not to an assumed ceremony time.
