@@ -1868,3 +1868,55 @@ h3 {
     line-height: 1.6;
   }
 }
+/* Force two wedding party members per row on phones */
+@media screen and (max-width: 760px) {
+  #wedding-party > .section-wrap {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  #wedding-party .section-wrap .party-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    width: 100% !important;
+    max-width: none !important;
+    gap: 30px 14px !important;
+    margin: 0 auto;
+  }
+
+  #wedding-party .section-wrap .party-grid > .party-card {
+    grid-column: auto !important;
+    width: 100% !important;
+    min-width: 0;
+    max-width: none !important;
+    padding: 8px 4px 14px;
+  }
+
+  #wedding-party .party-portrait,
+  #wedding-party img.party-portrait {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
+
+  #wedding-party .party-card h3 {
+    margin: 16px 0 8px;
+    font-size: clamp(19px, 5vw, 25px);
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+  }
+
+  #wedding-party .party-card h5 {
+    font-size: 10px;
+    letter-spacing: 0.5px;
+  }
+
+  #wedding-party .party-card:first-child h5 {
+    padding: 6px 8px;
+  }
+
+  #wedding-party .party-card p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+}
