@@ -1818,3 +1818,53 @@ h3 {
     gap: 20px;
   }
 }
+/* Wedding party: two across on phones */
+@media (max-width: 600px) {
+  #wedding-party > .section-wrap {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  #wedding-party .party-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    max-width: none;
+    gap: 30px 16px;
+  }
+
+  #wedding-party .party-grid > .party-card {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    padding: 8px 4px 14px;
+  }
+
+  #wedding-party .party-portrait,
+  #wedding-party img.party-portrait {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
+
+  #wedding-party .party-card h3 {
+    margin: 16px 0 8px;
+    font-size: clamp(19px, 5vw, 25px);
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+  }
+
+  #wedding-party .party-card h5 {
+    font-size: 10px;
+    letter-spacing: 0.6px;
+  }
+
+  #wedding-party .party-card:first-child h5 {
+    padding: 6px 8px;
+  }
+
+  #wedding-party .party-card p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+}
