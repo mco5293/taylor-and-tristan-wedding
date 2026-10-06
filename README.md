@@ -1,6 +1,6 @@
 # Taylor & Tristan — July 24, 2027
 
-An ivory-and-sage wedding website. Plain HTML, CSS, and JavaScript. No installation, build command, paid service, external font, or custom domain required.
+A sky-blue-and-gold wedding website. The blue (#B2CADA) is an approximate match sampled from your supplied Azazie dress photo, not an official manufacturer color specification. Plain HTML, CSS, and JavaScript. No installation, build command, paid service, external font, or custom domain required.
 
 ## Upload to your existing GitHub repository
 
@@ -65,3 +65,7 @@ The calendar file reserves July 24, 2027 as a tentative all-day event, not a tim
 ## Updating later
 
 Edit the files and commit to your Pages publishing branch. Check the Actions tab if deployment fails. If the live site still shows the old version after deployment succeeds, try a hard refresh. No custom domain or additional hosting setup is required.
+
+## Applying this color update to an existing site
+
+If you already uploaded the original template, replace styles.css, favicon.svg, and 404.html with these versions. In index.html, update the theme-color meta tag to #b2cada (or replace index.html too if you have not customized its content). This preserves any wedding details you have added. Hard-refresh the live page after deployment to see the new colors.
