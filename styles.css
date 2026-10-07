@@ -1,1922 +1,243 @@
-/* Sky blue sampled approximately from the supplied dress photo: #B2CADA.
-   Gold accents: #BE9B55; darker gold for readable text: #674b20. */
-:root{--paper:#fcfaf5;--ink:#263e50;--blue:#b2cada;--blue-light:#e7f0f6;--muted:#405362;--line:#d9c8a5;--gold:#674b20;--gold-accent:#be9b55;--white:#ffffff}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:105px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.7 Arial,Helvetica,sans-serif}a{color:inherit;text-underline-offset:5px}a,button,summary{-webkit-tap-highlight-color:transparent}a:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:6px}h1,h2,h3,p{margin:0}h1,h2,h3,.signature,.monogram{font-family:Georgia,'Times New Roman',serif;font-weight:400}h2{font-size:clamp(34px,4.1vw,56px);line-height:1.12;letter-spacing:-1.4px}h2 em{font-weight:400}h3{font-size:29px;line-height:1.2}p{max-width:65ch}.eyebrow{text-transform:uppercase;font-size:10px;letter-spacing:2.7px;font-weight:600;margin-bottom:24px;line-height:1.7}.small{font-size:14px}.skip-link{position:absolute;top:-90px;left:12px;z-index:10;background:var(--white);padding:12px}.skip-link:focus{top:12px}.site-header{position:sticky;top:0;z-index:5;min-height:83px;background:var(--paper);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:15px 5.5%;gap:24px}.monogram{text-decoration:none;font-size:30px;letter-spacing:-2px;white-space:nowrap}.monogram span{font-style:italic;font-size:23px;margin:0 3px;color:var(--gold)}nav{display:flex;align-items:center;gap:30px}nav a{font-size:11px;letter-spacing:1.1px;text-transform:uppercase;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}nav a:hover{text-decoration:underline}.nav-rsvp{border:1px solid var(--gold-accent);padding:7px 21px}.hero{min-height:665px;position:relative;display:grid;place-items:center;text-align:center;padding:105px 35px 95px;overflow:hidden;background:radial-gradient(ellipse at 50% 15%,#f6fafc 5%,#b2cada 130%)}.hero-border{position:absolute;inset:25px;border:1px solid var(--gold-accent);pointer-events:none}.hero-border:before{content:'';position:absolute;inset:7px;border:1px solid #e2d4b6}.hero-content{position:relative;z-index:1}.hero .eyebrow{margin-bottom:30px}.hero h1{font-size:clamp(58px,8.7vw,126px);line-height:1.1;letter-spacing:-5px}.hero h1 em{font-size:.7em;color:var(--gold);display:inline-block;margin:0 .12em}.hero-subtitle{font:italic 25px Georgia,serif;margin:22px auto 36px}.date-line{display:flex;align-items:center;justify-content:center;gap:24px}.date-line>span:not(.date){font-size:9px;text-transform:uppercase;letter-spacing:2px}.date{font:26px Georgia,serif;border-left:1px solid var(--gold-accent);border-right:1px solid var(--gold-accent);padding:0 24px}.location{font-size:13px;color:var(--muted);margin:25px auto 30px}.actions{display:flex;justify-content:center;align-items:center;gap:26px;flex-wrap:wrap}.button{display:inline-flex;align-items:center;justify-content:center;gap:26px;min-height:49px;background:var(--blue);color:var(--ink);font-size:10px;text-transform:uppercase;letter-spacing:1.6px;text-decoration:none;padding:15px 26px;border:1px solid var(--gold-accent)}.button:hover{background:#9bbdd3}.text-link{font-size:11px;letter-spacing:.5px}.hero-bottom{position:absolute;bottom:48px;left:0;right:0;font-size:9px;letter-spacing:2px;margin:auto}.hero-bottom span{margin-left:13px}.botanical{position:absolute;font-family:Georgia,serif;font-size:330px;font-weight:100;color:var(--gold-accent);opacity:.12;line-height:1;pointer-events:none}.botanical-left{left:-85px;bottom:5px;transform:rotate(25deg)}.botanical-right{right:-85px;top:10px;transform:rotate(-25deg)}.section-wrap{max-width:1130px;margin:auto;padding:90px 45px}.intro{text-align:center;max-width:810px;padding-top:93px;padding-bottom:95px}.intro>p:not(.eyebrow){margin:27px auto 0;color:var(--muted);font-size:15px}.signature{font-style:italic;font-size:23px;margin-top:27px}.couple-photo{display:block;width:100%;height:auto;max-height:540px;object-fit:cover;border-radius:240px 240px 0 0;margin:40px auto 0}.celebration{border-top:1px solid var(--line)}.section-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:44px}.section-heading>p{color:var(--muted);font-size:13px;white-space:nowrap}.section-heading .eyebrow{margin-bottom:17px}.event-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}.event-card{border:1px solid var(--line);padding:37px 38px 40px;background:var(--white)}.card-number{font:italic 29px Georgia,serif;color:var(--gold);display:block;margin-bottom:34px}.event-kicker{text-transform:uppercase;letter-spacing:1.6px;font-size:9px;margin:14px 0 25px}.event-card p:not(.event-kicker){color:var(--muted);font-size:14px}.event-card .small{margin-top:7px}.event-card .text-link{display:inline-block;margin-top:18px}.section-note{text-align:center;font-size:12px;color:var(--muted);margin:24px auto 0}.travel-band{background:var(--blue-light)}.travel-layout{display:grid;grid-template-columns:1.2fr 1fr;gap:95px;align-items:start}.travel-layout>div>p:not(.eyebrow){margin-top:27px;font-size:14px;color:var(--muted)}.travel-details article{padding:0 0 25px;border-bottom:1px solid #b5cbd8;margin-bottom:25px}.travel-details article:last-child{margin-bottom:0}.travel-details h3{font-size:25px}.travel-details p{font-size:14px;color:var(--muted);margin-top:12px}.faq{max-width:920px}details{border-bottom:1px solid var(--line)}summary{cursor:pointer;padding:23px 32px 23px 0;position:relative;font-size:15px;list-style:none}summary::-webkit-details-marker{display:none}summary:after{content:'+';position:absolute;right:2px;font-size:24px;line-height:1}details[open] summary:after{content:'−'}details p{padding:0 25px 25px 0;color:var(--muted);font-size:14px}.registry{text-align:center;border-top:1px solid var(--line);padding-top:80px;padding-bottom:95px}.registry h2{max-width:690px;margin:auto}.registry>p:not(.eyebrow){margin:24px auto 0;max-width:510px;font-size:14px;color:var(--muted)}.registry .button{margin-top:25px}.registry p.status-pill{display:inline-block;border:1px solid var(--line);padding:10px 22px;font-size:11px;letter-spacing:.5px}.rsvp{padding:65px 35px;background:var(--blue);color:var(--ink);text-align:center}.rsvp-inner{border:1px solid var(--gold-accent);max-width:1060px;margin:auto;padding:64px 25px}.rsvp h2{font-size:clamp(40px,5vw,66px)}.rsvp p{margin-left:auto;margin-right:auto}.rsvp h2+p{margin-top:23px;font-size:14px}.rsvp-status{display:inline-block;background:var(--paper);color:var(--ink);padding:14px 25px;margin-top:30px;margin-bottom:17px;text-transform:uppercase;letter-spacing:1.4px;font-size:10px}.rsvp .small{font-size:12px;color:var(--ink)}.button-light{background:var(--paper);color:var(--ink);border-color:var(--paper);margin:28px 0 18px}.button-light:hover{background:var(--blue-light)}footer{padding:38px 5.5%;display:flex;align-items:center;justify-content:space-between;gap:20px}footer p{font-size:11px;color:var(--muted)}footer p span{margin:0 10px}.footer-note{font-family:Georgia,serif;font-style:italic;font-size:16px}
-@media(max-width:760px){html{scroll-padding-top:120px}.site-header{flex-direction:column;gap:5px;padding:9px 15px}.monogram{font-size:26px}nav{gap:17px;max-width:100%;justify-content:center}nav a{font-size:9px;letter-spacing:.6px}.nav-rsvp{padding:3px 12px;min-height:35px}.hero{min-height:620px;padding:80px 30px 95px}.hero-border{inset:15px}.hero h1{font-size:clamp(53px,11vw,78px);letter-spacing:-2px}.hero h1 em{display:block;margin:3px auto;font-size:.55em}.hero .eyebrow{font-size:9px;letter-spacing:1.6px}.hero-subtitle{font-size:22px;margin:18px auto 27px}.date-line{gap:13px;flex-wrap:wrap}.date{font-size:22px;padding:0 12px}.date-line>span:not(.date){font-size:8px;letter-spacing:1px}.date-line>span:last-child{display:none}.hero-bottom{bottom:37px;font-size:8px}.location{font-size:12px;max-width:230px}.actions{gap:20px}.section-wrap{padding:65px 25px}.section-heading{display:block;margin-bottom:30px}.section-heading>p{margin-top:20px}.event-grid{grid-template-columns:1fr;gap:17px}.event-card{padding:27px}.card-number{margin-bottom:22px}.travel-layout{grid-template-columns:1fr;gap:35px}.rsvp{padding:25px 18px}.rsvp-inner{padding:50px 22px}footer{flex-direction:column;gap:10px;padding:30px 20px}.botanical{font-size:240px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-@media print{.site-header,.hero-border,.botanical,.hero-bottom,.actions,.skip-link{display:none}.hero{min-height:0;padding:30px}.section-wrap{padding:25px}.rsvp{background:white;color:black}.rsvp-inner{padding:25px}details p{display:block}footer{padding:20px}}
-
-/* PHOTO DESIGN • SKY BLUE & METALLIC GOLD */
-:root{--gold-accent:#d4af37;--gold:#78601d;--gold-shine:linear-gradient(115deg,#8e681c 0%,#d5ad35 19%,#fff0a0 35%,#c49b26 48%,#ffe99a 65%,#ad8225 83%,#ecd06b 100%)}
-.site-header{display:grid;grid-template-columns:1fr auto 1fr;min-height:83px;padding:15px 4%;background:#d8e7f0;border-bottom:2px solid transparent;border-image:var(--gold-shine) 1;gap:25px}
-.site-header nav{gap:22px}.nav-right{justify-content:flex-end}.header-mark{font:28px Georgia,serif;text-decoration:none;white-space:nowrap;color:var(--ink)}.header-mark span{font-style:italic;color:var(--gold);margin:0 3px}.header-mark small{font-size:18px;margin-left:12px}.nav-rsvp{background:var(--gold-shine);color:#243341;border:1px solid #d4af37;padding:10px 22px;box-shadow:inset 0 1px 0 #fff5bc,0 2px 6px #66501616}
-.hero{min-height:700px;height:calc(100svh - 83px);max-height:980px;display:block;padding:0;background:#182a39;isolation:isolate}.hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 43%;transform:scale(1.16);z-index:-3}.hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,28,40,.84) 0%,rgba(18,35,48,.50) 29%,rgba(17,30,41,.04) 56%,rgba(14,30,41,.63) 100%);z-index:-2}.hero-content{padding:54px 20px 0;color:#fffdf4;text-shadow:0 2px 16px #0009}.hero-announcement{margin:0 auto 17px;font:italic 21px Georgia,serif}.hero h1{font-size:clamp(56px,6.3vw,100px);letter-spacing:-3px;line-height:1.14}.hero h1 em{display:inline;margin:0 .1em;font-size:.8em;color:#f9dc73}.hero-date{font-size:12px;letter-spacing:4px;margin:23px auto 0;font-weight:600;color:#fff0b3}.hero-place{font-size:12px;letter-spacing:.9px;margin:12px auto 0;color:#fff}.hero-bottom{color:#fff3bd;bottom:34px;text-decoration:none;font-size:10px;letter-spacing:3px;padding:10px;width:fit-content}
-.countdown-band{max-width:none;padding:46px max(5.5%,calc((100% - 1040px)/2));display:flex;align-items:center;justify-content:space-between;gap:36px;background:var(--blue);border-bottom:2px solid transparent;border-image:var(--gold-shine) 1}.countdown-band .eyebrow{margin-bottom:12px;font-size:9px}.countdown-band h2{font-size:32px;max-width:380px;letter-spacing:-.7px}.countdown-display{text-align:center;min-width:155px;border-left:1px solid #8c7438;border-right:1px solid #8c7438;padding:0 30px}.countdown-display strong{font:65px/1 Georgia,serif;display:block;letter-spacing:-2px}.countdown-display span{display:block;text-transform:uppercase;letter-spacing:2px;font-size:9px;margin-top:12px}.countdown-band>.text-link{white-space:nowrap}
-.button{background:var(--gold-shine);color:#243341;border-color:#c6a13c;box-shadow:inset 0 1px 0 #fff5bc}.button:hover,.nav-rsvp:hover{filter:brightness(1.05);background:var(--gold-shine)}.event-card{border-top:3px solid transparent;border-image:var(--gold-shine) 1;background:#fffdf9}.event-card h3{min-height:70px;font-size:32px}.event-card .venue-city{margin-top:17px}.event-card .event-kicker{margin-bottom:16px}.card-number{color:#9b731a;font-size:35px;margin-bottom:20px}.signature{color:var(--gold)}
-.party-section{background:#eef4f8;border-top:1px solid #cfdfeb}.party-heading{text-align:center;max-width:660px;margin:0 auto 48px}.party-heading>p:last-child{margin:22px auto 0;font-size:14px;color:var(--muted)}.party-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}.party-card{text-align:center}.party-portrait{width:100%;height:285px;border-radius:160px 160px 0 0;display:grid;place-items:center;object-fit:cover;background:linear-gradient(145deg,#eaf3f9,#b2cada);border:1px solid #c7a449;box-shadow:inset 0 0 0 7px #edf4f8,inset 0 0 0 8px #d4af3766}.party-portrait span{font:italic 55px Georgia,serif;color:#6b5a28}.party-card h3{font-size:25px;margin-top:23px}.party-card p{font-size:12px;color:var(--muted);margin-top:8px}.travel-band{background:var(--paper)}.rsvp{background:linear-gradient(120deg,#d6e5ef,#b2cada 55%,#d9e8f2)}.rsvp-inner{border:2px solid transparent;border-image:var(--gold-shine) 1;box-shadow:0 0 0 7px #ffffff26}.rsvp-status{background:var(--gold-shine);color:#243341;box-shadow:inset 0 1px 0 #fff5bc}.rsvp h2 em{color:#6c5419}
-@supports(background-clip:text){.card-number,.signature{background:linear-gradient(115deg,#755419,#ba8f21 32%,#85601b 52%,#b18928 72%,#72521b);background-clip:text;-webkit-background-clip:text;color:transparent}}
-@media(min-width:1600px){.hero-photo{object-position:50% 47%}}
-@media(max-width:1000px){.site-header{gap:14px;padding:12px 20px}.site-header nav{gap:14px}.site-header nav a{font-size:9px}.header-mark{font-size:25px}.header-mark small{font-size:14px;margin-left:6px}.countdown-band{padding:35px;gap:25px}.countdown-band h2{font-size:28px}}
-@media(max-width:760px){html{scroll-padding-top:155px}.site-header{display:flex;flex-direction:column;gap:0;padding:9px 12px}.header-mark{order:-1;font-size:27px;margin-bottom:3px}.header-mark small{font-size:16px}.site-header nav{gap:22px;min-height:34px}.site-header nav a{min-height:34px;font-size:10px}.site-header .nav-rsvp{padding:2px 16px;min-height:30px}.hero{height:680px;min-height:620px;max-height:850px}.hero-photo{object-position:49% 50%;transform:scale(1.16)}.hero-content{padding:35px 14px 0}.hero-announcement{font-size:18px;margin-bottom:17px}.hero h1{font-size:clamp(37px,8.7vw,62px);letter-spacing:-1.5px;white-space:nowrap}.hero h1 em{display:inline;margin:0 .03em}.hero-date{font-size:11px;letter-spacing:3px;margin-top:19px}.hero-place{font-size:10px;letter-spacing:.3px}.hero-bottom{font-size:9px;letter-spacing:2px;bottom:24px}.countdown-band{flex-direction:column;padding:35px 22px;gap:27px;text-align:center}.countdown-band h2{font-size:30px}.countdown-display{min-width:180px}.countdown-display strong{font-size:65px}.party-grid{grid-template-columns:1fr;max-width:320px;margin:auto;gap:40px}.party-portrait{height:310px}.party-heading{margin-bottom:35px}.event-card h3{min-height:0}.event-card .venue-city{margin-top:15px}}
-@media print{.hero-photo,.hero-shade{display:none}.hero{height:auto;min-height:0;background:white}.hero-content,.hero-date,.hero-place{color:black;text-shadow:none}.hero-content{padding:30px}.hero h1 em{color:#78601d}.countdown-band{padding:20px}.party-grid{grid-template-columns:repeat(3,1fr)}.party-portrait{height:100px}}
-
-/* Realistic brushed-gold buttons */
+/* Taylor & Tristan — shared styles for all six pages.
+   Sky blue #b2cada, metallic gold, Manrope, and Cormorant Garamond. */
 :root {
-  --button-gold:
-    /* Soft reflected light */
-    radial-gradient(
-      ellipse at 32% 0%,
-      rgba(255, 250, 211, 0.65),
-      transparent 65%
-    ),
-    /* Fine horizontal metal grain */
-    repeating-linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.07) 0px,
-      rgba(255, 255, 255, 0.07) 1px,
-      rgba(105, 74, 12, 0.035) 1px,
-      rgba(105, 74, 12, 0.035) 2px,
-      transparent 2px,
-      transparent 4px
-    ),
-    /* Broad, subtle reflection */
-    linear-gradient(
-      110deg,
-      transparent 15%,
-      rgba(255, 247, 193, 0.25) 42%,
-      rgba(255, 247, 193, 0.08) 58%,
-      transparent 80%
-    ),
-    /* Warm gold surface */
-    linear-gradient(
-      180deg,
-      #ecd47e 0%,
-      #dfbd53 24%,
-      #d5ac3c 55%,
-      #cba033 78%,
-      #bd9029 100%
-    );
-}
-
-.button,
-.nav-rsvp,
-.rsvp-status,
-.button:hover,
-.nav-rsvp:hover {
-  background: var(--button-gold);
-  color: #30260e;
-
-  border: 1px solid #a47b24;
-  border-top-color: #f5e2a0;
-  border-left-color: #ddbf68;
-  border-radius: 3px;
-
-  text-shadow: 0 1px 0 rgba(255, 245, 194, 0.5);
-
-  box-shadow:
-    inset 0 1px 0 rgba(255, 253, 224, 0.75),
-    inset 1px 0 0 rgba(255, 241, 173, 0.3),
-    inset 0 -1px 0 rgba(110, 77, 14, 0.3),
-    0 2px 3px rgba(63, 48, 16, 0.12),
-    0 5px 12px rgba(63, 48, 16, 0.08);
-
-  filter: none;
-  text-decoration: none;
-}
-
-.button,
-.nav-rsvp {
-  transition: filter 180ms ease, transform 180ms ease;
-}
-
-@media (hover: hover) {
-  .button:hover,
-  .nav-rsvp:hover {
-    filter: brightness(1.06);
-    transform: translateY(-1px);
-  }
-}
-
-.button:active,
-.nav-rsvp:active {
-  transform: translateY(1px);
-  filter: brightness(0.98);
-  box-shadow:
-    inset 0 2px 4px rgba(105, 74, 12, 0.2),
-    inset 0 -1px 0 rgba(255, 242, 181, 0.45);
-}
-
-.button:focus-visible,
-.nav-rsvp:focus-visible {
-  outline: 3px solid #263e50;
-  outline-offset: 4px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .button,
-  .nav-rsvp {
-    transition: none;
-    transform: none;
-  }
-}
-/* OUR STORY: PHOTO LEFT, TEXT RIGHT */
-#story {
-  max-width: 1200px;
-  text-align: left;
-}
-
-.story-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  align-items: center;
-  gap: clamp(35px, 6vw, 85px);
-}
-
-#story .couple-photo {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: none;
-  margin: 0;
-  border-radius: 180px 180px 4px 4px;
-}
-
-.story-copy {
-  min-width: 0;
-}
-
-.story-copy h2 {
-  margin-bottom: 28px;
-}
-
-.story-copy p {
-  margin: 0 0 20px;
-  color: var(--muted);
-  font-size: 17px;
-  line-height: 1.9;
-}
-
-.story-copy .signature {
-  margin-top: 30px;
-  font-size: clamp(22px, 2.3vw, 29px);
-  line-height: 1.5;
-}
-
-
-/* LARGER SECTION LABELS */
-.eyebrow,
-.hero .eyebrow,
-.countdown-band .eyebrow,
-.section-heading .eyebrow,
-.party-heading .eyebrow {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(16px, 1.6vw, 21px);
-  font-weight: 700;
-  line-height: 1.5;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin-bottom: 24px;
-}
-
-/* Timeline heading and date */
-#celebration .section-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 18px 30px;
-  margin-bottom: 36px;
-}
-
-#celebration .section-heading .eyebrow {
-  margin: 0;
-  font-size: clamp(23px, 2.5vw, 32px);
-  letter-spacing: 4px;
-}
-
-.section-heading > .timeline-date {
-  margin: 0;
-  color: var(--ink);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(20px, 2.1vw, 27px);
-  line-height: 1.4;
-  white-space: normal;
-}
-
-
-/* VENUE PHOTOS AND TIMELINE CARDS */
-#celebration .event-grid {
-  align-items: stretch;
-}
-
-#celebration .event-card {
-  padding: 0;
-  min-width: 0;
-  overflow: hidden;
-}
-
-.venue-photo {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  object-position: center;
-  background: var(--blue-light);
-  border-bottom: 1px solid var(--gold-accent);
-}
-
-.event-content {
-  padding: 32px 36px 38px;
-}
-
-.event-content .card-number {
-  font-size: clamp(25px, 2.5vw, 35px);
-  line-height: 1.25;
-  margin-bottom: 22px;
-}
-
-.event-content h3 {
-  font-size: clamp(28px, 2.7vw, 35px);
-}
-
-.event-content .text-link {
-  font-size: 13px;
-}
-
-
-/* CENTER THE TITLE GROUP OVER THE HERO PHOTO */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 90px 24px;
-  text-align: center;
-}
-
-.hero .hero-content {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  z-index: 1;
-}
-
-.hero h1 {
-  margin: 0;
-  white-space: normal;
-  text-wrap: balance;
-}
-
-.hero .hero-announcement {
-  margin: 0 auto 22px;
-  font-size: clamp(16px, 2vw, 24px);
-  line-height: 1.5;
-}
-
-.hero .hero-date {
-  margin: 26px auto 0;
-  font-size: clamp(15px, 1.5vw, 19px);
-  letter-spacing: 4px;
-}
-
-.hero .hero-place {
-  margin: 15px auto 0;
-  font-size: clamp(12px, 1.3vw, 16px);
-  line-height: 1.6;
-}
-
-/* Keep the centered lettering readable over the photo */
-.hero-shade {
-  background:
-    linear-gradient(
-      180deg,
-      rgba(13, 28, 40, 0.35) 0%,
-      rgba(13, 28, 40, 0.55) 40%,
-      rgba(13, 28, 40, 0.55) 60%,
-      rgba(13, 28, 40, 0.45) 100%
-    );
-}
-
-
-/* MOBILE LAYOUT */
-@media (max-width: 760px) {
-  .story-layout {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
-
-  #story .couple-photo {
-    max-width: 480px;
-    margin: 0 auto;
-  }
-
-  .story-copy {
-    text-align: center;
-  }
-
-  .story-copy p {
-    font-size: 16px;
-  }
-
-  #celebration .section-heading {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  .event-content {
-    padding: 26px 24px 30px;
-  }
-
-  .hero {
-    padding: 85px 18px;
-  }
-}
-/* COMPACT COUNTDOWN BANNER */
-.countdown-band {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px 45px;
-
-  padding: 32px 24px;
-
-  background: linear-gradient(
-    115deg,
-    #dce9f2 0%,
-    #b2cada 50%,
-    #dce9f2 100%
-  );
-
-  border-bottom: 2px solid transparent;
-  border-image: var(--gold-shine) 1;
-}
-
-.countdown-band > div:first-child {
-  text-align: center;
-}
-
-.countdown-band h2 {
-  margin: 0;
-  max-width: none;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(27px, 3vw, 36px);
-  line-height: 1.2;
-  letter-spacing: -0.5px;
-}
-
-/* Large number with a readable label */
-.countdown-band .countdown-display {
-  min-width: 240px;
-  padding: 4px 35px;
-  text-align: center;
-
-  border-left: 1px solid rgba(135, 104, 35, 0.55);
-  border-right: 1px solid rgba(135, 104, 35, 0.55);
-}
-
-.countdown-band .countdown-display strong {
-  display: block;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(60px, 6vw, 78px);
-  line-height: 1;
-  font-weight: 400;
-  letter-spacing: -2px;
-  color: var(--ink);
-}
-
-.countdown-band .countdown-display span {
-  display: block;
-  margin-top: 12px;
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 1.5;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  color: var(--ink);
-}
-
-/* Calendar button */
-.countdown-band > .text-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-
-  min-height: 48px;
-  padding: 12px 22px;
-
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  text-decoration: none;
-  white-space: nowrap;
-
-  color: var(--ink);
-  background: rgba(255, 253, 245, 0.8);
-  border: 1px solid #aa8738;
-  border-radius: 4px;
-
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.8),
-    0 3px 8px rgba(38, 62, 80, 0.08);
-
-  transition: background-color 180ms ease;
-}
-
-.countdown-band > .text-link:hover {
-  background: #fffaf0;
-}
-
-.countdown-band > .text-link:focus-visible {
-  outline: 3px solid var(--ink);
-  outline-offset: 4px;
-}
-
-/* Neatly stacked on phones */
-@media (max-width: 760px) {
-  .countdown-band {
-    flex-direction: column;
-    gap: 22px;
-    padding: 30px 20px;
-  }
-
-  .countdown-band .countdown-display {
-    min-width: 0;
-    width: 100%;
-    max-width: 310px;
-    padding: 0 18px;
-  }
-
-  .countdown-band > .text-link {
-    margin-top: 2px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .countdown-band > .text-link {
-    transition: none;
-  }
-}
-/* WEDDING PARTY SPACING */
-
-/* Space between the bridesmaids row and Groomsmen heading */
-#wedding-party .party-grid + .party-heading {
-  position: relative;
-  margin: 80px auto 42px;
-  padding-top: 42px;
-}
-
-/* Small gold divider above Groomsmen */
-#wedding-party .party-grid + .party-heading::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 110px;
-  height: 2px;
-  transform: translateX(-50%);
-  background: var(--gold-shine);
-}
-
-#wedding-party .party-grid {
-  column-gap: 32px;
-  row-gap: 45px;
-}
-
-#wedding-party .party-card h3 {
-  margin: 22px 0 10px;
-  line-height: 1.3;
-}
-
-#wedding-party .party-card h5 {
-  margin: 0 0 12px;
-  font-size: 13px;
-  line-height: 1.5;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-#wedding-party .party-card p {
-  margin: 0;
-  font-size: 14px;
-  line-height: 1.7;
-}
-
-/* Photos use the same arch shape as the placeholders */
-#wedding-party img.party-portrait {
-  display: block;
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  object-position: center 30%;
-  border-radius: 180px 180px 0 0;
-  border: 1px solid var(--gold-accent);
-  padding: 7px;
-  background: #f9f6ed;
-  box-shadow: 0 8px 22px rgba(38, 62, 80, 0.08);
-}
-
-
-/* THREE-STOP GOLD TIMELINE */
-.day-timeline {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  list-style: none;
-  margin: 12px 0 48px;
-  padding: 0;
-}
-
-.day-timeline li {
-  position: relative;
-  display: grid;
-  grid-template-rows: auto 42px auto auto;
-  align-content: start;
-  justify-items: center;
-  text-align: center;
-  min-width: 0;
-}
-
-/* Each segment joins the center of one dot to the next */
-.day-timeline li::after {
-  content: "";
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  width: 100%;
-  height: 2px;
-  background: var(--gold-shine);
-}
-
-.day-timeline li:last-child::after {
-  display: none;
-}
-
-.day-timeline time {
-  display: block;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 30px;
-  letter-spacing: 1px;
-  color: var(--ink);
-}
-
-.timeline-dot {
-  position: relative;
-  z-index: 1;
-  align-self: center;
-  width: 18px;
-  height: 18px;
-  border: 3px solid var(--paper);
-  border-radius: 50%;
-  background: var(--gold-shine);
-  box-shadow: 0 0 0 1px #b58e32;
-}
-
-.day-timeline h3 {
-  margin: 8px 12px 0;
-  font-size: clamp(21px, 2.2vw, 28px);
-  line-height: 1.3;
-}
-
-.day-timeline p {
-  margin: 9px 16px 0;
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.6;
-}
-
-
-/* REFINED GOLD VENUE CARDS */
-#celebration .event-grid {
-  gap: 32px;
-}
-
-#celebration .event-card {
-  padding: 0;
-  overflow: hidden;
-  border: 1px solid transparent;
-  border-image: none;
-  border-radius: 14px;
-
-  /* Gold border follows the rounded corners */
-  background:
-    linear-gradient(#fffdf8, #fffdf8) padding-box,
-    var(--gold-shine) border-box;
-
-  box-shadow:
-    0 5px 12px rgba(38, 62, 80, 0.04),
-    0 16px 34px rgba(38, 62, 80, 0.07);
-}
-
-#celebration .venue-photo {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  border-bottom: 1px solid #d7bb69;
-}
-
-#celebration .event-content {
-  padding: 30px 32px 34px;
-}
-
-#celebration .event-content .card-number {
-  font-size: clamp(25px, 2.4vw, 32px);
-  margin-bottom: 20px;
-}
-
-#celebration .event-content h3 {
-  min-height: 0;
-  line-height: 1.2;
-}
-
-#celebration .event-content .text-link {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  margin-top: 20px;
-  padding: 8px 16px;
-
-  color: var(--ink);
-  background: var(--blue-light);
-  border: 1px solid #c9b477;
-  border-radius: 4px;
-  text-decoration: none;
-  font-size: 13px;
-}
-
-#celebration .event-content .text-link:hover {
-  background: #d6e6f0;
-}
-
-
-/* MOBILE: VERTICAL TIMELINE */
-@media (max-width: 760px) {
-  #wedding-party .party-grid + .party-heading {
-    margin-top: 58px;
-    padding-top: 32px;
-    margin-bottom: 32px;
-  }
-
-  .day-timeline {
-    grid-template-columns: 1fr;
-    margin: 8px 0 36px;
-  }
-
-  .day-timeline li {
-    display: block;
-    text-align: left;
-    padding: 0 0 30px 42px;
-  }
-
-  .day-timeline li:last-child {
-    padding-bottom: 0;
-  }
-
-  .day-timeline li::after {
-    top: 15px;
-    left: 9px;
-    width: 2px;
-    height: 100%;
-  }
-
-  .day-timeline .timeline-dot {
-    position: absolute;
-    left: 1px;
-    top: 6px;
-  }
-
-  .day-timeline h3 {
-    margin: 6px 0 0;
-    font-size: 25px;
-  }
-
-  .day-timeline p {
-    margin: 7px 0 0;
-    font-size: 14px;
-  }
-
-  #celebration .event-content {
-    padding: 26px 24px 30px;
-  }
-}
-/* REMOVE THE LINE BEFORE THE COUNTDOWN */
-.countdown-band .countdown-display {
-  border-left: none;
-}
-
-
-/* WEDDING PARTY: THREE, THREE, THEN TWO CENTERED */
-#wedding-party .party-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 48px 32px;
-  width: 100%;
-  max-width: none;
-  margin: 0 auto;
-}
-
-#wedding-party .party-grid > .party-card {
-  flex: 0 0 calc((100% - 64px) / 3);
-  min-width: 0;
-}
-
-
-/* REFINED VENUE CARDS */
-#celebration .event-grid {
-  align-items: stretch;
-  gap: 32px;
-}
-
-#celebration .event-card {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  padding: 0;
-  overflow: hidden;
-
-  border: 1px solid transparent;
-  border-image: none;
-  border-radius: 18px;
-
-  background:
-    linear-gradient(#fffdf8, #fffdf8) padding-box,
-    var(--gold-shine) border-box;
-
-  box-shadow:
-    0 4px 10px rgba(38, 62, 80, 0.04),
-    0 18px 36px rgba(38, 62, 80, 0.08);
-}
-
-#celebration .venue-photo {
-  display: block;
-  flex-shrink: 0;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  border-bottom: 2px solid #d7bb69;
-}
-
-#celebration .event-content {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  flex: 1;
-  padding: 30px;
-}
-
-/* Small gold label above the venue name */
-#celebration .event-content .card-number {
-  align-self: flex-start;
-  margin: 0 0 18px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #d7bb69;
-
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.5;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-}
-
-/* Venue name */
-#celebration .event-content h3 {
-  min-height: 0;
-  margin: 0;
-  color: var(--ink);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(29px, 2.8vw, 38px);
-  line-height: 1.15;
-  letter-spacing: -0.5px;
-  text-wrap: balance;
-}
-
-/* Location beneath the name */
-#celebration .event-content .venue-location {
-  margin: 14px 0 26px;
-  color: var(--muted);
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-.venue-location > span {
-  margin: 0 6px;
-  color: #94701e;
-}
-
-/* Sky-blue schedule panel */
-#celebration .venue-schedule {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  margin: auto 0 24px;
-  padding: 20px;
-
-  background: linear-gradient(135deg, #edf4f8, #dae8f1);
-  border: 1px solid #cbdde8;
-  border-radius: 10px;
-}
-
-.venue-schedule > div {
-  flex: 1 1 120px;
-  min-width: 0;
-}
-
-.venue-schedule dt {
-  margin: 0 0 9px;
-  color: var(--muted);
-  font-size: 11px;
-  font-weight: 700;
-  line-height: 1.5;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-}
-
-.venue-schedule dd {
-  margin: 0;
-  color: var(--ink);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 35px;
-  line-height: 1.15;
-}
-
-.venue-schedule time {
-  white-space: nowrap;
-}
-
-.venue-schedule time span {
-  margin-left: 3px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-/* Full-width location button */
-#celebration .event-content .venue-map {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  min-height: 48px;
-  margin: 0;
-  padding: 12px 18px;
-
-  color: #30260e;
-  background: var(--button-gold, #dfbd53);
-  border: 1px solid #b38c32;
-  border-radius: 5px;
-
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-
-  box-shadow: inset 0 1px 0 rgba(255, 250, 220, 0.7);
-}
-
-#celebration .event-content .venue-map:hover {
-  background: var(--button-gold, #dfbd53);
-  filter: brightness(1.05);
-}
-
-#celebration .venue-map:focus-visible {
-  outline: 3px solid var(--ink);
-  outline-offset: 4px;
-}
-
-
-/* TABLETS: TWO PEOPLE PER ROW */
-@media (min-width: 601px) and (max-width: 900px) {
-  #wedding-party .party-grid > .party-card {
-    flex-basis: calc((100% - 32px) / 2);
-  }
-}
-
-/* PHONES: ONE CENTERED PERSON PER ROW */
-@media (max-width: 600px) {
-  #wedding-party .party-grid {
-    gap: 40px;
-  }
-
-  #wedding-party .party-grid > .party-card {
-    flex-basis: 100%;
-    max-width: 340px;
-  }
-
-  #celebration .event-content {
-    padding: 25px 22px;
-  }
-}
-/* MODERN, ELEGANT TYPOGRAPHY */
-:root {
+  --paper: #fcfaf5;
+  --ink: #263e50;
+  --blue: #b2cada;
+  --blue-light: #e7f0f6;
+  --muted: #405362;
+  --line: #d9c8a5;
+  --gold: #78601d;
+  --gold-accent: #d4af37;
   --font-heading: "Cormorant Garamond", Georgia, serif;
   --font-body: "Manrope", Arial, sans-serif;
+  --gold-shine: linear-gradient(115deg, #8e681c 0%, #d5ad35 19%, #fff0a0 35%, #c49b26 48%, #ffe99a 65%, #ad8225 83%, #ecd06b 100%);
+  --button-gold:
+    radial-gradient(ellipse at 32% 0%, rgba(255,250,211,.65), transparent 65%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,.07) 0 1px, rgba(105,74,12,.035) 1px 2px, transparent 2px 4px),
+    linear-gradient(110deg, transparent 15%, rgba(255,247,193,.25) 42%, rgba(255,247,193,.08) 58%, transparent 80%),
+    linear-gradient(180deg, #ecd47e, #dfbd53 24%, #d5ac3c 55%, #cba033 78%, #bd9029);
 }
 
-body,
-button,
-input,
-select,
-textarea {
-  font-family: var(--font-body);
-}
-
-h1,
-h2,
-h3,
-.signature,
-.monogram,
-.header-mark,
-.header-mark small,
-.hero .hero-announcement,
-.countdown-band h2,
-.countdown-band .countdown-display strong,
-.section-heading > .timeline-date,
-.venue-schedule dd,
-.footer-note {
-  font-family: var(--font-heading);
-}
-
-h1,
-h2,
-h3 {
-  font-weight: 500;
-}
-
-.eyebrow,
-.hero .eyebrow,
-.countdown-band .eyebrow,
-.section-heading .eyebrow,
-.party-heading .eyebrow,
-#celebration .event-content .card-number,
-.venue-schedule dt,
-.venue-schedule time span {
-  font-family: var(--font-body);
-}
-
-#celebration .event-content h3 {
-  font-family: var(--font-heading);
-  font-size: clamp(34px, 3.2vw, 44px);
-  font-weight: 500;
-  line-height: 1.08;
-  letter-spacing: -0.6px;
-}
-
-/* Readable full addresses */
-#celebration .event-content .venue-location {
-  margin: 16px 0 26px;
-  font-family: var(--font-body);
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.8;
-  color: var(--muted);
-}
-
-#celebration .venue-schedule .venue-end-time {
-  margin: 9px 0 0;
-  font-family: var(--font-body);
-  font-size: 12px;
-  line-height: 1.6;
-  color: var(--muted);
-}
-
-
-/* CENTER BUTTON TEXT AND UPDATE ITS FONT */
-.button,
-.nav-rsvp,
-.rsvp-status,
-.countdown-band > .text-link,
-#celebration .event-content .venue-map {
-  font-family: var(--font-body);
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-align: center;
-}
-
-#celebration .event-content .venue-map {
-  position: relative;
-  justify-content: center;
-  padding: 14px 46px;
-  font-size: 14px;
-}
-
-/* Keep the arrow to the right without shifting the label */
-#celebration .venue-map > span {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-
-/* FOUR TIMELINE STOPS */
-.day-timeline {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.day-timeline h3 {
-  font-family: var(--font-heading);
-  font-size: clamp(23px, 2.3vw, 30px);
-  font-weight: 500;
-}
-
-
-/* TEN PEOPLE PER GROUP: TWO ROWS OF FIVE */
-#wedding-party > .section-wrap {
-  max-width: 1440px;
-}
-
-#wedding-party .party-grid {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  align-items: start;
-  gap: 48px 24px;
-  width: 100%;
-  max-width: none;
-  margin: 0 auto;
-}
-
-#wedding-party .party-grid > .party-card {
-  min-width: 0;
-  max-width: none;
-  width: 100%;
-  padding: 10px 8px 20px;
-  text-align: center;
-}
-
-/* Consistent arches for photos and placeholders */
-#wedding-party .party-portrait,
-#wedding-party img.party-portrait {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 5;
-  border-radius: 160px 160px 0 0;
-}
-
-#wedding-party img.party-portrait {
-  object-fit: cover;
-  object-position: center 30%;
-}
-
-#wedding-party .party-card h3 {
-  margin: 20px 0 10px;
-  font-family: var(--font-heading);
-  font-size: clamp(24px, 2vw, 29px);
-  font-weight: 600;
-  line-height: 1.1;
-  overflow-wrap: break-word;
-}
-
-#wedding-party .party-card h5 {
-  margin: 0 0 12px;
-  font-family: var(--font-body);
-  font-size: 11px;
-  font-weight: 700;
-  line-height: 1.6;
-  letter-spacing: 1.1px;
-}
-
-#wedding-party .party-card p {
-  font-size: 13px;
-  line-height: 1.7;
-}
-
-
-/* FIRST PERSON: MAID OF HONOR / BEST MAN */
-#wedding-party .party-grid > .party-card:first-child {
-  border-radius: 150px 150px 12px 12px;
-
-  background: linear-gradient(
-    180deg,
-    rgba(236, 213, 143, 0.22),
-    rgba(255, 250, 232, 0.75)
-  );
-
-  box-shadow: 0 10px 24px rgba(126, 97, 25, 0.08);
-}
-
-/* Add a stronger gold frame around the first arch */
-#wedding-party .party-card:first-child .party-portrait {
-  border: 3px solid #c6a13c;
-
-  box-shadow:
-    0 0 0 3px #fff8df,
-    0 0 0 4px #d9b857,
-    0 8px 20px rgba(136, 105, 29, 0.16);
-}
-
-#wedding-party .party-card:first-child h3 {
-  color: #705318;
-}
-
-/* Gold honor-attendant badge */
-#wedding-party .party-card:first-child h5 {
-  display: inline-block;
-  max-width: 100%;
-  padding: 7px 12px;
-
-  color: #30260e;
-  background: var(--button-gold, #e2c261);
-  border: 1px solid #bb9437;
-  border-radius: 30px;
-
-  box-shadow: inset 0 1px 0 rgba(255, 250, 220, 0.8);
-}
-
-
-/* TABLETS: FIVE EVEN ROWS OF TWO */
-@media (max-width: 1050px) {
-  #wedding-party .party-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    max-width: 720px;
-    gap: 40px 30px;
-  }
-}
-
-/* KEEP THE TIMELINE VERTICAL ON PHONES */
-@media (max-width: 760px) {
-  .day-timeline {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* SMALL PHONES: ONE PERSON PER ROW */
-@media (max-width: 480px) {
-  #wedding-party .party-grid {
-    grid-template-columns: minmax(0, 1fr);
-    max-width: 330px;
-  }
-}
-/* VENUE CARDS: balanced spacing and matching alignment */
-
-#celebration .event-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-items: stretch;
-  gap: 30px;
-}
-
-#celebration .event-card {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  padding: 0;
-  overflow: hidden;
-
-  border: 1px solid transparent;
-  border-image: none;
-  border-radius: 18px;
-
-  background:
-    linear-gradient(#fffdf8, #fffdf8) padding-box,
-    var(--gold-shine) border-box;
-
-  box-shadow:
-    0 4px 12px rgba(38, 62, 80, 0.04),
-    0 16px 36px rgba(38, 62, 80, 0.07);
-}
-
-/* Matching photo proportions */
-#celebration .venue-photo {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  object-position: center;
-  flex-shrink: 0;
-  border-bottom: 1px solid #d6b65d;
-}
-
-#celebration .event-content {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  padding: clamp(24px, 3vw, 36px);
-}
-
-/* Small, readable gold section label */
-#celebration .event-content .card-number {
-  align-self: flex-start;
-  margin: 0 0 20px;
-  padding: 0 0 10px;
-
-  background: none;
-  color: #806019;
-  border-bottom: 1px solid #d7bb69;
-
-  font-family: var(--font-body);
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.5;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-/* Reserve two lines so both addresses begin at the same height */
-#celebration .event-content h3 {
-  min-height: 2.2em;
-  margin: 0;
-
-  font-family: var(--font-heading);
-  font-size: clamp(34px, 3.2vw, 44px);
-  font-weight: 500;
-  line-height: 1.1;
-  letter-spacing: -0.6px;
-  color: var(--ink);
-}
-
-#celebration .event-content .venue-location {
-  margin: 18px 0 26px;
-
-  font-family: var(--font-body);
-  font-style: normal;
-  font-size: 15px;
-  line-height: 1.8;
-  color: var(--muted);
-}
-
-/* Matching sky-blue time panels */
-#celebration .venue-schedule {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(min(135px, 100%), 1fr)
-  );
-  align-content: start;
-  gap: 22px;
-
-  min-height: 148px;
-  margin: auto 0 22px;
-  padding: 22px;
-
-  background: linear-gradient(135deg, #edf4f8, #dce9f2);
-  border: 1px solid #cadce8;
-  border-radius: 12px;
-
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
-}
-
-#celebration .venue-schedule > div {
-  min-width: 0;
-}
-
-#celebration .venue-schedule dt {
-  margin: 0 0 12px;
-
-  font-family: var(--font-body);
-  font-size: 11px;
-  font-weight: 700;
-  line-height: 1.5;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #40596b;
-}
-
-#celebration .venue-schedule dd {
-  margin: 0;
-
-  font-family: var(--font-heading);
-  font-size: 38px;
-  font-weight: 500;
-  line-height: 1;
-  color: var(--ink);
-}
-
-#celebration .venue-schedule time {
-  white-space: nowrap;
-}
-
-#celebration .venue-schedule time span {
-  margin-left: 4px;
-  font-family: var(--font-body);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-}
-
-#celebration .venue-schedule .venue-end-time {
-  display: block;
-  margin: 10px 0 0;
-
-  font-family: var(--font-body);
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1.5;
-  color: var(--muted);
-}
-
-/* Centered labels with the arrow positioned independently */
-#celebration .event-content .venue-map {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-  min-height: 52px;
-  margin: 0;
-  padding: 14px 46px;
-
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.5;
-  letter-spacing: 0.4px;
-  text-align: center;
-  text-decoration: none;
-
-  color: #30260e;
-  background: var(--button-gold, #dfbd53);
-  border: 1px solid #b38c32;
-  border-radius: 8px;
-
-  box-shadow:
-    inset 0 1px 0 rgba(255, 250, 220, 0.8),
-    0 3px 8px rgba(117, 87, 21, 0.1);
-}
-
-#celebration .venue-map > span {
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  font-size: 18px;
-}
-
-#celebration .event-content .venue-map:hover {
-  background: var(--button-gold, #dfbd53);
-  filter: brightness(1.04);
-}
-
-#celebration .event-content .venue-map:focus-visible {
-  outline: 3px solid var(--ink);
-  outline-offset: 4px;
-}
-
-/* Stacked cards on smaller screens */
-@media (max-width: 760px) {
-  #celebration .event-grid {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-
-  #celebration .event-content {
-    padding: 26px 22px;
-  }
-
-  #celebration .event-content h3 {
-    min-height: 0;
-  }
-
-  #celebration .venue-schedule {
-    min-height: 0;
-    margin-top: 0;
-    padding: 20px;
-  }
-}
-/* FEATURED GOLD COUNTDOWN */
-.countdown-band {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 26px;
-  padding: 48px 24px;
-  text-align: center;
-
-  background:
-    radial-gradient(
-      ellipse at 50% 35%,
-      rgba(255, 255, 255, 0.65),
-      transparent 65%
-    ),
-    linear-gradient(115deg, #dce9f2, #b2cada 50%, #dce9f2);
-
-  border-bottom: 2px solid transparent;
-  border-image: var(--gold-shine) 1;
-}
-
-/* Remove the old vertical dividers */
-.countdown-band .countdown-display {
-  width: 100%;
-  max-width: 600px;
-  min-width: 0;
-  padding: 0;
-  border: none;
-}
-
-/* Bold, clean numerals with a metallic gold finish */
-.countdown-band .countdown-display strong {
-  display: block;
-  width: fit-content;
-  max-width: 100%;
-  margin: 0 auto;
-
-  font-family: var(--font-body, "Manrope", Arial, sans-serif);
-  font-size: clamp(72px, 10vw, 120px);
-  font-weight: 700;
-  font-style: normal;
-  font-variant-numeric: lining-nums tabular-nums;
-  line-height: 1.15;
-  letter-spacing: -0.045em;
-
-  color: #856019;
-}
-
-/* Gold highlights, with darker edges to keep the number readable */
+/* Base and shared navigation */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 105px; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.7 var(--font-body); min-height: 100svh; display: flex; flex-direction: column; }
+main { flex: 1; }
+a { color: inherit; text-underline-offset: 5px; -webkit-tap-highlight-color: transparent; }
+a:focus-visible, summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 5px; }
+h1, h2, h3, h4, p { margin: 0; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 500; }
+h1, h2 { font-size: clamp(34px, 4.1vw, 56px); line-height: 1.12; letter-spacing: -1.4px; }
+h3 { font-size: 29px; line-height: 1.2; }
+p { max-width: 65ch; }
+.eyebrow { font-size: clamp(16px, 1.6vw, 21px); font-weight: 700; line-height: 1.5; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 24px; }
+.small { font-size: 14px; }
+.skip-link { position: absolute; top: -90px; left: 12px; z-index: 10; background: #fff; padding: 12px; }
+.skip-link:focus { top: 12px; }
+.site-header { position: sticky; top: 0; z-index: 5; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 25px; min-height: 83px; padding: 15px 4%; background: #d8e7f0; border-bottom: 2px solid transparent; border-image: var(--gold-shine) 1; }
+.site-header nav { display: flex; align-items: center; gap: 22px; }
+.nav-right { justify-content: flex-end; }
+.site-header nav a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; font-size: 11px; letter-spacing: 1.1px; text-transform: uppercase; text-decoration: none; text-align: center; }
+.site-header nav a:hover, .site-header nav a[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 2px; }
+.header-mark { font: 28px var(--font-heading); text-decoration: none; white-space: nowrap; }
+.header-mark span, .monogram span { font-style: italic; color: var(--gold); margin: 0 3px; }
+.header-mark small { font-size: 18px; margin-left: 12px; }
+.nav-rsvp, .button, .rsvp-status { background: var(--button-gold); color: #30260e; border: 1px solid #a47b24; border-top-color: #f5e2a0; border-left-color: #ddbf68; border-radius: 5px; text-shadow: 0 1px 0 rgba(255,245,194,.5); box-shadow: inset 0 1px 0 rgba(255,253,224,.75), inset 0 -1px 0 rgba(110,77,14,.3), 0 3px 8px rgba(63,48,16,.1); }
+.nav-rsvp { padding: 10px 22px; }
+.button { display: inline-flex; align-items: center; justify-content: center; min-height: 49px; padding: 15px 26px; font-size: 14px; font-weight: 600; text-align: center; text-decoration: none; margin-top: 25px; }
+.button:hover, .nav-rsvp:hover { filter: brightness(1.05); }
+.section-wrap { max-width: 1200px; margin: auto; padding: 80px 40px; }
+.page-heading { padding: 58px 24px 48px; text-align: center; background: linear-gradient(120deg, #e7f0f6, #d8e7f0); border-bottom: 1px solid var(--line); }
+.page-heading p { margin: 16px auto 0; color: var(--muted); }
+.section-heading { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 18px 30px; margin-bottom: 36px; }
+.section-heading .eyebrow { margin: 0; }
+
+/* Home photo and story */
+.hero { position: relative; display: flex; align-items: center; justify-content: center; height: calc(100svh - 83px); min-height: 700px; max-height: 980px; padding: 90px 24px; text-align: center; overflow: hidden; background: #182a39; isolation: isolate; }
+.hero-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 43%; transform: scale(1.16); z-index: -3; }
+.hero-shade { position: absolute; inset: 0; z-index: -2; background: linear-gradient(180deg, rgba(13,28,40,.35), rgba(13,28,40,.55) 40%, rgba(13,28,40,.55) 60%, rgba(13,28,40,.45)); }
+.hero-content { width: 100%; max-width: 1200px; color: #fffdf4; text-shadow: 0 2px 16px #0009; }
+.hero-announcement { margin: 0 auto 24px; font: 500 clamp(18px, 2vw, 25px)/1.5 var(--font-heading); letter-spacing: 2px; }
+.hero h1 { font-size: clamp(56px, 6.3vw, 100px); letter-spacing: -3px; line-height: 1.14; text-wrap: balance; }
+.hero h1 em { margin: 0 .1em; font-size: .8em; color: #f9dc73; }
+.hero-date { font-size: clamp(14px, 1.5vw, 19px); letter-spacing: 4px; margin: 26px auto 0; font-weight: 600; color: #fff0b3; }
+.hero-place { margin: 15px auto 0; font-size: clamp(12px, 1.3vw, 16px); }
+.hero-bottom { position: absolute; bottom: 34px; left: 0; right: 0; width: fit-content; margin: auto; padding: 10px; color: #fff3bd; font-size: 10px; letter-spacing: 3px; text-decoration: none; }
+.hero-bottom span { margin-left: 13px; }
+.story-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: clamp(35px, 6vw, 85px); }
+.couple-photo { display: block; width: 100%; height: auto; border-radius: 180px 180px 4px 4px; }
+.story-copy { min-width: 0; }
+.story-copy h2 { margin-bottom: 28px; }
+.story-copy p { margin-bottom: 20px; font-size: 17px; line-height: 1.9; color: var(--muted); }
+.signature { margin-top: 30px; font: italic clamp(22px, 2.3vw, 29px)/1.5 var(--font-heading); color: var(--gold); }
+
+/* Gold countdown and calendar keepsake */
+.countdown-band { display: flex; align-items: center; justify-content: center; gap: 36px; padding: 48px 24px; text-align: center; background: radial-gradient(ellipse at 50% 35%, rgba(255,255,255,.65), transparent 65%), linear-gradient(115deg, #dce9f2, #b2cada 50%, #dce9f2); border-bottom: 2px solid transparent; border-image: var(--gold-shine) 1; }
+.countdown-display { position: relative; min-width: 0; padding-right: 36px; }
+.countdown-display::after { content: ""; position: absolute; top: 10%; right: 0; width: 2px; height: 80%; border-radius: 2px; background: var(--gold-shine); }
+.countdown-display strong { display: block; width: fit-content; max-width: 100%; margin: auto; font-size: clamp(72px, 10vw, 120px); font-weight: 700; font-variant-numeric: lining-nums tabular-nums; line-height: 1.15; letter-spacing: -.045em; color: #856019; }
+.countdown-display span { display: block; margin-top: 14px; font-size: clamp(14px, 1.6vw, 18px); font-weight: 700; line-height: 1.6; letter-spacing: 2px; text-transform: uppercase; }
 @supports ((background-clip: text) or (-webkit-background-clip: text)) {
-  .countdown-band .countdown-display strong {
-    background: linear-gradient(
-      115deg,
-      #765015 0%,
-      #aa7c1c 22%,
-      #dfbd53 39%,
-      #8c6216 53%,
-      #c79b2b 72%,
-      #765015 100%
-    );
-
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-
-    filter: drop-shadow(0 2px 1px rgba(255, 255, 255, 0.45));
-  }
+  .countdown-display strong { background: linear-gradient(115deg, #765015, #aa7c1c 22%, #dfbd53 39%, #8c6216 53%, #c79b2b 72%, #765015); background-clip: text; -webkit-background-clip: text; color: transparent; filter: drop-shadow(0 2px 1px rgba(255,255,255,.45)); }
 }
+.calendar-button { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 0 0 auto; gap: 10px; width: 174px; min-height: 164px; padding: 20px 14px; text-decoration: none; border: 2px solid transparent; border-radius: 20px; background: linear-gradient(#fff,#fff) padding-box, var(--gold-shine) border-box; box-shadow: 0 8px 20px rgba(38,62,80,.09), 0 2px 4px rgba(135,104,35,.08); transition: transform 180ms ease, box-shadow 180ms ease; }
+.calendar-button::before { content: ""; position: absolute; inset: 5px; border: 1px solid rgba(190,155,55,.22); border-radius: 14px; pointer-events: none; }
+.calendar-icon { display: block; flex-shrink: 0; width: 48px; height: 48px; color: #a47b20; }
+.calendar-label { font-size: 14px; font-weight: 700; line-height: 1.4; }
+.calendar-date { font-size: 10px; font-weight: 600; line-height: 1.5; letter-spacing: 1.2px; color: #806019; }
+.calendar-button:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(38,62,80,.12); }
+.calendar-button:active { transform: translateY(0); }
 
-.countdown-band .countdown-display span {
-  display: block;
-  margin: 14px auto 0;
+/* Four-stop timeline and venue cards */
+.celebration .section-heading .eyebrow { font-size: clamp(23px, 2.5vw, 32px); letter-spacing: 4px; }
+.timeline-date { font: clamp(20px, 2.1vw, 27px)/1.4 var(--font-heading); }
+.day-timeline { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); list-style: none; margin: 12px 0 48px; padding: 0; }
+.day-timeline li { position: relative; display: grid; grid-template-rows: 30px 42px auto auto; align-content: start; justify-items: center; min-width: 0; text-align: center; }
+.day-timeline li::after { content: ""; position: absolute; top: 50px; left: 50%; width: 100%; height: 2px; background: var(--gold-shine); }
+.day-timeline li:last-child::after { display: none; }
+.day-timeline time { font-size: 20px; font-weight: 600; line-height: 30px; letter-spacing: 1px; }
+.timeline-dot { position: relative; z-index: 1; align-self: center; width: 18px; height: 18px; border: 3px solid var(--paper); border-radius: 50%; background: var(--gold-shine); box-shadow: 0 0 0 1px #b58e32; }
+.day-timeline h3 { margin: 8px 12px 0; font-size: clamp(23px, 2.3vw, 30px); line-height: 1.3; }
+.day-timeline p { margin: 9px 16px 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.event-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; gap: 30px; }
+.event-card { display: flex; flex-direction: column; min-width: 0; overflow: hidden; border: 1px solid transparent; border-radius: 18px; background: linear-gradient(#fffdf8,#fffdf8) padding-box, var(--gold-shine) border-box; box-shadow: 0 4px 12px rgba(38,62,80,.04), 0 16px 36px rgba(38,62,80,.07); }
+.venue-photo { display: block; width: 100%; height: auto; aspect-ratio: 16/10; object-fit: cover; object-position: center; flex-shrink: 0; background: var(--blue-light); border-bottom: 1px solid #d6b65d; }
+.event-content { display: flex; flex-direction: column; flex: 1; padding: clamp(24px, 3vw, 36px); }
+.card-number { align-self: flex-start; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #d7bb69; color: #806019; font-size: 12px; font-weight: 700; line-height: 1.5; letter-spacing: 2px; text-transform: uppercase; }
+.event-content h3 { min-height: 2.2em; font-size: clamp(34px, 3.2vw, 44px); line-height: 1.1; letter-spacing: -.6px; }
+.venue-location { margin: 18px 0 26px; font-style: normal; font-size: 15px; line-height: 1.8; color: var(--muted); }
+.venue-schedule { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(135px, 100%), 1fr)); align-content: start; gap: 22px; min-height: 148px; margin: auto 0 22px; padding: 24px; border: 2px solid transparent; border-radius: 14px; background: linear-gradient(135deg, #f2f8fc, #dceaf4 60%, #cbdfea) padding-box, var(--gold-shine) border-box; box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 5px 14px rgba(38,62,80,.06); }
+.venue-schedule > div { min-width: 0; }
+.venue-schedule dt { margin-bottom: 14px; font-size: 11px; font-weight: 700; line-height: 1.5; letter-spacing: 1.3px; text-transform: uppercase; color: #40596b; }
+.venue-schedule dd { margin: 0; font-size: clamp(25px, 2.4vw, 32px); font-weight: 600; font-variant-numeric: lining-nums tabular-nums; line-height: 1.25; }
+.venue-schedule time { white-space: nowrap; }
+.venue-schedule dd > time { display: block; }
+.venue-schedule time span { margin-left: 2px; font-size: .65em; font-weight: 600; }
+.venue-end-time { display: block; margin-top: 12px; font-size: 12px; font-weight: 500; line-height: 1.5; color: #40596b; }
+.venue-map { position: relative; display: flex; align-items: center; justify-content: center; width: 100%; min-height: 52px; padding: 14px 46px; font-size: 14px; font-weight: 600; line-height: 1.5; letter-spacing: .4px; text-align: center; text-decoration: none; color: #30260e; background: var(--button-gold); border: 1px solid #b38c32; border-radius: 8px; box-shadow: inset 0 1px 0 rgba(255,250,220,.8), 0 3px 8px rgba(117,87,21,.1); }
+.venue-map span { position: absolute; top: 50%; right: 20px; transform: translateY(-50%); font-size: 18px; }
+.venue-map:hover { filter: brightness(1.04); }
 
-  font-family: var(--font-body, "Manrope", Arial, sans-serif);
-  font-size: clamp(14px, 1.6vw, 18px);
-  font-weight: 700;
-  line-height: 1.6;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #263e50;
+/* Wedding party: five across desktop, two across tablet and phone */
+.party-section { background: #eef4f8; }
+.party-section > .section-wrap { max-width: 1440px; }
+.party-heading { text-align: center; margin: 0 auto 48px; }
+.party-grid + .party-heading { position: relative; margin: 80px auto 42px; padding-top: 42px; }
+.party-grid + .party-heading::before { content: ""; position: absolute; top: 0; left: 50%; width: 110px; height: 2px; transform: translateX(-50%); background: var(--gold-shine); }
+.party-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); align-items: start; gap: 48px 24px; width: 100%; margin: auto; }
+.party-card { min-width: 0; padding: 10px 8px 20px; text-align: center; }
+.party-portrait { display: grid; place-items: center; width: 100%; height: auto; aspect-ratio: 4/5; border-radius: 160px 160px 0 0; background: linear-gradient(145deg,#eaf3f9,#b2cada); border: 1px solid #c7a449; box-shadow: inset 0 0 0 7px #edf4f8, inset 0 0 0 8px #d4af3766; }
+.party-portrait span { font: italic 55px var(--font-heading); color: #6b5a28; }
+/* Adjust center 30% to reposition a person's face in the arch. */
+img.party-portrait { display: block; object-fit: cover; object-position: center 30%; padding: 7px; background: #f9f6ed; box-shadow: 0 8px 22px rgba(38,62,80,.08); }
+.party-card h3 { margin: 20px 0 10px; font-size: clamp(24px, 2vw, 29px); font-weight: 600; line-height: 1.1; overflow-wrap: break-word; }
+.party-card .party-role { margin: 0 0 12px; font-size: 11px; font-weight: 700; line-height: 1.6; letter-spacing: 1.1px; text-transform: uppercase; }
+.party-card p:not(.party-role) { margin: 0; font-size: 13px; line-height: 1.7; color: var(--muted); }
+.party-card-honor { border-radius: 150px 150px 12px 12px; background: linear-gradient(180deg,rgba(236,213,143,.22),rgba(255,250,232,.75)); box-shadow: 0 10px 24px rgba(126,97,25,.08); }
+.party-card-honor .party-portrait { border: 3px solid #c6a13c; box-shadow: 0 0 0 3px #fff8df, 0 0 0 4px #d9b857, 0 8px 20px rgba(136,105,29,.16); }
+.party-card-honor h3 { color: #705318; }
+.party-card-honor .party-role { display: inline-block; max-width: 100%; padding: 7px 12px; color: #30260e; background: var(--button-gold); border: 1px solid #bb9437; border-radius: 30px; box-shadow: inset 0 1px 0 rgba(255,250,220,.8); }
+
+/* Travel, FAQ, registry, and RSVP */
+.travel-layout { display: grid; grid-template-columns: 1fr 1.2fr; gap: 70px; align-items: start; }
+.travel-layout > div > p { margin-top: 24px; color: var(--muted); }
+.travel-details article { padding-bottom: 25px; border-bottom: 1px solid #b5cbd8; margin-bottom: 25px; }
+.travel-details article:last-child { margin-bottom: 0; }
+.travel-details h3 { font-size: 28px; margin-bottom: 12px; }
+.travel-details h4 { font-size: 15px; font-weight: 600; }
+.travel-details p { margin-top: 10px; color: var(--muted); font-size: 14px; }
+.faq { max-width: 920px; padding-top: 35px; }
+details { border-bottom: 1px solid var(--line); }
+summary { cursor: pointer; padding: 23px 32px 23px 0; position: relative; font-size: 15px; list-style: none; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; position: absolute; right: 2px; font-size: 24px; line-height: 1; }
+details[open] summary::after { content: "−"; }
+details p { padding: 0 25px 25px 0; color: var(--muted); font-size: 14px; }
+.registry { text-align: center; padding-top: 90px; padding-bottom: 95px; }
+.registry h1 { max-width: 690px; margin: auto; }
+.registry > p:not(.eyebrow) { margin: 24px auto 0; max-width: 510px; font-size: 14px; color: var(--muted); }
+.registry p.status-pill { display: inline-block; border: 1px solid var(--line); padding: 10px 22px; font-size: 12px; }
+.rsvp { padding: 65px 35px; background: linear-gradient(120deg,#d6e5ef,#b2cada 55%,#d9e8f2); text-align: center; }
+.rsvp-inner { max-width: 1060px; margin: auto; padding: 64px 25px; border: 2px solid transparent; border-image: var(--gold-shine) 1; box-shadow: 0 0 0 7px #ffffff26; }
+.rsvp h1 { font-size: clamp(40px, 5vw, 66px); }
+.rsvp h1 em { color: #6c5419; }
+.rsvp p { margin-left: auto; margin-right: auto; }
+.rsvp h1 + p { margin-top: 23px; font-size: 14px; }
+.rsvp-status { display: inline-block; padding: 14px 25px; margin-top: 30px; margin-bottom: 17px; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+.rsvp .small { font-size: 12px; }
+footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 38px 5.5%; border-top: 1px solid var(--line); }
+.monogram { font: 30px var(--font-heading); letter-spacing: -2px; text-decoration: none; }
+footer p { font-size: 11px; color: var(--muted); }
+footer p span { margin: 0 10px; }
+.footer-note { font: italic 16px var(--font-heading); }
+
+/* Responsive rules, in one place */
+@media (max-width: 1050px) {
+  .site-header { gap: 14px; padding: 12px 20px; }
+  .site-header nav { gap: 14px; }
+  .site-header nav a { font-size: 9px; }
+  .header-mark { font-size: 25px; }
+  .header-mark small { font-size: 14px; margin-left: 6px; }
+  .party-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 720px; gap: 40px 30px; }
 }
-
-/* Small gold flourish below the countdown */
-.countdown-band .countdown-display::after {
-  content: "";
-  display: block;
-  width: 84px;
-  height: 3px;
-  margin: 24px auto 0;
-  border-radius: 3px;
-  background: var(--gold-shine);
-}
-
-/* Supporting action beneath the main countdown */
-.countdown-band > .text-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-
-  min-height: 46px;
-  margin: 0;
-  padding: 12px 24px;
-
-  font-family: var(--font-body, "Manrope", Arial, sans-serif);
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.5;
-  text-align: center;
-  text-decoration: none;
-
-  color: #263e50;
-  background: rgba(255, 253, 245, 0.85);
-  border: 1px solid #aa8738;
-  border-radius: 8px;
-
-  box-shadow: 0 4px 12px rgba(38, 62, 80, 0.07);
-}
-
-.countdown-band > .text-link:hover {
-  background: #fffaf0;
-}
-
 @media (max-width: 760px) {
-  .countdown-band {
-    padding: 38px 20px;
-    gap: 22px;
-  }
+  html { scroll-padding-top: 155px; }
+  .site-header { display: flex; flex-direction: column; gap: 0; padding: 9px 12px; }
+  .header-mark { order: -1; font-size: 27px; margin-bottom: 3px; }
+  .header-mark small { font-size: 16px; }
+  .site-header nav { gap: 22px; min-height: 34px; justify-content: center; max-width: 100%; }
+  .site-header nav a { min-height: 34px; font-size: 10px; }
+  .site-header .nav-rsvp { padding: 2px 16px; min-height: 30px; }
+  .section-wrap { padding: 60px 24px; }
+  .page-heading { padding: 40px 20px; }
+  .hero { height: 680px; min-height: 620px; max-height: 850px; padding: 85px 18px; }
+  .hero-photo { object-position: 49% 50%; }
+  .hero-announcement { font-size: 18px; letter-spacing: 1px; }
+  .hero h1 { font-size: clamp(42px, 8.7vw, 62px); letter-spacing: -1.5px; }
+  .hero-date { font-size: 14px; letter-spacing: 3px; }
+  .hero-bottom { bottom: 24px; font-size: 9px; letter-spacing: 2px; }
+  .story-layout, .travel-layout { grid-template-columns: 1fr; gap: 35px; }
+  .couple-photo { max-width: 480px; margin: auto; }
+  .story-copy { text-align: center; }
+  .story-copy p { font-size: 16px; }
+  .section-heading { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .day-timeline { grid-template-columns: 1fr; margin: 8px 0 36px; }
+  .day-timeline li { display: block; text-align: left; padding: 0 0 30px 42px; }
+  .day-timeline li:last-child { padding-bottom: 0; }
+  .day-timeline li::after { top: 15px; left: 9px; width: 2px; height: 100%; }
+  .timeline-dot { position: absolute; left: 1px; top: 6px; }
+  .day-timeline h3 { margin: 6px 0 0; font-size: 25px; }
+  .day-timeline p { margin: 7px 0 0; font-size: 14px; }
+  .event-grid { grid-template-columns: 1fr; gap: 28px; }
+  .event-content { padding: 26px 22px; }
+  .event-content h3 { min-height: 0; }
+  .venue-schedule { min-height: 0; margin-top: 0; padding: 20px; gap: 20px; }
+  .party-section > .section-wrap { padding-left: 16px; padding-right: 16px; }
+  .party-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: none; gap: 30px 14px; }
+  .party-card { padding: 8px 4px 14px; }
+  .party-card h3 { margin: 16px 0 8px; font-size: clamp(19px, 5vw, 25px); line-height: 1.15; overflow-wrap: anywhere; }
+  .party-card .party-role { font-size: 10px; letter-spacing: .5px; }
+  .party-card-honor .party-role { padding: 6px 8px; }
+  .party-card p:not(.party-role) { font-size: 12px; line-height: 1.6; }
+  .party-grid + .party-heading { margin: 58px auto 32px; padding-top: 32px; }
+  .rsvp { padding: 35px 18px; }
+  .rsvp-inner { padding: 50px 22px; }
+  footer { flex-direction: column; gap: 10px; padding: 30px 20px; text-align: center; }
 }
-/* Side-by-side countdown and calendar button */
-.countdown-band {
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 36px;
-}
-
-.countdown-band .countdown-display {
-  width: auto;
-  max-width: none;
-  min-width: 0;
-  margin: 0;
-  padding: 0 36px 0 0;
-  border: none;
-  position: relative;
-}
-
-/* Vertical gold divider */
-.countdown-band .countdown-display::after {
-  content: "";
-  position: absolute;
-  top: 10%;
-  right: 0;
-  width: 2px;
-  height: 80%;
-  margin: 0;
-  border-radius: 2px;
-  background: var(--gold-shine);
-}
-
-/* Squarer white button with a shiny gold outline */
-.countdown-band > .text-link {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex: 0 0 auto;
-  gap: 12px;
-
-  width: 154px;
-  min-height: 140px;
-  margin: 0;
-  padding: 20px 14px;
-
-  white-space: normal;
-  text-align: center;
-  font-family: var(--font-body, "Manrope", Arial, sans-serif);
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.5;
-  color: var(--ink);
-
-  border: 2px solid transparent;
-  border-radius: 16px;
-
-  background:
-    linear-gradient(#ffffff, #ffffff) padding-box,
-    var(--gold-shine) border-box;
-
-  box-shadow:
-    0 6px 18px rgba(38, 62, 80, 0.08),
-    0 1px 3px rgba(135, 104, 35, 0.12);
-}
-
-.countdown-band > .text-link span {
-  font-size: 23px;
-  line-height: 1;
-  color: #87641b;
-}
-
-.countdown-band > .text-link:hover {
-  background:
-    linear-gradient(#fffdf7, #fffdf7) padding-box,
-    var(--gold-shine) border-box;
-}
-
-.countdown-band > .text-link:focus-visible {
-  outline: 3px solid var(--ink);
-  outline-offset: 5px;
-}
-
-/* Keep the same layout compact on phones */
 @media (max-width: 600px) {
-  .countdown-band {
-    gap: 18px;
-    padding: 32px 16px;
-  }
-
-  .countdown-band .countdown-display {
-    flex: 1 1 auto;
-    padding-right: 18px;
-  }
-
-  .countdown-band .countdown-display strong {
-    font-size: clamp(48px, 12vw, 72px);
-  }
-
-  .countdown-band .countdown-display span {
-    max-width: 180px;
-    font-size: 12px;
-    letter-spacing: 1px;
-  }
-
-  .countdown-band > .text-link {
-    width: 116px;
-    min-height: 116px;
-    padding: 14px 10px;
-    border-radius: 13px;
-    font-size: 13px;
-  }
+  .countdown-band { gap: 18px; padding: 32px 16px; }
+  .countdown-display { flex: 1 1 auto; padding-right: 18px; }
+  .countdown-display strong { font-size: clamp(48px, 12vw, 72px); }
+  .countdown-display span { max-width: 180px; margin-left: auto; margin-right: auto; font-size: 12px; letter-spacing: 1px; }
+  .calendar-button { width: 124px; min-height: 144px; padding: 16px 10px; gap: 9px; border-radius: 16px; }
+  .calendar-button::before { border-radius: 10px; }
+  .calendar-icon { width: 40px; height: 40px; }
+  .calendar-label { font-size: 12px; }
+  .calendar-date { font-size: 9px; letter-spacing: .6px; }
 }
-/* Calendar keepsake button */
-.countdown-band > .calendar-button {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-
-  width: 174px;
-  min-height: 164px;
-  padding: 20px 14px;
-
-  border: 2px solid transparent;
-  border-radius: 20px;
-
-  background:
-    linear-gradient(#fff, #fff) padding-box,
-    var(--gold-shine) border-box;
-
-  box-shadow:
-    0 8px 20px rgba(38, 62, 80, 0.09),
-    0 2px 4px rgba(135, 104, 35, 0.08);
-
-  transition: transform 180ms ease, box-shadow 180ms ease;
-}
-
-/* Fine inner gold frame */
-.countdown-band > .calendar-button::before {
-  content: "";
-  position: absolute;
-  inset: 5px;
-  border: 1px solid rgba(190, 155, 55, 0.22);
-  border-radius: 14px;
-  pointer-events: none;
-}
-
-.countdown-band .calendar-icon {
-  display: block;
-  flex-shrink: 0;
-  width: 48px;
-  height: 48px;
-  color: #a47b20;
-}
-
-.countdown-band > .calendar-button .calendar-label {
-  font-family: var(--font-body, "Manrope", Arial, sans-serif);
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.4;
-  letter-spacing: 0;
-  color: var(--ink);
-}
-
-.countdown-band > .calendar-button .calendar-date {
-  font-family: var(--font-body, "Manrope", Arial, sans-serif);
-  font-size: 10px;
-  font-weight: 600;
-  line-height: 1.5;
-  letter-spacing: 1.2px;
-  color: #806019;
-}
-
-.countdown-band > .calendar-button:hover {
-  transform: translateY(-2px);
-
-  background:
-    linear-gradient(#fff, #fffdf8) padding-box,
-    var(--gold-shine) border-box;
-
-  box-shadow:
-    0 12px 24px rgba(38, 62, 80, 0.12),
-    0 3px 6px rgba(135, 104, 35, 0.1);
-}
-
-.countdown-band > .calendar-button:active {
-  transform: translateY(0);
-}
-
-@media (max-width: 600px) {
-  .countdown-band > .calendar-button {
-    width: 124px;
-    min-height: 144px;
-    padding: 16px 10px;
-    gap: 9px;
-    border-radius: 16px;
-  }
-
-  .countdown-band > .calendar-button::before {
-    border-radius: 10px;
-  }
-
-  .countdown-band .calendar-icon {
-    width: 40px;
-    height: 40px;
-  }
-
-  .countdown-band > .calendar-button .calendar-label {
-    font-size: 12px;
-  }
-
-  .countdown-band > .calendar-button .calendar-date {
-    font-size: 9px;
-    letter-spacing: 0.6px;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .countdown-band > .calendar-button {
-    transition: none;
-  }
-
-  .countdown-band > .calendar-button:hover {
-    transform: none;
-  }
-}
-/* Modern sky-blue schedule panels with metallic gold borders */
-#celebration .venue-schedule {
-  gap: 22px;
-  padding: 24px;
-
-  border: 2px solid transparent;
-  border-radius: 14px;
-
-  background:
-    linear-gradient(135deg, #f2f8fc 0%, #dceaf4 60%, #cbdfea 100%)
-      padding-box,
-    var(--gold-shine) border-box;
-
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.9),
-    0 5px 14px rgba(38, 62, 80, 0.06);
-}
-
-/* Clear labels above each time */
-#celebration .venue-schedule dt {
-  margin: 0 0 14px;
-
-  font-family: var(--font-body, "Manrope", Arial, sans-serif);
-  font-size: 11px;
-  font-weight: 700;
-  line-height: 1.5;
-  letter-spacing: 1.3px;
-  text-transform: uppercase;
-  color: #40596b;
-}
-
-/* Match the timeline's clean, modern number font */
-#celebration .venue-schedule dd {
-  margin: 0;
-
-  font-family: var(--font-body, "Manrope", Arial, sans-serif);
-  font-size: clamp(25px, 2.4vw, 32px);
-  font-weight: 600;
-  font-variant-numeric: lining-nums tabular-nums;
-  line-height: 1.25;
-  letter-spacing: 0;
-  color: #263e50;
-}
-
-#celebration .venue-schedule dd > time {
-  display: block;
-  white-space: nowrap;
-}
-
-/* Keep PM proportional to the time */
-#celebration .venue-schedule time span {
-  margin-left: 2px;
-  font-family: inherit;
-  font-size: 0.65em;
-  font-weight: 600;
-  letter-spacing: 0;
-}
-
-/* Reception end time */
-#celebration .venue-schedule .venue-end-time {
-  display: block;
-  margin: 12px 0 0;
-
-  font-family: var(--font-body, "Manrope", Arial, sans-serif);
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1.5;
-  color: #40596b;
-}
-
-@media (max-width: 600px) {
-  #celebration .venue-schedule {
-    padding: 20px;
-    gap: 20px;
-  }
-}
-/* Wedding party: two across on phones */
-@media (max-width: 600px) {
-  #wedding-party > .section-wrap {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  #wedding-party .party-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    width: 100%;
-    max-width: none;
-    gap: 30px 16px;
-  }
-
-  #wedding-party .party-grid > .party-card {
-    width: 100%;
-    min-width: 0;
-    max-width: none;
-    padding: 8px 4px 14px;
-  }
-
-  #wedding-party .party-portrait,
-  #wedding-party img.party-portrait {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 4 / 5;
-  }
-
-  #wedding-party .party-card h3 {
-    margin: 16px 0 8px;
-    font-size: clamp(19px, 5vw, 25px);
-    line-height: 1.15;
-    overflow-wrap: anywhere;
-  }
-
-  #wedding-party .party-card h5 {
-    font-size: 10px;
-    letter-spacing: 0.6px;
-  }
-
-  #wedding-party .party-card:first-child h5 {
-    padding: 6px 8px;
-  }
-
-  #wedding-party .party-card p {
-    font-size: 12px;
-    line-height: 1.6;
-  }
-}
-/* Force two wedding party members per row on phones */
-@media screen and (max-width: 760px) {
-  #wedding-party > .section-wrap {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  #wedding-party .section-wrap .party-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    width: 100% !important;
-    max-width: none !important;
-    gap: 30px 14px !important;
-    margin: 0 auto;
-  }
-
-  #wedding-party .section-wrap .party-grid > .party-card {
-    grid-column: auto !important;
-    width: 100% !important;
-    min-width: 0;
-    max-width: none !important;
-    padding: 8px 4px 14px;
-  }
-
-  #wedding-party .party-portrait,
-  #wedding-party img.party-portrait {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 4 / 5;
-  }
-
-  #wedding-party .party-card h3 {
-    margin: 16px 0 8px;
-    font-size: clamp(19px, 5vw, 25px);
-    line-height: 1.15;
-    overflow-wrap: anywhere;
-  }
-
-  #wedding-party .party-card h5 {
-    font-size: 10px;
-    letter-spacing: 0.5px;
-  }
-
-  #wedding-party .party-card:first-child h5 {
-    padding: 6px 8px;
-  }
-
-  #wedding-party .party-card p {
-    font-size: 12px;
-    line-height: 1.6;
-  }
+  html { scroll-behavior: auto; }
+  .calendar-button { transition: none; }
+  .calendar-button:hover { transform: none; }
 }

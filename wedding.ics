@@ -1,15 +1,17 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Taylor and Tristan//Wedding Save the Date//EN
+PRODID:-//Taylor and Tristan//Wedding//EN
 CALSCALE:GREGORIAN
 BEGIN:VEVENT
 UID:taylor-tristan-wedding-20270724@wedding.invalid
-DTSTAMP:20261006T170000Z
+DTSTAMP:20261006T235700Z
 DTSTART;VALUE=DATE:20270724
 DTEND;VALUE=DATE:20270725
 SUMMARY:Taylor & Tristan's Wedding
-DESCRIPTION:Save the date! The Ceremony: 1 pm at Holy Name Church in Ebensburg, PA. The Reception: 4 pm at The Willow in Johnstown, PA.
-STATUS:TENTATIVE
+LOCATION:Ebensburg and Johnstown\, Pennsylvania
+DESCRIPTION:Ceremony: 1 PM at Holy Name Catholic Church\, 500 N Julian St\,
+ Ebensburg\, PA 15931.\nReception: The Willow\, 650 Airport Rd\, Johnstown\
+ ,PA 15904. Cocktail hour: 4 PM. Reception: 5 PM to 10 PM.
 TRANSP:TRANSPARENT
 END:VEVENT
 END:VCALENDAR

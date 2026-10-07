@@ -1,342 +1,152 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <script>(() => {  /* Prevent the browser from restoring an old scroll position. */  if ("scrollRestoration" in history) {
-      history.scrollRestoration = "manual";
-    }
-
-    /* Remove an RSVP anchor left over from a previous visit. */
-    if (window.location.hash.toLowerCase() === "#rsvp") {
-      history.replaceState(
-        history.state,
-        "",
-        window.location.pathname + window.location.search
-      );
-    }
-
-    /* Start at the top when no other section was requested. */
-    if (!window.location.hash) {
-      document.addEventListener("DOMContentLoaded", () => {
-        /* Respect a section link clicked while the page was loading. */
-        if (!window.location.hash) {
-          window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: "instant"
-          });
-        }
-      }, { once: true });
-    }
-  })();
-</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap"  rel="stylesheet">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Taylor &amp; Tristan • July 24, 2027</title>
-  <meta name="description" content="Join us in celebrating Taylor and Tristan on July 24, 2027. Wedding details, travel information, and RSVP updates.">
-  <meta name="theme-color" content="#b2cada">
-  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./styles.css?v=15">
-  <script src="./script.js?v=3" defer></script>
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Welcome • Taylor &amp; Tristan • July 24, 2027
+  </title>
+  <meta content="Welcome for Taylor and Tristan's wedding on July 24, 2027." name="description"/>
+  <meta content="#b2cada" name="theme-color"/>
+  <link href="./favicon.svg" rel="icon" type="image/svg+xml"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="./styles.css?v=17" rel="stylesheet"/>
+  <script defer="" src="./script.js?v=17">
+  </script>
+ </head>
+ <body>
+  <a class="skip-link" href="#main">
+   Skip to content
+  </a>
   <header class="site-header">
-    <nav class="nav-left" aria-label="Wedding navigation"><a href="#story">Our Story</a><a href="#celebration">The Day</a><a href="#wedding-party">Wedding Party</a></nav>
-    <a class="header-mark" href="#home" aria-label="Taylor and Tristan, home">T<span>&amp;</span>T <small>07.24.27</small></a>
-    <nav class="nav-right" aria-label="Guest information"><a href="#travel">Travel</a><a href="#registry">Registry</a><a class="nav-rsvp" href="#rsvp">RSVP</a></nav>
+   <nav aria-label="Wedding navigation" class="nav-left">
+    <a href="./index.html#story">
+     Our Story
+    </a>
+    <a href="./the-day.html">
+     The Day
+    </a>
+    <a href="./wedding-party.html">
+     Wedding Party
+    </a>
+   </nav>
+   <a aria-label="Taylor and Tristan, home" class="header-mark" href="./index.html">
+    T
+    <span>
+     &amp;
+    </span>
+    T
+    <small>
+     07.24.27
+    </small>
+   </a>
+   <nav aria-label="Guest information" class="nav-right">
+    <a href="./travel.html">
+     Travel
+    </a>
+    <a href="./registry.html">
+     Registry
+    </a>
+    <a class="nav-rsvp" href="./rsvp.html">
+     RSVP
+    </a>
+   </nav>
   </header>
   <main id="main">
-    <section class="hero" id="home" aria-labelledby="hero-title">
-      <img class="hero-photo" src="./assets/couple.jpg" alt="A couple sharing a joyful moment together" width="691" height="558" fetchpriority="high">
-      <div class="hero-shade" aria-hidden="true"></div>
-      <div class="hero-content">
-        <p class="hero-announcement">CELEBRATING THE MARRIAGE OF</p>
-        <h1 id="hero-title">Taylor <em>&amp;</em> Tristan</h1>
-        <p class="hero-date">JULY 24, 2027</p>
-        <p class="hero-place">Ebensburg, Pennsylvania</p>
-      </div>
-      <a class="hero-bottom" href="#countdown">DETAILS BELOW <span aria-hidden="true">↓</span></a>
-    </section>
-    <section class="countdown-band" id="countdown" aria-label="Wedding countdown">
-      <div class="countdown-display"><strong id="days-left">07.24.27</strong><span id="countdown-label">Our wedding day</span></div>
-<a class="text-link calendar-button" href="./wedding.ics" download>
-  <!-- Decorative calendar icon showing our wedding date -->
-  <svg
-    class="calendar-icon"
-    viewBox="0 0 48 48"
-    width="48"
-    height="48"
-    fill="none"
-    aria-hidden="true"
-    focusable="false"
-  >
-    <rect
-      x="7" y="10" width="34" height="32" rx="6"
-      fill="#fffaf0"
-      stroke="currentColor"
-      stroke-width="2"
-    />
-    <path
-      d="M7 20H41M16 6V14M32 6V14"
-      stroke="currentColor"
-      stroke-width="2.5"
-      stroke-linecap="round"
-    />
-    <text
-      x="24" y="35"
-      text-anchor="middle"
-      fill="currentColor"
-      font-family="Arial, sans-serif"
-      font-size="15"
-      font-weight="700"
-    >24</text>
-  </svg>
-
-  <span class="calendar-label">Add to calendar</span>
-  <span class="calendar-date">JULY 24, 2027</span>
-</a>    </section>
-
-<section id="story" class="intro section-wrap" aria-labelledby="intro-title">
-  <div class="story-layout">
-    <img
-      class="couple-photo"
-      src="./assets/couple_standing.jpg"
-      alt="Taylor and Tristan together"
-      loading="lazy"
-    >
-
-    <div class="story-copy">
-      <h2 id="intro-title">Our Story</h2>
-
-      <p>Write our story here</p>
-
+   <section aria-labelledby="hero-title" class="hero" id="home">
+    <img alt="A couple sharing a joyful moment together" class="hero-photo" fetchpriority="high" height="558" src="./assets/couple.jpg" width="691"/>
+    <div aria-hidden="true" class="hero-shade">
+    </div>
+    <div class="hero-content">
+     <p class="hero-announcement">
+      CELEBRATING THE MARRIAGE OF
+     </p>
+     <h1 id="hero-title">
+      Taylor
+      <em>
+       &amp;
+      </em>
+      Tristan
+     </h1>
+     <p class="hero-date">
+      JULY 24, 2027
+     </p>
+     <p class="hero-place">
+      Ebensburg, Pennsylvania
+     </p>
+    </div>
+    <a class="hero-bottom" href="#countdown">
+     DETAILS BELOW
+     <span aria-hidden="true">
+      ↓
+     </span>
+    </a>
+   </section>
+   <section aria-label="Wedding countdown" class="countdown-band" id="countdown">
+    <div class="countdown-display">
+     <strong id="days-left">
+      07.24.27
+     </strong>
+     <span id="countdown-label">
+      Our wedding day
+     </span>
+    </div>
+    <a class="text-link calendar-button" download="" href="./wedding.ics">
+     <!-- Decorative calendar icon showing our wedding date -->
+     <svg aria-hidden="true" class="calendar-icon" fill="none" focusable="false" height="48" viewbox="0 0 48 48" width="48">
+      <rect fill="#fffaf0" height="32" rx="6" stroke="currentColor" stroke-width="2" width="34" x="7" y="10">
+      </rect>
+      <path d="M7 20H41M16 6V14M32 6V14" stroke="currentColor" stroke-linecap="round" stroke-width="2.5">
+      </path>
+      <text fill="currentColor" font-family="Arial, sans-serif" font-size="15" font-weight="700" text-anchor="middle" x="24" y="35">
+       24
+      </text>
+     </svg>
+     <span class="calendar-label">
+      Add to calendar
+     </span>
+     <span class="calendar-date">
+      JULY 24, 2027
+     </span>
+    </a>
+   </section>
+   <section aria-labelledby="intro-title" class="intro section-wrap" id="story">
+    <div class="story-layout">
+     <img alt="Taylor and Tristan together" class="couple-photo" loading="lazy" src="./assets/couple_standing.jpg"/>
+     <div class="story-copy">
+      <h2 id="intro-title">
+       Our Story
+      </h2>
+      <p>
+       Write our story here
+      </p>
       <div class="signature">
-        With love, Taylor &amp; Tristan
+       With love, Taylor &amp; Tristan
       </div>
+     </div>
     </div>
-  </div>
-</section>
-
-<section
-  class="celebration section-wrap"
-  id="celebration"
-  aria-labelledby="celebration-title"
->
-  <div class="section-heading">
-    <h2 id="celebration-title" class="eyebrow">Timeline</h2>
-
-    <p class="timeline-date">
-      <time datetime="2027-07-24">Saturday, July 24, 2027</time>
-    </p>
-  </div>
-<!-- Wedding-day timeline: edit the times and labels here. -->
-<ol class="day-timeline" aria-label="Wedding day schedule">
-  <li>
-    <time datetime="2027-07-24T13:00:00-04:00">1:00 PM</time>
-    <span class="timeline-dot" aria-hidden="true"></span>
-    <h3>The ceremony</h3>
-    <p>Holy Name Catholic Church</p>
-  </li>
-
-  <li>
-    <time datetime="2027-07-24T16:00:00-04:00">4:00 PM</time>
-    <span class="timeline-dot" aria-hidden="true"></span>
-    <h3>Cocktail hour</h3>
-    <p>The Willow</p>
-  </li>
-
-  <li>
-    <time datetime="2027-07-24T17:00:00-04:00">5:00 PM</time>
-    <span class="timeline-dot" aria-hidden="true"></span>
-    <h3>The reception</h3>
-    <p>Dinner &amp; celebration at The Willow</p>
-  </li>
-  <li>
-  <time datetime="2027-07-24T22:00:00-04:00">10:00 PM</time>
-  <span class="timeline-dot" aria-hidden="true"></span>
-  <h3>Reception Ends</h3>
-  <p>The night is over.</p>
-</li>
-</ol>
-<div class="event-grid">
-
-  <!-- CEREMONY VENUE -->
-  <article class="event-card">
-    <img
-      class="venue-photo"
-      src="./assets/holy-name.jpg"
-      alt="Holy Name Catholic Church in Ebensburg"
-      loading="lazy"
-    >
-
-    <div class="event-content">
-      <span class="card-number">The Ceremony</span>
-
-      <h3>Holy Name<br>Catholic Church</h3>
-
-      <address class="venue-location">
-        500 N Julian St<br>
-        Ebensburg, PA 15931
-      </address>
-
-      <dl class="venue-schedule">
-        <div>
-          <dt>Ceremony begins</dt>
-          <dd>
-            <time datetime="2027-07-24T13:00:00-04:00">
-              1:00 <span>PM</span>
-            </time>
-          </dd>
-        </div>
-      </dl>
-
-      <a
-        class="text-link venue-map"
-        href="https://www.google.com/maps/search/?api=1&amp;query=500+N+Julian+St+Ebensburg+PA+15931"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="View Holy Name Catholic Church on Google Maps"
-      >
-        View location
-        <span aria-hidden="true">↗</span>
-      </a>
-    </div>
-  </article>
-
-  <!-- RECEPTION VENUE -->
-  <article class="event-card">
-    <img
-      class="venue-photo"
-      src="./assets/the-willow.jpg"
-      alt="The Willow in Johnstown"
-      loading="lazy"
-    >
-
-    <div class="event-content">
-      <span class="card-number">The Reception</span>
-
-      <h3>The Willow</h3>
-
-      <address class="venue-location">
-        650 Airport Rd<br>
-        Johnstown, PA 15904
-      </address>
-
-      <dl class="venue-schedule">
-        <div>
-          <dt>Cocktail hour</dt>
-          <dd>
-            <time datetime="2027-07-24T16:00:00-04:00">
-              4:00 <span>PM</span>
-            </time>
-          </dd>
-        </div>
-
-        <div>
-          <dt>Reception</dt>
-          <dd>
-            <time datetime="2027-07-24T17:00:00-04:00">
-              5:00 <span>PM</span>
-            </time>
-
-            <small class="venue-end-time">
-              Until
-              <time datetime="2027-07-24T22:00:00-04:00">
-                10:00 PM
-              </time>
-            </small>
-          </dd>
-        </div>
-      </dl>
-
-      <a
-        class="text-link venue-map"
-        href="https://www.google.com/maps/search/?api=1&amp;query=650+Airport+Rd+Johnstown+PA+15904"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="View The Willow on Google Maps"
-      >
-        View location
-        <span aria-hidden="true">↗</span>
-      </a>
-    </div>
-  </article>
-
-</div>
-
-</section>
-
-    <section class="party-section" id="wedding-party" aria-labelledby="party-title"><div class="section-wrap">
-      <div class="party-heading"><p class="eyebrow">Wedding Party</p><h2 id="party-title">Bridesmaids</h2></div>
-      <div class="party-grid">
-        <!-- EDIT: Replace each title and coming-soon line with a wedding party member's name and role. Duplicate an article to add more people. Replace the party-portrait div with an img using class="party-portrait" and a descriptive alt to add their photo. -->
-        <article class="party-card"><div class="party-portrait" aria-hidden="true"><span>01</span></div><h3>Madison Ostinowsky</h3><h5>Maid of Honor</h5><p>Sister of the bride.</p></article>
-        <article class="party-card"><div class="party-portrait" aria-hidden="true"><span>02</span></div><h3>Caroline Semelsberger</h3><h5>Bridesmaid</h5><p>Cousin of the bride.</p></article>
-        <article class="party-card"><div class="party-portrait" aria-hidden="true"><span>03</span></div><h3>Faith McMullen</h3><h5>Bridesmaid</h5><p>Friend of the bride.</p></article>
-        <article class="party-card"><div class="party-portrait" aria-hidden="true"><span>04</span></div><h3>Brooke Semelsberger</h3><h5>Bridesmaid</h5><p>Cousin of the bride.</p></article>
-        <article class="party-card"><div class="party-portrait" aria-hidden="true"><span>05</span></div><h3>Alexa Semelsberger</h3><h5>Bridesmaid</h5><p>Cousin of the bride.</p></article>
-        <article class="party-card"><div class="party-portrait" aria-hidden="true"><span>06</span></div><h3>Olivia Czap</h3><h5>Bridesmaid</h5><p>Friend of the bride.</p></article>
-        <article class="party-card"><div class="party-portrait" aria-hidden="true"><span>07</span></div><h3>Alivia Yahner</h3><h5>Bridesmaid</h5><p>Cousin of the bride.</p></article>
-        <article class="party-card"><div class="party-portrait" aria-hidden="true"><span>08</span></div><h3>Alyssa Yahner</h3><h5>Bridesmaid</h5><p>Friend of the bride.</p></article>
-        <article class="party-card"><div class="party-portrait" aria-hidden="true"><span>09</span></div><h3>Lauren Bender</h3><h5>Bridesmaid</h5><p>Friend of the bride.</p></article>
-        <article class="party-card"><div class="party-portrait" aria-hidden="true"><span>10</span></div><h3>Julianna Crisfulla</h3><h5>Bridesmaid</h5><p>Friend of the bride.</p></article>
-
-      </div>
-      <div class="party-heading"><h2 id="groomsmen-title">Groomsmen</h2></div>
-      <div class="party-grid">
-          <article class="party-card"><div class="party-portrait" aria-hidden="true"><span>01</span></div><h3>Nolan Burk</h3><h5>Best Man</h5><p>Friend of the groom.</p></article>
-          <article class="party-card"><div class="party-portrait" aria-hidden="true"><span>02</span></div><h3>Andrew Ostinowsky</h3><h5>Groomsman</h5><p>Brother of the bride.</p></article>
-          <article class="party-card"><div class="party-portrait" aria-hidden="true"><span>03</span></div><h3>Logan McDannell</h3><h5>Groomsman</h5><p>Brother of the groom.</p></article>     
-          <article class="party-card"><div class="party-portrait" aria-hidden="true"><span>04</span></div><h3>Logan McDannell</h3><h5>Groomsman</h5><p>Brother of the groom.</p></article>     
-          <article class="party-card"><div class="party-portrait" aria-hidden="true"><span>05</span></div><h3>Logan McDannell</h3><h5>Groomsman</h5><p>Brother of the groom.</p></article>     
-          <article class="party-card"><div class="party-portrait" aria-hidden="true"><span>06</span></div><h3>Logan McDannell</h3><h5>Groomsman</h5><p>Brother of the groom.</p></article>     
-          <article class="party-card"><div class="party-portrait" aria-hidden="true"><span>07</span></div><h3>Logan McDannell</h3><h5>Groomsman</h5><p>Brother of the groom.</p></article>     
-          <article class="party-card"><div class="party-portrait" aria-hidden="true"><span>08</span></div><h3>Logan McDannell</h3><h5>Groomsman</h5><p>Brother of the groom.</p></article>     
-          <article class="party-card"><div class="party-portrait" aria-hidden="true"><span>09</span></div><h3>Logan McDannell</h3><h5>Groomsman</h5><p>Brother of the groom.</p></article>     
-          <article class="party-card"><div class="party-portrait" aria-hidden="true"><span>10</span></div><h3>Logan McDannell</h3><h5>Groomsman</h5><p>Brother of the groom.</p></article>     
-
-        
-        </div>
-    </div>
-  </section>
-
-    <section class="travel-band" id="travel" aria-labelledby="travel-title"><div class="section-wrap travel-layout">
-      <div><p class="eyebrow">Travel Information</p>
-      <div class="travel-details">
-        <article><h3>Where to stay</h3><h4>Holiday Inn Express</h4><p>1440 Scalp Ave<br>Johnstown, PA 15904</p></article>
-        <article><h3>Getting there</h3><h4>We reccomend ride share apps. Uber code here: </h4><p>There is ample parking at each venue. Holy Name Church has parking in front and to the side of the church. Enter The Willow and there will be a huge parking lot in front.</p></article>
-        <article><h3>While you're here</h3><!-- EDIT: favorite local restaurants, coffee shops, and activities. --><p>We'll add a few favorite local spots to help you make a weekend of it.</p></article>
-      </div>
-      </div>
-    </div></section>
-
-    <section class="faq section-wrap" id="questions" aria-labelledby="faq-title">
-      <div class="section-heading"><div><p class="eyebrow">Frequently Asked Questions</p><h2 id="faq-title"><em>FAQ</em></h2></div></div>
-      <!-- EDIT: Replace these answers with your confirmed plans and policies. -->
-      <details><summary>What should I wear?</summary><p>We'll share the dress code here once the details are finalized.</p></details>
-      <details><summary>Can I bring a guest?</summary><p>Please refer to the names on your invitation for who is included in your party.</p></details>
-      <details><summary>Are children invited?</summary><p>We'll share more information about this with our invitations.</p></details>
-      <details><summary>When should I RSVP?</summary><p>Our RSVP deadline and response form will be posted here when invitations are sent.</p></details>
-      <details><summary>What about dietary or accessibility needs?</summary><p>Please fill out the allergies section on your RSVP.</p></details>
-    </section>
-
-    <section class="registry section-wrap" id="registry" aria-labelledby="registry-title"><p class="eyebrow">Registry</p><h2 id="registry-title">Your presence is <em>our favorite gift.</em></h2><p>Celebrating with you means the world to us. For those who wish to give a gift, we'll share our registry details here.</p>
-      <!-- EDIT: To add a registry, replace the coming-soon line with the link below and insert its real URL. -->
-      <!-- <a class="button" href="YOUR_REGISTRY_URL" target="_blank" rel="noopener noreferrer">Visit our registry ↗</a> -->
-      <p class="status-pill">Registry details coming soon</p>
-    </section>
-
-    <section class="rsvp" id="rsvp" aria-labelledby="rsvp-title"><div class="rsvp-inner"><h2 id="rsvp-title"><em>RSVP</em></h2><p>We can't wait to celebrate with you on July 24, 2027.</p>
-      <!-- EDIT: When your form is ready, replace the status paragraph with the RSVP link below and paste the published responder URL. -->
-      <!-- <a class="button button-light" href="YOUR_RSVP_FORM_URL" target="_blank" rel="noopener noreferrer">RSVP now ↗</a> -->
-      <p class="rsvp-status">RSVPs will open soon</p>
-      <!-- EDIT: Add your RSVP deadline and contact email here when ready. -->
-      <p class="small">Please check back after invitations arrive.</p>
-    </div></section>
+   </section>
   </main>
-  <footer><a class="monogram" href="#home" aria-label="Back to top">T<span>&amp;</span>T</a><p>Taylor &amp; Tristan <span aria-hidden="true">·</span> July 24, 2027</p><p class="footer-note">Here's to forever.</p></footer>
-</body>
+  <footer>
+   <a aria-label="Taylor and Tristan, home" class="monogram" href="./index.html">
+    T
+    <span>
+     &amp;
+    </span>
+    T
+   </a>
+   <p>
+    Taylor &amp; Tristan
+    <span aria-hidden="true">
+     ·
+    </span>
+    July 24, 2027
+   </p>
+   <p class="footer-note">
+    Here's to forever.
+   </p>
+  </footer>
+ </body>
 </html>
