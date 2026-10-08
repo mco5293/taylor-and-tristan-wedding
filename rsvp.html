@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
+  <!-- EDITING GUIDE: Search for EDIT: in this file. Upload photos into assets/ using exact, case-sensitive filenames. Keep ./ prefixes for GitHub Pages. See README.md for the complete checklist. -->
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
   <title>
@@ -12,24 +13,16 @@
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-  <link href="./styles.css?v=17" rel="stylesheet"/>
+  <link href="./styles.css?v=22" rel="stylesheet"/>
+  <script defer="" src="./script.js?v=22">
+  </script>
  </head>
  <body>
   <a class="skip-link" href="#main">
    Skip to content
   </a>
+  <!-- SHARED NAVIGATION: This header appears in every HTML file. If you change a link or label, update all eight pages. -->
   <header class="site-header">
-   <nav aria-label="Wedding navigation" class="nav-left">
-    <a href="./index.html#story">
-     Our Story
-    </a>
-    <a href="./the-day.html">
-     The Day
-    </a>
-    <a href="./wedding-party.html">
-     Wedding Party
-    </a>
-   </nav>
    <a aria-label="Taylor and Tristan, home" class="header-mark" href="./index.html">
     T
     <span>
@@ -40,41 +33,72 @@
      07.24.27
     </small>
    </a>
-   <nav aria-label="Guest information" class="nav-right">
+   <nav aria-label="Wedding navigation" class="nav-pages">
+    <a href="./index.html#story">
+     Our Story
+    </a>
+    <a href="./the-day.html">
+     The Day
+    </a>
+    <a href="./wedding-party.html">
+     Wedding Party
+    </a>
+    <a href="./gallery.html">
+     Gallery
+    </a>
     <a href="./travel.html">
      Travel
     </a>
     <a href="./registry.html">
      Registry
     </a>
-    <a aria-current="page" class="nav-rsvp" href="./rsvp.html">
-     RSVP
+    <a href="./faq.html">
+     FAQ
     </a>
    </nav>
+   <a aria-current="page" class="nav-rsvp header-rsvp" href="./rsvp.html">
+    RSVP
+   </a>
   </header>
   <main id="main">
-   <section aria-labelledby="rsvp-title" class="rsvp" id="rsvp">
-    <div class="rsvp-inner">
-     <h1 id="rsvp-title">
-      <em>
-       RSVP
-      </em>
-     </h1>
-     <p>
-      We can't wait to celebrate with you on July 24, 2027.
-     </p>
-     <!-- EDIT: When your form is ready, replace the status paragraph with the RSVP link below and paste the published responder URL. -->
-     <!-- <a class="button button-light" href="YOUR_RSVP_FORM_URL" target="_blank" rel="noopener noreferrer">RSVP now ↗</a> -->
-     <p class="rsvp-status">
-      RSVPs will open soon
-     </p>
-     <!-- EDIT: Add your RSVP deadline and contact email here when ready. -->
-     <p class="small">
-      Please check back after invitations arrive.
-     </p>
-    </div>
-   </section>
+   <div class="page-heading">
+    <h1>
+     RSVP
+    </h1>
+    <p>
+     We saved you a place.
+    </p>
+   </div>
+   <div class="floral-scene floral-scene-forward">
+    <section aria-labelledby="rsvp-title" class="rsvp" id="rsvp">
+     <div class="rsvp-inner">
+      <h2 id="rsvp-title">
+       <em>
+        RSVP
+       </em>
+      </h2>
+      <p>
+       We can't wait to celebrate with you on July 24, 2027.
+      </p>
+      <!-- EDIT: When your form is ready, replace the status paragraph with the RSVP link below and paste the published responder URL. -->
+      <!-- <a class="button button-light" href="YOUR_RSVP_FORM_URL" target="_blank" rel="noopener noreferrer">RSVP now ↗</a> -->
+      <p class="rsvp-status">
+       RSVPs will open soon
+      </p>
+      <!-- EDIT: Add your RSVP deadline and contact email here when ready. -->
+      <p class="small">
+       Please check back after invitations arrive.
+      </p>
+      <!-- EDIT: EXTRA COUPLE PHOTO. Replace src with ./assets/couple-registry.jpg or ./assets/couple-rsvp.jpg, upload that photo, and edit alt. Remove the whole figure if you do not want a photo here. -->
+      <figure class="couple-keepsake photo-frame">
+       <img alt="A favorite photo of Taylor and Tristan coming soon" height="1100" loading="lazy" src="./assets/couple-placeholder.svg" width="900"/>
+      </figure>
+     </div>
+    </section>
+   </div>
   </main>
+  <div aria-hidden="true" class="floral-footer">
+  </div>
   <footer>
    <a aria-label="Taylor and Tristan, home" class="monogram" href="./index.html">
     T

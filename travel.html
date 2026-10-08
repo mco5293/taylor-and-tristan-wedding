@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
+  <!-- EDITING GUIDE: Search for EDIT: in this file. Upload photos into assets/ using exact, case-sensitive filenames. Keep ./ prefixes for GitHub Pages. See README.md for the complete checklist. -->
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
   <title>
@@ -12,26 +13,16 @@
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-  <link href="./styles.css?v=17" rel="stylesheet"/>
-  <script defer="" src="./script.js?v=17">
+  <link href="./styles.css?v=22" rel="stylesheet"/>
+  <script defer="" src="./script.js?v=22">
   </script>
  </head>
  <body>
   <a class="skip-link" href="#main">
    Skip to content
   </a>
+  <!-- SHARED NAVIGATION: This header appears in every HTML file. If you change a link or label, update all eight pages. -->
   <header class="site-header">
-   <nav aria-label="Wedding navigation" class="nav-left">
-    <a href="./index.html#story">
-     Our Story
-    </a>
-    <a href="./the-day.html">
-     The Day
-    </a>
-    <a href="./wedding-party.html">
-     Wedding Party
-    </a>
-   </nav>
    <a aria-label="Taylor and Tristan, home" class="header-mark" href="./index.html">
     T
     <span>
@@ -42,123 +33,167 @@
      07.24.27
     </small>
    </a>
-   <nav aria-label="Guest information" class="nav-right">
+   <nav aria-label="Wedding navigation" class="nav-pages">
+    <a href="./index.html#story">
+     Our Story
+    </a>
+    <a href="./the-day.html">
+     The Day
+    </a>
+    <a href="./wedding-party.html">
+     Wedding Party
+    </a>
+    <a href="./gallery.html">
+     Gallery
+    </a>
     <a aria-current="page" href="./travel.html">
      Travel
     </a>
     <a href="./registry.html">
      Registry
     </a>
-    <a class="nav-rsvp" href="./rsvp.html">
-     RSVP
+    <a href="./faq.html">
+     FAQ
     </a>
    </nav>
+   <a class="nav-rsvp header-rsvp" href="./rsvp.html">
+    RSVP
+   </a>
   </header>
   <main id="main">
-   <section aria-labelledby="travel-title" class="travel-band" id="travel">
-    <div class="section-wrap travel-layout">
-     <div>
-      <h1 id="travel-title">
-       Travel Information
-      </h1>
+   <div class="page-heading">
+    <h1>
+     Make a weekend of it.
+    </h1>
+    <p>
+     Stay a little longer. Celebrate a little more.
+    </p>
+   </div>
+   <div class="floral-scene floral-scene-forward">
+    <section aria-labelledby="stay-title" class="travel-guide section-wrap">
+     <div class="travel-intro">
+      <p class="eyebrow">
+       Where to stay
+      </p>
+      <h2 id="stay-title">
+       Your home
+       <em>
+        for the weekend.
+       </em>
+      </h2>
       <p>
-       Everything you need to plan your visit.
+       A place to settle in before the celebration.
       </p>
      </div>
-     <div class="travel-details">
-      <article>
+     <article class="hotel-card">
+      <div class="hotel-gallery">
+       <!-- HOTEL PHOTOS: Replace each placeholder src below with your own image.
+           Example: src="./assets/hotel-exterior.jpg". Keep the class names.
+           Update alt to describe the real photo. Images crop automatically. -->
+       <figure class="hotel-photo-main">
+        <img alt="Placeholder for a hotel exterior photo" decoding="async" loading="lazy" src="./assets/hotel-placeholder.svg"/>
+        <figcaption>
+         Hotel exterior
+        </figcaption>
+       </figure>
+       <figure>
+        <img alt="Placeholder for a hotel room photo" decoding="async" loading="lazy" src="./assets/hotel-placeholder.svg"/>
+        <figcaption>
+         Guest rooms
+        </figcaption>
+       </figure>
+       <figure>
+        <img alt="Placeholder for a hotel lobby photo" decoding="async" loading="lazy" src="./assets/hotel-placeholder.svg"/>
+        <figcaption>
+         Lobby &amp; amenities
+        </figcaption>
+       </figure>
+      </div>
+      <div class="hotel-copy">
+       <p class="eyebrow">
+        Johnstown, Pennsylvania
+       </p>
        <h3>
-        Where to stay
-       </h3>
-       <h4>
         Holiday Inn Express
-       </h4>
-       <p>
+       </h3>
+       <address>
         1440 Scalp Ave
         <br/>
         Johnstown, PA 15904
-       </p>
-      </article>
-      <article>
-       <h3>
-        Getting there
-       </h3>
-       <h4>
-        We recommend ride share apps.
-       </h4>
-       <!-- EDIT: Add your Uber code here when it is available. -->
+       </address>
        <p>
-        There is ample parking at each venue. Holy Name Church has parking in front and to the side of the church. Enter The Willow and there will be a huge parking lot in front.
+        Planning to stay overnight? Here is our hotel information to help you plan your visit.
        </p>
+       <!-- EDIT: Add your room block, booking deadline, and real booking link here. -->
+       <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Holiday+Inn+Express+1440+Scalp+Ave+Johnstown+PA+15904" rel="noopener noreferrer" target="_blank">
+        View hotel location ↗
+       </a>
+      </div>
+     </article>
+     <div class="travel-card-grid">
+      <article class="travel-info-card">
+       <p class="eyebrow">
+        01 / Getting there
+       </p>
+       <h2>
+        A smooth arrival.
+       </h2>
+       <p>
+        We recommend ride share apps.
+       </p>
+       <!-- EDIT: Add your Uber code here when it is available. -->
+       <ul class="travel-list">
+        <li>
+         <strong>
+          Ceremony parking
+         </strong>
+         <span>
+          Holy Name Church has parking in front and to the side of the church.
+         </span>
+        </li>
+        <li>
+         <strong>
+          Reception parking
+         </strong>
+         <span>
+          The Willow has a large parking lot in front of the venue.
+         </span>
+        </li>
+       </ul>
+       <a class="travel-link" href="./the-day.html">
+        See venues &amp; directions
+        <span aria-hidden="true">
+         ↗
+        </span>
+       </a>
       </article>
-      <article>
-       <h3>
-        While you're here
-       </h3>
-       <!-- EDIT: favorite local restaurants, coffee shops, and activities. -->
+      <article class="travel-info-card">
+       <p class="eyebrow">
+        02 / While you're here
+       </p>
+       <h2>
+        A little exploring.
+       </h2>
        <p>
         We'll add a few favorite local spots to help you make a weekend of it.
        </p>
+       <!-- EDIT: Add your favorite restaurants, coffee shops, and activities here. -->
+       <div class="local-note">
+        Our local favorites are coming soon.
+       </div>
+       <a class="travel-link" href="./faq.html">
+        Have a question? Visit our FAQ
+        <span aria-hidden="true">
+         ↗
+        </span>
+       </a>
       </article>
      </div>
-    </div>
-   </section>
-   <section aria-labelledby="faq-title" class="faq section-wrap" id="questions">
-    <div class="section-heading">
-     <div>
-      <p class="eyebrow">
-       Frequently Asked Questions
-      </p>
-      <h2 id="faq-title">
-       <em>
-        FAQ
-       </em>
-      </h2>
-     </div>
-    </div>
-    <!-- EDIT: Replace these answers with your confirmed plans and policies. -->
-    <details>
-     <summary>
-      What should I wear?
-     </summary>
-     <p>
-      We'll share the dress code here once the details are finalized.
-     </p>
-    </details>
-    <details>
-     <summary>
-      Can I bring a guest?
-     </summary>
-     <p>
-      Please refer to the names on your invitation for who is included in your party.
-     </p>
-    </details>
-    <details>
-     <summary>
-      Are children invited?
-     </summary>
-     <p>
-      We'll share more information about this with our invitations.
-     </p>
-    </details>
-    <details>
-     <summary>
-      When should I RSVP?
-     </summary>
-     <p>
-      Our RSVP deadline and response form will be posted here when invitations are sent.
-     </p>
-    </details>
-    <details>
-     <summary>
-      What about dietary or accessibility needs?
-     </summary>
-     <p>
-      Please fill out the allergies section on your RSVP.
-     </p>
-    </details>
-   </section>
+    </section>
+   </div>
   </main>
+  <div aria-hidden="true" class="floral-footer">
+  </div>
   <footer>
    <a aria-label="Taylor and Tristan, home" class="monogram" href="./index.html">
     T

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
+  <!-- EDITING GUIDE: Search for EDIT: in this file. Upload photos into assets/ using exact, case-sensitive filenames. Keep ./ prefixes for GitHub Pages. See README.md for the complete checklist. -->
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
   <title>
@@ -12,26 +13,16 @@
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-  <link href="./styles.css?v=17" rel="stylesheet"/>
-  <script defer="" src="./script.js?v=17">
+  <link href="./styles.css?v=22" rel="stylesheet"/>
+  <script defer="" src="./script.js?v=23">
   </script>
  </head>
- <body>
+ <body class="home-page">
   <a class="skip-link" href="#main">
    Skip to content
   </a>
+  <!-- SHARED NAVIGATION: This header appears in every HTML file. If you change a link or label, update all eight pages. -->
   <header class="site-header">
-   <nav aria-label="Wedding navigation" class="nav-left">
-    <a href="./index.html#story">
-     Our Story
-    </a>
-    <a href="./the-day.html">
-     The Day
-    </a>
-    <a href="./wedding-party.html">
-     Wedding Party
-    </a>
-   </nav>
    <a aria-label="Taylor and Tristan, home" class="header-mark" href="./index.html">
     T
     <span>
@@ -42,21 +33,37 @@
      07.24.27
     </small>
    </a>
-   <nav aria-label="Guest information" class="nav-right">
+   <nav aria-label="Wedding navigation" class="nav-pages">
+    <a href="./index.html#story">
+     Our Story
+    </a>
+    <a href="./the-day.html">
+     The Day
+    </a>
+    <a href="./wedding-party.html">
+     Wedding Party
+    </a>
+    <a href="./gallery.html">
+     Gallery
+    </a>
     <a href="./travel.html">
      Travel
     </a>
     <a href="./registry.html">
      Registry
     </a>
-    <a class="nav-rsvp" href="./rsvp.html">
-     RSVP
+    <a href="./faq.html">
+     FAQ
     </a>
    </nav>
+   <a class="nav-rsvp header-rsvp" href="./rsvp.html">
+    RSVP
+   </a>
   </header>
   <main id="main">
    <section aria-labelledby="hero-title" class="hero" id="home">
-    <img alt="A couple sharing a joyful moment together" class="hero-photo" fetchpriority="high" height="558" src="./assets/couple.jpg" width="691"/>
+    <!-- EDIT: EXISTING PHOTO. Keep ./assets/couple.jpg in your repository, or update src to your own filename. Edit alt to describe the real photo. -->
+    <img alt="A couple sharing a joyful moment together" class="hero-photo" decoding="async" fetchpriority="high" height="558" src="./assets/couple.jpg" width="691"/>
     <div aria-hidden="true" class="hero-shade">
     </div>
     <div class="hero-content">
@@ -95,7 +102,7 @@
     </div>
     <a class="text-link calendar-button" download="" href="./wedding.ics">
      <!-- Decorative calendar icon showing our wedding date -->
-     <svg aria-hidden="true" class="calendar-icon" fill="none" focusable="false" height="48" viewbox="0 0 48 48" width="48">
+     <svg aria-hidden="true" class="calendar-icon" fill="none" focusable="false" height="48" viewBox="0 0 48 48" width="48">
       <rect fill="#fffaf0" height="32" rx="6" stroke="currentColor" stroke-width="2" width="34" x="7" y="10">
       </rect>
       <path d="M7 20H41M16 6V14M32 6V14" stroke="currentColor" stroke-linecap="round" stroke-width="2.5">
@@ -112,23 +119,161 @@
      </span>
     </a>
    </section>
-   <section aria-labelledby="intro-title" class="intro section-wrap" id="story">
-    <div class="story-layout">
-     <img alt="Taylor and Tristan together" class="couple-photo" loading="lazy" src="./assets/couple_standing.jpg"/>
-     <div class="story-copy">
-      <h2 id="intro-title">
-       Our Story
-      </h2>
-      <p>
-       Write our story here
-      </p>
-      <div class="signature">
-       With love, Taylor &amp; Tristan
+   <div class="floral-scene floral-scene-forward">
+<section
+  class="intro section-wrap"
+  id="story"
+  aria-labelledby="intro-title"
+>
+  <div class="our-story-heading">
+    <h2 id="intro-title">Our Story</h2>
+  </div>
+
+  <div class="story-perspectives">
+    <!-- EDIT: HER STORY. Replace this paragraph with Taylor's story.
+         You can add more <p> paragraphs inside this article. -->
+    <article class="story-side" aria-labelledby="her-story-title">
+      <p class="story-kicker">In her words</p>
+      <h3 id="her-story-title">Her Version</h3>
+
+      <p>Taylor’s side of the story is coming soon.</p>
+
+      <span class="story-signature">— Taylor</span>
+    </article>
+
+    <!-- EDIT: COUPLE PHOTO. Keep this photo in assets/, or change
+         src to your own filename. Update alt to describe the photo. -->
+    <figure class="story-center-photo">
+      <img
+        class="couple-photo"
+        src="./assets/couple_standing.jpg"
+        alt="Taylor and Tristan together"
+        loading="lazy"
+        decoding="async"
+      >
+    </figure>
+
+    <!-- EDIT: HIS STORY. Replace this paragraph with Tristan's story.
+         You can add more <p> paragraphs inside this article. -->
+    <article class="story-side" aria-labelledby="his-story-title">
+      <p class="story-kicker">In his words</p>
+      <h3 id="his-story-title">His Version</h3>
+
+      <p>Tristan’s side of the story is coming soon.</p>
+
+      <span class="story-signature">— Tristan</span>
+    </article>
+  </div>
+
+  <div class="signature our-story-signature">
+    With love, Taylor &amp; Tristan
+  </div>
+</section>
+   </div>
+   <div class="floral-scene floral-scene-reverse">
+    <section aria-labelledby="memory-title" class="memory-section section-wrap">
+     <div class="section-heading">
+      <div>
+       <p class="eyebrow">
+        Little moments, big love
+       </p>
+       <h2 id="memory-title">
+        Us, through the years.
+       </h2>
+      </div>
+      <a class="travel-link" href="./gallery.html">
+       View our gallery ↗
+      </a>
+     </div>
+     <!-- EDIT: HOME PHOTOS. Replace the three src values with ./assets/first-date.jpg, ./assets/proposal.jpg, and ./assets/adventures.jpg. Upload those files, write descriptive alt text, and edit each caption. -->
+     <div class="memory-grid">
+      <figure class="photo-frame">
+       <img alt="Couple photo coming soon" decoding="async" height="1100" loading="lazy" src="./assets/couple-placeholder.svg" width="900"/>
+       <figcaption>
+        The beginning
+       </figcaption>
+      </figure>
+      <figure class="photo-frame">
+       <img alt="Proposal photo coming soon" decoding="async" height="1100" loading="lazy" src="./assets/couple-placeholder.svg" width="900"/>
+       <figcaption>
+        The easiest yes
+       </figcaption>
+      </figure>
+      <figure class="photo-frame">
+       <img alt="Adventure photo coming soon" decoding="async" height="1100" loading="lazy" src="./assets/couple-placeholder.svg" width="900"/>
+       <figcaption>
+        All the little adventures
+       </figcaption>
+      </figure>
+     </div>
+    </section>
+   </div>
+   <div class="floral-scene floral-scene-forward">
+    <section aria-labelledby="places-title" class="places-section section-wrap">
+     <div class="section-heading">
+      <div>
+       <p class="eyebrow">
+        A few places close to our hearts
+       </p>
+       <h2 id="places-title">
+        Our love, on the map.
+       </h2>
       </div>
      </div>
-    </div>
-   </section>
+     <p class="section-lede">
+      The places that became part of our story.
+     </p>
+     <!-- EDIT: LOCAL MAP PINS. For each card, replace the description and put the exact place name AND address inside data-map-query="". The script enables its Google Maps link only after you supply a location. Example: data-map-query="Place Name, 123 Main St, City, PA". Do not use made-up locations. -->
+     <div class="places-grid">
+      <article class="place-card">
+       <span aria-hidden="true" class="map-pin">
+        01
+       </span>
+       <h3>
+        Where we met
+       </h3>
+       <p>
+        Our first chapter. Location and story coming soon.
+       </p>
+       <a aria-disabled="true" class="travel-link" data-map-query="">
+        Location coming soon
+       </a>
+      </article>
+      <article class="place-card">
+       <span aria-hidden="true" class="map-pin">
+        02
+       </span>
+       <h3>
+        Where he proposed
+       </h3>
+       <p>
+        The beginning of forever. Location and story coming soon.
+       </p>
+       <a aria-disabled="true" class="travel-link" data-map-query="">
+        Location coming soon
+       </a>
+      </article>
+      <article class="place-card">
+       <span aria-hidden="true" class="map-pin">
+        03
+       </span>
+       <h3>
+        Our favorite coffee
+       </h3>
+       <p>
+        A little local favorite. Coffee shop details coming soon.
+       </p>
+       <a aria-disabled="true" class="travel-link" data-map-query="">
+        Location coming soon
+       </a>
+      </article>
+     </div>
+     <!-- OPTIONAL SHARED MAP: To show all three pins on one interactive map, create a public Google My Maps map, add your pins, choose Embed on my site, and paste the supplied iframe below. Include title="Taylor and Tristan's favorite places" and loading="lazy" on the iframe. Individual map links above work without an embedded map or API key. -->
+    </section>
+   </div>
   </main>
+  <div aria-hidden="true" class="floral-footer">
+  </div>
   <footer>
    <a aria-label="Taylor and Tristan, home" class="monogram" href="./index.html">
     T
