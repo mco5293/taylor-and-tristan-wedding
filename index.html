@@ -12,9 +12,9 @@
   <link href="./favicon.svg" rel="icon" type="image/svg+xml"/>
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-  <link href="./styles.css?v=22" rel="stylesheet"/>
-  <script defer="" src="./script.js?v=23">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Manrope:wght@400;500;600;700&amp;family=Pinyon+Script&amp;display=swap" rel="stylesheet"/>
+  <link href="./styles.css?v=30" rel="stylesheet"/>
+  <script defer="" src="./script.js?v=30">
   </script>
  </head>
  <body class="home-page">
@@ -120,55 +120,55 @@
     </a>
    </section>
    <div class="floral-scene floral-scene-forward">
-<section
-  class="intro section-wrap"
-  id="story"
-  aria-labelledby="intro-title"
->
-  <div class="our-story-heading">
-    <h2 id="intro-title">Our Story</h2>
-  </div>
-
-  <div class="story-perspectives">
-    <!-- EDIT: HER STORY. Replace this paragraph with Taylor's story.
-         You can add more <p> paragraphs inside this article. -->
-    <article class="story-side" aria-labelledby="her-story-title">
-      <p class="story-kicker">In her words</p>
-      <h3 id="her-story-title">Her Version</h3>
-
-      <p>Taylor’s side of the story is coming soon.</p>
-
-      <span class="story-signature">— Taylor</span>
-    </article>
-
-    <!-- EDIT: COUPLE PHOTO. Keep this photo in assets/, or change
-         src to your own filename. Update alt to describe the photo. -->
-    <figure class="story-center-photo">
-      <img
-        class="couple-photo"
-        src="./assets/couple_standing.jpg"
-        alt="Taylor and Tristan together"
-        loading="lazy"
-        decoding="async"
-      >
-    </figure>
-
-    <!-- EDIT: HIS STORY. Replace this paragraph with Tristan's story.
-         You can add more <p> paragraphs inside this article. -->
-    <article class="story-side" aria-labelledby="his-story-title">
-      <p class="story-kicker">In his words</p>
-      <h3 id="his-story-title">His Version</h3>
-
-      <p>Tristan’s side of the story is coming soon.</p>
-
-      <span class="story-signature">— Tristan</span>
-    </article>
-  </div>
-
-  <div class="signature our-story-signature">
-    With love, Taylor &amp; Tristan
-  </div>
-</section>
+    <section aria-labelledby="intro-title" class="intro section-wrap" id="story">
+     <div class="page-title-frame story-title-frame">
+      <h2 id="intro-title">
+       Our Story
+      </h2>
+      <p>
+       Two perspectives. One love story.
+      </p>
+     </div>
+     <div class="story-perspectives">
+      <article class="story-side">
+       <!-- EDIT: Replace this paragraph with Taylor's story. Add more p paragraphs if needed. -->
+       <p class="story-kicker">
+        In her words
+       </p>
+       <h3>
+        Her Story
+       </h3>
+       <p>
+        Taylor’s side of the story is coming soon.
+       </p>
+       <span class="story-signature">
+        — Taylor
+       </span>
+      </article>
+      <figure class="story-center-photo">
+       <!-- EDIT: Keep assets/couple_standing.jpg or change src and alt to your photo. -->
+       <img alt="Taylor and Tristan together" class="couple-photo" decoding="async" loading="lazy" src="./assets/couple_standing.jpg"/>
+      </figure>
+      <article class="story-side">
+       <!-- EDIT: Replace this paragraph with Tristan's story. Add more p paragraphs if needed. -->
+       <p class="story-kicker">
+        In his words
+       </p>
+       <h3>
+        His Story
+       </h3>
+       <p>
+        Tristan’s side of the story is coming soon.
+       </p>
+       <span class="story-signature">
+        — Tristan
+       </span>
+      </article>
+     </div>
+     <div class="signature our-story-signature">
+      With love, Taylor &amp; Tristan
+     </div>
+    </section>
    </div>
    <div class="floral-scene floral-scene-reverse">
     <section aria-labelledby="memory-title" class="memory-section section-wrap">
@@ -226,9 +226,13 @@
      <!-- EDIT: LOCAL MAP PINS. For each card, replace the description and put the exact place name AND address inside data-map-query="". The script enables its Google Maps link only after you supply a location. Example: data-map-query="Place Name, 123 Main St, City, PA". Do not use made-up locations. -->
      <div class="places-grid">
       <article class="place-card">
-       <span aria-hidden="true" class="map-pin">
-        01
-       </span>
+       <figure class="place-photo">
+        <!-- EDIT: LOCATION PHOTO. Replace src with your place photo and describe it in alt. Future interactive-map stories can use the paragraph beneath this image. -->
+        <img alt="Location photo coming soon" decoding="async" height="600" loading="lazy" src="./assets/place-placeholder.svg" width="900"/>
+        <figcaption>
+         Coming soon
+        </figcaption>
+       </figure>
        <h3>
         Where we met
        </h3>
@@ -240,9 +244,13 @@
        </a>
       </article>
       <article class="place-card">
-       <span aria-hidden="true" class="map-pin">
-        02
-       </span>
+       <figure class="place-photo">
+        <!-- EDIT: LOCATION PHOTO. Replace src with your place photo and describe it in alt. Future interactive-map stories can use the paragraph beneath this image. -->
+        <img alt="Location photo coming soon" decoding="async" height="600" loading="lazy" src="./assets/place-placeholder.svg" width="900"/>
+        <figcaption>
+         Coming soon
+        </figcaption>
+       </figure>
        <h3>
         Where he proposed
        </h3>
@@ -254,9 +262,13 @@
        </a>
       </article>
       <article class="place-card">
-       <span aria-hidden="true" class="map-pin">
-        03
-       </span>
+       <figure class="place-photo">
+        <!-- EDIT: LOCATION PHOTO. Replace src with your place photo and describe it in alt. Future interactive-map stories can use the paragraph beneath this image. -->
+        <img alt="Location photo coming soon" decoding="async" height="600" loading="lazy" src="./assets/place-placeholder.svg" width="900"/>
+        <figcaption>
+         Coming soon
+        </figcaption>
+       </figure>
        <h3>
         Our favorite coffee
        </h3>
@@ -272,8 +284,6 @@
     </section>
    </div>
   </main>
-  <div aria-hidden="true" class="floral-footer">
-  </div>
   <footer>
    <a aria-label="Taylor and Tristan, home" class="monogram" href="./index.html">
     T
