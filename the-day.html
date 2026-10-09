@@ -1,317 +1,414 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <!-- EDITING GUIDE: Search for EDIT: in this file. Upload photos into assets/ using exact, case-sensitive filenames. Keep ./ prefixes for GitHub Pages. See README.md for the complete checklist. -->
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
-   The Day • Taylor &amp; Tristan • July 24, 2027
-  </title>
-  <meta content="The Day for Taylor and Tristan's wedding on July 24, 2027." name="description"/>
-  <meta content="#b2cada" name="theme-color"/>
-  <link href="./favicon.svg" rel="icon" type="image/svg+xml"/>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Manrope:wght@400;500;600;700&amp;family=Pinyon+Script&amp;display=swap" rel="stylesheet"/>
-  <link href="./styles.css?v=30" rel="stylesheet"/>
-  <script defer="" src="./script.js?v=30">
-  </script>
- </head>
- <body>
-  <a class="skip-link" href="#main">
-   Skip to content
-  </a>
-  <!-- SHARED NAVIGATION: This header appears in every HTML file. If you change a link or label, update all eight pages. -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>The Day • Taylor &amp; Tristan • July 24, 2027</title>
+  <meta
+    name="description"
+    content="Taylor and Tristan’s wedding day: ceremony, reception, timeline, and venue maps for July 24, 2027."
+  >
+  <meta name="theme-color" content="#dce8f0">
+
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Lora:wght@400;500&amp;family=Manrope:wght@400;500;600;700&amp;family=Pinyon+Script&amp;display=swap"
+    rel="stylesheet"
+  >
+
+  <link href="./styles.css?v=45" rel="stylesheet">
+  <script src="./script.js?v=34" defer></script>
+
+  <style>
+    /* Venue information beside the lace-framed photo. */
+    .wedding-day .day-venue {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr);
+      grid-template-areas: "details visual";
+      gap: clamp(32px, 5vw, 72px);
+      align-items: center;
+    }
+
+    .wedding-day .day-venue.day-venue-reverse {
+      grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
+      grid-template-areas: "visual details";
+    }
+
+    .wedding-day .day-venue > .day-venue-details {
+      grid-area: details;
+      padding: 0;
+      min-width: 0;
+    }
+
+    .wedding-day .day-venue > .day-venue-visual {
+      grid-area: visual;
+      align-self: center;
+      min-width: 0;
+    }
+
+    .wedding-day .day-photo {
+      margin: 0;
+    }
+
+    /* Printed address on the left; miniature map on the right. */
+    .wedding-day .day-location {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 180px;
+      gap: 20px;
+      align-items: center;
+      margin: 26px 0 30px;
+    }
+
+    .wedding-day .day-location .day-address {
+      margin: 0;
+      font-style: normal;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    /* Clean white frame with a fine gold outline. */
+    .wedding-day .day-location .day-map {
+      display: block;
+      width: 100%;
+      min-width: 0;
+      max-width: none;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 4px;
+      border: 1px solid #c7ad68;
+      border-image: none;
+      border-radius: 13px;
+      background: #fffdf9;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(38, 62, 80, 0.06);
+    }
+
+    .wedding-day .day-location .day-map::before,
+    .wedding-day .day-location .day-map::after {
+      content: none;
+    }
+
+    .wedding-day .day-location .day-map iframe {
+      display: block;
+      width: 100%;
+      height: 125px;
+      border: 0;
+      border-radius: 8px;
+    }
+
+    /* Mobile: venue information, including its map, then the photo. */
+    @media (max-width: 760px) {
+      .wedding-day .day-venue,
+      .wedding-day .day-venue.day-venue-reverse {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+          "details"
+          "visual";
+        gap: 28px;
+      }
+
+      .wedding-day .day-location {
+        grid-template-columns: minmax(0, 1fr) 150px;
+        gap: 14px;
+      }
+
+      .wedding-day .day-location .day-map iframe {
+        height: 115px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .wedding-day .day-location {
+        grid-template-columns: minmax(0, 1fr) 120px;
+        gap: 10px;
+      }
+
+      .wedding-day .day-location .day-address {
+        font-size: 12px;
+      }
+    }
+  </style>
+  <style>
+  /* Tighten The Willow title and address */
+  .wedding-day .day-venue-reverse .day-venue-name {
+    margin-bottom: 8px !important;
+    padding-bottom: 0 !important;
+  }
+
+  .wedding-day .day-venue-reverse .day-location {
+    display: block;
+    margin: 0 0 24px !important;
+    padding: 0;
+    min-height: 0;
+  }
+
+  .wedding-day .day-venue-reverse .day-address {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+</style>
+</head>
+
+<body class="wedding-day">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- SHARED NAVIGATION: Keep these links consistent across all pages. -->
   <header class="site-header">
-   <a aria-label="Taylor and Tristan, home" class="header-mark" href="./index.html">
-    T
-    <span>
-     &amp;
-    </span>
-    T
-    <small>
-     07.24.27
-    </small>
-   </a>
-   <nav aria-label="Wedding navigation" class="nav-pages">
-    <a href="./index.html#story">
-     Our Story
+    <a
+      class="header-mark"
+      href="./index.html"
+      aria-label="Taylor and Tristan, home"
+    >
+      T<span>&amp;</span>T
+      <small>07.24.27</small>
     </a>
-    <a aria-current="page" href="./the-day.html">
-     The Day
-    </a>
-    <a href="./wedding-party.html">
-     Wedding Party
-    </a>
-    <a href="./gallery.html">
-     Gallery
-    </a>
-    <a href="./travel.html">
-     Travel
-    </a>
-    <a href="./registry.html">
-     Registry
-    </a>
-    <a href="./faq.html">
-     FAQ
-    </a>
-   </nav>
-   <a class="nav-rsvp header-rsvp" href="./rsvp.html">
-    RSVP
-   </a>
+
+    <nav class="nav-pages" aria-label="Wedding navigation">
+      <a href="./index.html#story">Our Story</a>
+      <a href="./the-day.html" aria-current="page">The Day</a>
+      <a href="./wedding-party.html">Wedding Party</a>
+      <a href="./gallery.html">Gallery</a>
+      <a href="./travel.html">Travel</a>
+      <a href="./registry.html">Registry</a>
+      <a href="./faq.html">FAQ</a>
+    </nav>
+
+    <a class="nav-rsvp header-rsvp" href="./rsvp.html">RSVP</a>
   </header>
+
   <main id="main">
-   <div class="page-heading">
-    <div class="page-title-frame">
-     <h1>
-      The Day
-     </h1>
-     <p>
-      Saturday, July 24, 2027
-     </p>
+    <div class="page-heading day-invitation">
+      <div class="page-title-frame">
+        <h1>The Day</h1>
+        <p>
+          <time datetime="2027-07-24">Saturday, July 24, 2027</time>
+        </p>
+      </div>
     </div>
-   </div>
-   <div class="floral-scene floral-scene-forward">
-    <section aria-labelledby="celebration-title" class="celebration section-wrap" id="celebration">
-     <div class="section-heading">
-      <h2 class="eyebrow" id="celebration-title">
-       Timeline
-      </h2>
-      <p class="timeline-date">
-       <time datetime="2027-07-24">
-        Saturday, July 24, 2027
-       </time>
-      </p>
-     </div>
-     <!-- Wedding-day timeline: edit the times and labels here. -->
-     <ol aria-label="Wedding day schedule" class="day-timeline">
-      <li>
-       <time datetime="2027-07-24T13:00:00-04:00">
-        1:00 PM
-       </time>
-       <span aria-hidden="true" class="timeline-dot">
-       </span>
-       <h3>
-        <svg aria-hidden="true" class="timeline-icon" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewBox="0 0 32 32">
-         <path d="M16 2v7M13 5h6M11 15V11l5-4 5 4v4M5 27V17l11-6 11 6v10H5Z">
-         </path>
-         <path d="M13 27v-7a3 3 0 0 1 6 0v7M9 19v3M23 19v3">
-         </path>
-        </svg>
-        <span>
-         The ceremony
-        </span>
-       </h3>
-       <p>
-        Holy Name Catholic Church
-       </p>
-      </li>
-      <li>
-       <time datetime="2027-07-24T16:00:00-04:00">
-        4:00 PM
-       </time>
-       <span aria-hidden="true" class="timeline-dot">
-       </span>
-       <h3>
-        <svg aria-hidden="true" class="timeline-icon" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewBox="0 0 32 32">
-         <path d="M5 8h22L16 20 5 8ZM16 20v8M10 28h12M8 11h16m-5 1 6-9h4">
-         </path>
-         <circle cx="9" cy="6" r="3">
-         </circle>
-        </svg>
-        <span>
-         Cocktail hour
-        </span>
-       </h3>
-       <p>
-        The Willow
-       </p>
-      </li>
-      <li>
-       <time datetime="2027-07-24T17:00:00-04:00">
-        5:00 PM
-       </time>
-       <span aria-hidden="true" class="timeline-dot">
-       </span>
-       <h3>
-        <svg aria-hidden="true" class="timeline-icon" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewBox="0 0 32 32">
-         <path d="m4 28 6-18 12 12-18 6Zm3-8 5 5m-3-11 9 9M16 4v4M24 12h4M23 4l-3 5M17 14c0-3 5-2 5-5M23 18c3 0 2-4 6-4">
-         </path>
-        </svg>
-        <span>
-         The reception
-        </span>
-       </h3>
-       <p>
-        Dinner &amp; celebration at The Willow
-       </p>
-      </li>
-      <li>
-       <time datetime="2027-07-24T22:00:00-04:00">
-        10:00 PM
-       </time>
-       <span aria-hidden="true" class="timeline-dot">
-       </span>
-       <h3>
-        <svg aria-hidden="true" class="timeline-icon" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewBox="0 0 32 32">
-         <path d="M19 5a11 11 0 1 0 8 17A10 10 0 0 1 19 5Zm6-2 1 3 3 1-3 1-1 3-1-3-3-1 3-1ZM29 14v4M27 16h4">
-         </path>
-        </svg>
-        <span>
-         Reception Ends
-        </span>
-       </h3>
-       <p>
-        The night is over.
-       </p>
-      </li>
-     </ol>
-     <div class="event-grid">
-      <!-- CEREMONY VENUE -->
-      <article class="event-card">
-       <!-- EDIT: EXISTING PHOTO. Keep ./assets/holy-name.jpg in your repository, or update src to your own filename. Edit alt to describe the real photo. -->
-       <img alt="Holy Name Catholic Church in Ebensburg" class="venue-photo" decoding="async" loading="lazy" src="./assets/holy-name.jpg"/>
-       <div class="event-content">
-        <span class="card-number">
-         The Ceremony
-        </span>
-        <h3>
-         Holy Name
-         <br/>
-         Catholic Church
-        </h3>
-        <address class="venue-location">
-         500 N Julian St
-         <br/>
-         Ebensburg, PA 15931
-        </address>
-        <dl class="venue-schedule">
-         <div>
-          <dt>
-           Ceremony begins
-          </dt>
-          <dd>
-           <time datetime="2027-07-24T13:00:00-04:00">
-            1:00
-            <span>
-             PM
-            </span>
-           </time>
-          </dd>
-         </div>
-        </dl>
-       </div>
-       <!-- EDIT: Update the map address if the venue changes. Keep this map OUTSIDE event-content. -->
-       <div class="venue-map-panel">
-        <div class="venue-map-heading">
-         <span aria-hidden="true" class="venue-map-symbol">
-          ↗
-         </span>
-         <div>
-          <p class="venue-map-label">
-           Getting there
-          </p>
-          <p class="venue-map-caption">
-           Holy Name Catholic Church · Ebensburg
-          </p>
-         </div>
+
+    <!-- EDIT TIMES: Update the timeline and venue information together. -->
+    <div class="floral-scene floral-scene-forward day-timeline-frame">
+      <section
+        class="day-schedule day-wrap"
+        aria-labelledby="schedule-title"
+      >
+        <div class="day-section-title section-heading">
+          <h2 id="schedule-title">TIMELINE</h2>
         </div>
-        <iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=500+N+Julian+St,+Ebensburg,+PA+15931&amp;output=embed" title="Map to Holy Name Catholic Church">
-        </iframe>
-       </div>
-      </article>
-      <!-- RECEPTION VENUE -->
-      <article class="event-card">
-       <!-- EDIT: EXISTING PHOTO. Keep ./assets/the-willow.jpg in your repository, or update src to your own filename. Edit alt to describe the real photo. -->
-       <img alt="The Willow in Johnstown" class="venue-photo" decoding="async" loading="lazy" src="./assets/the-willow.jpg"/>
-       <div class="event-content">
-        <span class="card-number">
-         The Reception
-        </span>
-        <h3>
-         The Willow
-        </h3>
-        <address class="venue-location">
-         650 Airport Rd
-         <br/>
-         Johnstown, PA 15904
-        </address>
-        <dl class="venue-schedule">
-         <div>
-          <dt>
-           Cocktail hour
-          </dt>
-          <dd>
-           <time datetime="2027-07-24T16:00:00-04:00">
-            4:00
-            <span>
-             PM
-            </span>
-           </time>
-          </dd>
-         </div>
-         <div>
-          <dt>
-           Reception
-          </dt>
-          <dd>
-           <time datetime="2027-07-24T17:00:00-04:00">
-            5:00
-            <span>
-             PM
-            </span>
-           </time>
-           <small class="venue-end-time">
-            Until
-            <time datetime="2027-07-24T22:00:00-04:00">
-             10:00 PM
-            </time>
-           </small>
-          </dd>
-         </div>
-        </dl>
-       </div>
-       <!-- EDIT: Update the map address if the venue changes. Keep this map OUTSIDE event-content. -->
-       <div class="venue-map-panel">
-        <div class="venue-map-heading">
-         <span aria-hidden="true" class="venue-map-symbol">
-          ↗
-         </span>
-         <div>
-          <p class="venue-map-label">
-           Getting there
-          </p>
-          <p class="venue-map-caption">
-           The Willow · Johnstown
-          </p>
-         </div>
+
+        <ol class="day-agenda" aria-label="Wedding day schedule">
+          <li>
+            <svg
+              class="day-icon"
+              width="32" height="32" viewBox="0 0 32 32"
+              fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M16 2v7M13 5h6"/>
+              <path d="M10 15l6-6 6 6v14H10z"/>
+              <path d="M10 19l-6 4v6h6M22 19l6 4v6h-6"/>
+              <path d="M14 29v-7a2 2 0 0 1 4 0v7"/>
+              <circle cx="16" cy="16" r="1.5"/>
+            </svg>
+
+            <time datetime="2027-07-24T13:00:00-04:00">1:00 PM</time>
+            <span class="day-agenda-dot" aria-hidden="true"></span>
+            <h3>The Ceremony</h3>
+            <p>Holy Name Catholic Church</p>
+          </li>
+
+          <li>
+            <svg
+              class="day-icon"
+              width="32" height="32" viewBox="0 0 32 32"
+              fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M5 7h22L16 19z"/>
+              <path d="M16 19v9M10 28h12M9 11h14"/>
+              <path d="M19 11l5-9"/>
+              <circle cx="25" cy="7" r="3"/>
+            </svg>
+
+            <time datetime="2027-07-24T16:00:00-04:00">4:00 PM</time>
+            <span class="day-agenda-dot" aria-hidden="true"></span>
+            <h3>Cocktail Hour</h3>
+            <p>A little mingling at The Willow</p>
+          </li>
+
+          <li>
+            <svg
+              class="day-icon"
+              width="32" height="32" viewBox="0 0 32 32"
+              fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M12 24V8l14-3v16M12 13l14-3"/>
+              <ellipse cx="8" cy="25" rx="4" ry="3"/>
+              <ellipse cx="22" cy="22" rx="4" ry="3"/>
+              <path d="M5 5v5M2.5 7.5h5M27 27v3M25.5 28.5h3"/>
+            </svg>
+
+            <time datetime="2027-07-24T17:00:00-04:00">5:00 PM</time>
+            <span class="day-agenda-dot" aria-hidden="true"></span>
+            <h3>The Reception</h3>
+            <p>Dinner, dancing, and celebration</p>
+          </li>
+
+          <li>
+            <svg
+              class="day-icon"
+              width="32" height="32" viewBox="0 0 32 32"
+              fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M22 23A11 11 0 0 1 10 5a11 11 0 1 0 12 18Z"/>
+              <path d="M23 3v6M20 6h6M28 12v4M26 14h4"/>
+            </svg>
+
+            <time datetime="2027-07-24T22:00:00-04:00">10:00 PM</time>
+            <span class="day-agenda-dot" aria-hidden="true"></span>
+            <h3>A Final Goodnight</h3>
+            <p>Our reception comes to a close</p>
+          </li>
+        </ol>
+      </section>
+    </div>
+
+    <!-- CEREMONY -->
+    <div class="floral-scene floral-scene-reverse">
+      <section
+        class="day-venue day-wrap"
+        aria-labelledby="ceremony-title"
+      >
+        <div class="day-venue-details event-content">
+          <h2 class="day-script" id="ceremony-title">The Ceremony</h2>
+
+          <h3 class="day-venue-name">
+            Holy Name<br>
+            Catholic Church
+          </h3>
+
+          <div class="day-location">
+            <!-- EDIT ADDRESS: Update the map URL too if this changes. -->
+            <address class="day-address">
+              500 N Julian St<br>
+              Ebensburg, PA 15931
+            </address>
+
+            
+          </div>
+
+          <dl class="day-times">
+            <div>
+              <dt>The ceremony begins</dt>
+              <dd>
+                <time datetime="2027-07-24T13:00:00-04:00">
+                  1:00 <span>PM</span>
+                </time>
+              </dd>
+            </div>
+          </dl>
         </div>
-        <iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=650+Airport+Rd,+Johnstown,+PA+15904&amp;output=embed" title="Map to The Willow">
-        </iframe>
-       </div>
-      </article>
-     </div>
-    </section>
-   </div>
+
+        <div class="day-venue-visual">
+          <figure class="day-photo">
+            <!-- EDIT PHOTO: Upload assets/holy-name.jpg with this exact filename. -->
+            <img
+              src="./assets/holy-name.jpg"
+              alt="Exterior of Holy Name Catholic Church in Ebensburg"
+              loading="lazy"
+              decoding="async"
+            >
+          </figure>
+        </div>
+      </section>
+    </div>
+
+    <!-- RECEPTION -->
+    <div class="floral-scene floral-scene-forward day-reception-band">
+      <section
+        class="day-venue day-venue-reverse day-wrap"
+        aria-labelledby="reception-title"
+      >
+        <div class="day-venue-details event-content">
+          <h2 class="day-script" id="reception-title">The Reception</h2>
+          <h3 class="day-venue-name">The Willow</h3>
+
+          <div class="day-location">
+            <!-- EDIT ADDRESS: Update the map URL too if this changes. -->
+            <address class="day-address">
+              650 Airport Rd<br>
+              Johnstown, PA 15904
+            </address>
+
+          </div>
+
+          <dl class="day-times">
+            <div>
+              <dt>Cocktail hour</dt>
+              <dd>
+                <time datetime="2027-07-24T16:00:00-04:00">
+                  4:00 <span>PM</span>
+                </time>
+              </dd>
+            </div>
+
+            <div>
+              <dt>Dinner &amp; celebration</dt>
+              <dd>
+                <time datetime="2027-07-24T17:00:00-04:00">
+                  5:00 <span>PM</span>
+                </time>
+              </dd>
+            </div>
+          </dl>
+
+          <p class="day-end-note">
+            Our evening concludes at
+            <time datetime="2027-07-24T22:00:00-04:00">10:00 PM</time>.
+          </p>
+        </div>
+
+        <div class="day-venue-visual">
+          <figure class="day-photo">
+            <!-- EDIT PHOTO: Upload assets/the-willow.jpg with this exact filename. -->
+            <img
+              src="./assets/the-willow.jpg"
+              alt="Exterior of The Willow reception venue in Johnstown"
+              loading="lazy"
+              decoding="async"
+            >
+          </figure>
+        </div>
+      </section>
+    </div>
   </main>
+
   <footer>
-   <a aria-label="Taylor and Tristan, home" class="monogram" href="./index.html">
-    T
-    <span>
-     &amp;
-    </span>
-    T
-   </a>
-   <p>
-    Taylor &amp; Tristan
-    <span aria-hidden="true">
-     ·
-    </span>
-    July 24, 2027
-   </p>
-   <p class="footer-note">
-    Here's to forever.
-   </p>
+    <a
+      class="monogram"
+      href="./index.html"
+      aria-label="Taylor and Tristan, home"
+    >
+      T<span>&amp;</span>T
+    </a>
+
+    <p>
+      Taylor &amp; Tristan
+      <span aria-hidden="true">·</span>
+      July 24, 2027
+    </p>
+
+    <p class="footer-note">Here's to forever.</p>
   </footer>
- </body>
+</body>
 </html>

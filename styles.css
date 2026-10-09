@@ -507,3 +507,980 @@ body.gallery-open { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   #celebration .venue-photo.photo-arrived { animation: none; }
 }
+/* Show complete gallery photos at their natural proportions. */
+.gallery-page .gallery-grid .gallery-tile img,
+.gallery-page .gallery-grid .gallery-tile:nth-child(4n) img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+/* Uniform gallery rows without cropping photos */
+.gallery-page .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.gallery-page .gallery-grid .gallery-tile {
+  margin: 0;
+  min-width: 0;
+}
+
+.gallery-page .gallery-grid .gallery-tile img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+/* Two columns on phones */
+@media (max-width: 760px) {
+  .gallery-page .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+}
+/* Consistent gaps between photos without cropping */
+.gallery-page .gallery-grid {
+  display: block;
+  column-count: 3;
+  column-gap: 20px;
+}
+
+.gallery-page .gallery-grid .gallery-tile:nth-child(n) {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 20px;
+  vertical-align: top;
+  break-inside: avoid;
+}
+
+.gallery-page .gallery-grid .gallery-tile:nth-child(n) img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+/* Two columns on phones */
+@media (max-width: 760px) {
+  .gallery-page .gallery-grid {
+    column-count: 2;
+    column-gap: 14px;
+  }
+
+  .gallery-page .gallery-grid .gallery-tile:nth-child(n) {
+    margin-bottom: 14px;
+  }
+}
+/* PAGE TITLES: softly fade in when the page opens */
+@keyframes wedding-title-fade {
+  from {
+    opacity: 0;
+    translate: 0 8px;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.page-title-frame h1,
+.page-title-frame h2 {
+  animation: wedding-title-fade 1s ease-out both;
+}
+
+.page-title-frame > p {
+  animation: wedding-title-fade 1s ease-out .18s both;
+}
+
+/* HOME: introduce the announcement, names, and date gently */
+.hero-announcement {
+  animation: wedding-title-fade 1s ease-out .1s both;
+}
+
+.hero-content h1 {
+  animation: wedding-title-fade 1.2s ease-out .25s both;
+}
+
+.hero-date,
+.hero-place {
+  animation: wedding-title-fade 1s ease-out .45s both;
+}
+
+/* SCROLL FADES: JavaScript adds these classes.
+   Content stays visible if JavaScript is unavailable. */
+.fade-in-ready {
+  opacity: 0;
+  translate: 0 14px;
+  transition:
+    opacity .8s ease,
+    translate .8s ease;
+  transition-delay: var(--fade-delay, 0ms);
+}
+
+.fade-in-ready.is-visible {
+  opacity: 1;
+  translate: 0 0;
+}
+
+/* Respect visitors who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .page-title-frame h1,
+  .page-title-frame h2,
+  .page-title-frame > p,
+  .hero-announcement,
+  .hero-content h1,
+  .hero-date,
+  .hero-place {
+    animation: none;
+  }
+
+  .fade-in-ready,
+  .fade-in-ready.is-visible {
+    opacity: 1;
+    translate: none;
+    transition: none;
+  }
+}
+/* =========================================================
+   THE DAY — invitation-inspired redesign
+   Uses the existing sky blue, ivory, gold, and font variables.
+   ========================================================= */
+
+.wedding-day .day-wrap {
+  width: min(100%, 1180px);
+  margin: auto;
+  padding: 72px 40px;
+}
+
+.wedding-day .day-invitation {
+  padding: 55px 24px;
+  background: linear-gradient(135deg, #eaf2f7, #d7e6ef);
+}
+
+.wedding-day .day-invitation .page-title-frame {
+  max-width: 850px;
+  padding: 26px 24px 34px;
+  box-shadow: 0 12px 35px rgba(38, 62, 80, .04);
+}
+
+.wedding-day .day-invitation h1 {
+  font-size: clamp(82px, 9vw, 118px);
+}
+
+.wedding-day .day-label {
+  margin: 0 auto 16px;
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.wedding-day .day-section-title {
+  display: block;
+  margin-bottom: 44px;
+  text-align: center;
+}
+
+.wedding-day .day-section-title h2 {
+  font-size: clamp(38px, 4vw, 54px);
+  font-style: italic;
+}
+
+.wedding-day .day-ornament {
+  display: block;
+  margin-top: 20px;
+  color: var(--gold);
+  font-size: 18px;
+}
+
+/* Delicate timeline rather than boxed event cards */
+.wedding-day .day-agenda {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wedding-day .day-agenda li {
+  position: relative;
+  display: grid;
+  grid-template-rows: 48px 35px 34px auto auto;
+  align-content: start;
+  justify-items: center;
+  min-width: 0;
+  text-align: center;
+}
+
+.wedding-day .day-agenda li::after {
+  content: "";
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  width: 100%;
+  height: 1px;
+  background: var(--gold-shine);
+}
+
+.wedding-day .day-agenda li:last-child::after {
+  display: none;
+}
+
+.wedding-day .day-icon {
+  width: 31px;
+  height: 31px;
+  color: #927124;
+}
+
+.wedding-day .day-agenda time {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--ink);
+}
+
+.wedding-day .day-agenda-dot {
+  position: relative;
+  z-index: 1;
+  align-self: center;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--gold-shine);
+  box-shadow: 0 0 0 5px var(--paper);
+}
+
+.wedding-day .day-agenda h3 {
+  margin: 12px 8px 0;
+  font-size: clamp(25px, 2.5vw, 32px);
+  font-style: italic;
+}
+
+.wedding-day .day-agenda li > p {
+  margin: 10px 14px 0;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+/* Venue chapters */
+.wedding-day .day-venue {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr);
+  grid-template-areas: "details visual";
+  align-items: center;
+  gap: clamp(35px, 6vw, 90px);
+}
+
+.wedding-day .day-venue-reverse {
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
+  grid-template-areas: "visual details";
+}
+
+.wedding-day .day-venue-details {
+  grid-area: details;
+  display: block;
+  min-width: 0;
+  padding: 32px 0;
+  border: 0;
+  background: transparent;
+}
+
+.wedding-day .day-chapter {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 26px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.wedding-day .day-chapter span {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+.wedding-day .day-script {
+  margin-bottom: 22px;
+  font-family: "Pinyon Script", cursive;
+  font-size: clamp(52px, 5.3vw, 74px);
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 0;
+  color: var(--gold);
+}
+
+.wedding-day .day-venue-name {
+  font-size: clamp(36px, 4vw, 52px);
+  line-height: 1.12;
+}
+
+.wedding-day .day-address {
+  margin: 24px 0 30px;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+.wedding-day .day-times {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 38px;
+  margin: 0;
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.wedding-day .day-times dt {
+  margin-bottom: 10px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.wedding-day .day-times dd {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 42px;
+  line-height: 1.1;
+}
+
+.wedding-day .day-times dd span {
+  font-family: var(--font-body);
+  font-size: 13px;
+}
+
+.wedding-day .day-end-note {
+  margin-top: 20px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.wedding-day .day-venue-visual {
+  grid-area: visual;
+  min-width: 0;
+}
+
+.wedding-day .day-photo {
+  margin: 0;
+  padding: 8px;
+  border: 1px solid transparent;
+  border-radius: 24px;
+  background:
+    linear-gradient(var(--paper), var(--paper)) padding-box,
+    var(--gold-shine) border-box;
+  box-shadow: 0 12px 30px rgba(38, 62, 80, .07);
+}
+
+.wedding-day .day-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* Maps are quiet companions to the venue photographs */
+.wedding-day .day-map {
+  margin-top: 18px;
+  overflow: hidden;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  background:
+    linear-gradient(#fffdf8, #fffdf8) padding-box,
+    var(--gold-shine) border-box;
+}
+
+.wedding-day .day-map-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  padding: 13px 17px;
+  border-bottom: 1px solid var(--line);
+  background: #e7f0f6;
+}
+
+.wedding-day .day-map-heading p {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-style: italic;
+}
+
+.wedding-day .day-map-heading span {
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.wedding-day .day-map iframe {
+  display: block;
+  width: 100%;
+  height: 180px;
+  border: 0;
+}
+
+.wedding-day .day-reception-band {
+  background: linear-gradient(135deg, #edf4f8, #e2edf4);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.wedding-day .day-closing {
+  padding: 55px 24px 65px;
+  text-align: center;
+}
+
+.wedding-day .day-closing .day-ornament {
+  margin: 0 0 18px;
+}
+
+.wedding-day .day-closing > p {
+  margin: auto;
+  font-family: var(--font-heading);
+  font-size: clamp(26px, 3vw, 36px);
+  font-style: italic;
+}
+
+.wedding-day .day-closing-names {
+  display: block;
+  margin-top: 18px;
+  font-family: "Pinyon Script", cursive;
+  font-size: 38px;
+  color: var(--gold);
+}
+
+/* Mobile: information first, then photo, then map */
+@media (max-width: 760px) {
+  .wedding-day .day-wrap {
+    padding: 48px 24px;
+  }
+
+  .wedding-day .day-invitation {
+    padding: 38px 20px;
+  }
+
+  .wedding-day .day-invitation h1 {
+    font-size: 84px;
+  }
+
+  .wedding-day .day-agenda {
+    grid-template-columns: 1fr;
+    gap: 0;
+    max-width: 420px;
+    margin: auto;
+  }
+
+  .wedding-day .day-agenda li {
+    display: block;
+    padding: 0 0 32px 56px;
+    text-align: left;
+  }
+
+  .wedding-day .day-agenda li:last-child {
+    padding-bottom: 0;
+  }
+
+  .wedding-day .day-agenda li::after {
+    top: 22px;
+    left: 15px;
+    width: 1px;
+    height: 100%;
+  }
+
+  .wedding-day .day-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: var(--paper);
+  }
+
+  .wedding-day .day-agenda-dot {
+    display: none;
+  }
+
+  .wedding-day .day-agenda h3 {
+    margin: 6px 0 0;
+    font-size: 30px;
+  }
+
+  .wedding-day .day-agenda li > p {
+    margin: 8px 0 0;
+    font-size: 13px;
+  }
+
+  .wedding-day .day-venue,
+  .wedding-day .day-venue-reverse {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "details"
+      "visual";
+    gap: 28px;
+  }
+
+  .wedding-day .day-venue-details {
+    padding: 0;
+  }
+
+  .wedding-day .day-script {
+    font-size: 60px;
+  }
+
+  .wedding-day .day-times {
+    gap: 22px;
+  }
+
+  .wedding-day .day-times dd {
+    font-size: 38px;
+  }
+
+  .wedding-day .day-map iframe {
+    height: 165px;
+  }
+}
+/* Reception: warm champagne gold, like the groomsmen section */
+.wedding-day .day-reception-band {
+  background: linear-gradient(135deg, #fffdf8, #f1e9dc);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+/* Let The Day sit directly on the blue background */
+.wedding-day .day-invitation .page-title-frame {
+  padding: 12px 24px 20px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Timeline label occupies a small column on the left */
+.wedding-day .day-schedule {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  align-items: center;
+  gap: 32px;
+  padding-top: 44px;
+  padding-bottom: 30px;
+}
+
+.wedding-day .day-schedule .day-section-title {
+  margin: 0;
+  text-align: center;
+}
+
+.wedding-day .day-schedule .day-section-title h2 {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: 3px;
+  color: var(--gold);
+}
+
+/* Remove the clipped bottom flowers and extra timeline spacing */
+.wedding-day .day-timeline-frame {
+  padding-bottom: 0;
+}
+
+.wedding-day .day-timeline-frame::after {
+  display: none;
+}
+
+/* Bring the ceremony closer to the timeline */
+.wedding-day .day-timeline-frame + .floral-scene .day-venue {
+  padding-top: 36px;
+}
+
+/* Lora keeps the elegant serif aesthetic with clearer numerals */
+.wedding-day .day-times dd {
+  font-family: "Lora", Georgia, serif;
+  font-size: clamp(32px, 3.5vw, 42px);
+  font-weight: 400;
+  font-variant-numeric: lining-nums tabular-nums;
+  line-height: 1.3;
+  letter-spacing: -.5px;
+}
+
+.wedding-day .day-times dd span {
+  margin-left: 4px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  letter-spacing: .5px;
+}
+
+/* White lace-inspired photo frames.
+   The repeating flower pattern is built into CSS;
+   no additional image file is needed. */
+.wedding-day .day-photo {
+  --day-lace: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='white' stroke-width='.8'%3E%3Ccircle cx='12' cy='7' r='4'/%3E%3Ccircle cx='17' cy='12' r='4'/%3E%3Ccircle cx='12' cy='17' r='4'/%3E%3Ccircle cx='7' cy='12' r='4'/%3E%3Cpath d='M0 12h3m18 0h3'/%3E%3C/g%3E%3Ccircle cx='12' cy='12' r='1.3' fill='white'/%3E%3C/svg%3E");
+
+  position: relative;
+  isolation: isolate;
+  padding: 22px;
+  border: 1px solid #bda15a;
+  border-radius: 26px;
+  background: linear-gradient(
+    135deg,
+    #d9c594,
+    #eee1bd 45%,
+    #cbb27c
+  );
+  box-shadow: 0 12px 28px rgba(105, 81, 30, .1);
+}
+
+.wedding-day .day-photo::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: 24px;
+  pointer-events: none;
+  background:
+    var(--day-lace) center top / 24px 24px repeat-x,
+    var(--day-lace) center bottom / 24px 24px repeat-x,
+    var(--day-lace) left center / 24px 24px repeat-y,
+    var(--day-lace) right center / 24px 24px repeat-y;
+}
+
+.wedding-day .day-photo img {
+  position: relative;
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, .85);
+  border-radius: 10px;
+}
+
+/* Mobile: timeline label above the vertical schedule */
+@media (max-width: 760px) {
+  .wedding-day .day-schedule {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    padding-top: 32px;
+    padding-bottom: 24px;
+  }
+
+  .wedding-day .day-schedule .day-section-title {
+    text-align: left;
+  }
+
+  .wedding-day .day-schedule .day-section-title h2 {
+    font-size: 16px;
+  }
+
+  .wedding-day .day-timeline-frame + .floral-scene .day-venue {
+    padding-top: 28px;
+  }
+
+  .wedding-day .day-photo {
+    padding: 18px;
+    border-radius: 22px;
+  }
+
+  .wedding-day .day-photo::before {
+    border-radius: 20px;
+    background-size: 20px 20px;
+  }
+
+  .wedding-day .day-times dd {
+    font-size: 34px;
+  }
+}
+/* TIMELINE: above the schedule, aligned with its left edge */
+.wedding-day .day-schedule {
+  display: block;
+}
+
+.wedding-day .day-schedule .day-section-title {
+  margin: 0 0 30px;
+  text-align: left;
+}
+
+.wedding-day .day-schedule .day-section-title h2 {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.wedding-day .day-agenda {
+  width: 100%;
+  max-width: none;
+}
+
+/* Floral lace frame: replaces the previous small flower pattern */
+.wedding-day .day-photo {
+  position: relative;
+  padding: 0;
+  border: 34px solid transparent;
+  border-image-source: url("./assets/lace-border.svg");
+  border-image-slice: 40;
+  border-image-width: 1;
+  border-image-repeat: round;
+  border-radius: 0;
+  background: linear-gradient(135deg, #d7c397, #eee2c4, #cbb581);
+  box-shadow: 0 10px 28px rgba(105, 81, 30, .08);
+}
+
+.wedding-day .day-photo::before,
+.wedding-day .day-photo::after {
+  content: none;
+}
+
+.wedding-day .day-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(255, 255, 255, .8);
+  border-radius: 3px;
+}
+
+@media (max-width: 760px) {
+  .wedding-day .day-schedule .day-section-title {
+    margin-bottom: 26px;
+  }
+
+  .wedding-day .day-photo {
+    border-width: 25px;
+  }
+}
+/* White lace with no gold backing */
+.wedding-day .day-photo {
+  background: transparent;
+  box-shadow: none;
+}
+/* Sky blue background behind the white lace */
+body.wedding-day {
+  background: #dce8f0;
+}
+
+/* Keep the venue sections consistent */
+.wedding-day .floral-scene,
+.wedding-day .day-reception-band {
+  background: transparent;
+}
+
+/* Let the blue show through the lace */
+.wedding-day .day-photo {
+  background: transparent;
+  box-shadow: none;
+}
+/* Wider bridal lace around the venue photos */
+.wedding-day .day-photo {
+  padding: 0;
+  border: 42px solid transparent;
+  border-image-source: url("./assets/lace-border.svg?v=2");
+  border-image-slice: 40;
+  border-image-width: 1;
+  border-image-repeat: round;
+  background: transparent;
+  box-shadow: none;
+}
+
+.wedding-day .day-photo img {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-radius: 8px;
+}
+
+@media (max-width: 760px) {
+  .wedding-day .day-photo {
+    border-width: 30px;
+  }
+}
+/* Matching bridal lace around the embedded maps */
+.wedding-day .day-map {
+  margin-top: 18px;
+  padding: 0;
+  border: 26px solid transparent;
+  border-image: url("./assets/lace-border.svg?v=4") 40 / 1 round;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.wedding-day .day-map iframe {
+  display: block;
+  width: 100%;
+  height: 180px;
+  border: 0;
+  border-radius: 8px;
+}
+
+@media (max-width: 760px) {
+  .wedding-day .day-map {
+    border-width: 20px;
+  }
+
+  .wedding-day .day-map iframe {
+    height: 165px;
+  }
+}
+/* Photo beside the venue details, with the map below the details */
+.wedding-day .day-venue {
+  display: grid;
+  grid-template-columns: 1fr 1.12fr;
+  grid-template-areas:
+    "details visual"
+    "map     visual";
+  column-gap: clamp(32px, 5vw, 72px);
+  row-gap: 24px;
+  align-items: start;
+}
+
+/* Alternate the reception layout */
+.wedding-day .day-venue.day-venue-reverse {
+  grid-template-columns: 1.12fr 1fr;
+  grid-template-areas:
+    "visual details"
+    "visual map";
+}
+
+.wedding-day .day-venue > .day-venue-details {
+  grid-area: details;
+  padding: 0;
+}
+
+.wedding-day .day-venue > .day-venue-visual {
+  grid-area: visual;
+  align-self: center;
+  min-width: 0;
+}
+
+.wedding-day .day-venue .day-photo {
+  margin: 0;
+}
+
+.wedding-day .day-venue > .day-map {
+  grid-area: map;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Mobile: information, photo, then map */
+@media (max-width: 760px) {
+  .wedding-day .day-venue,
+  .wedding-day .day-venue.day-venue-reverse {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "details"
+      "visual"
+      "map";
+    gap: 24px;
+  }
+}
+/* Venue details beside the photo and map */
+.wedding-day .day-venue {
+  display: grid;
+  grid-template-columns: 1fr 1.12fr;
+  grid-template-areas: "details visual";
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+}
+
+.wedding-day .day-venue.day-venue-reverse {
+  grid-template-columns: 1.12fr 1fr;
+  grid-template-areas: "visual details";
+}
+
+.wedding-day .day-venue > .day-venue-details {
+  grid-area: details;
+  padding: 0;
+}
+
+.wedding-day .day-venue > .day-venue-visual {
+  grid-area: visual;
+  align-self: center;
+  min-width: 0;
+}
+
+.wedding-day .day-photo {
+  margin: 0;
+}
+
+/* Simple white map frame with a delicate gold outline */
+.wedding-day .day-venue .day-map {
+  display: block;
+  width: calc(100% - 48px);
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 20px auto 0;
+  padding: 7px;
+
+  border: 1px solid #c7ad68;
+  border-image: none;
+  border-radius: 16px;
+  background: #fffdf9;
+  overflow: hidden;
+
+  box-shadow: 0 6px 18px rgba(38, 62, 80, 0.07);
+}
+
+.wedding-day .day-map::before,
+.wedding-day .day-map::after {
+  content: none;
+}
+
+.wedding-day .day-map iframe {
+  display: block;
+  width: 100%;
+  height: 180px;
+  border: 0;
+  border-radius: 9px;
+}
+
+/* Mobile order: information, photo, map */
+@media (max-width: 760px) {
+  .wedding-day .day-venue,
+  .wedding-day .day-venue.day-venue-reverse {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "details"
+      "visual";
+    gap: 28px;
+  }
+
+  .wedding-day .day-venue .day-map {
+    width: calc(100% - 32px);
+    margin-top: 16px;
+    padding: 6px;
+  }
+
+  .wedding-day .day-map iframe {
+    height: 165px;
+  }
+}
+.wedding-day .day-venue-reverse .day-venue-name {
+  margin-bottom: 8px;
+}
+
+.wedding-day .day-venue-reverse .day-address {
+  margin-top: 0;
+}

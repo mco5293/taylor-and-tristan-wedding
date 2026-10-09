@@ -68,8 +68,11 @@ if ('IntersectionObserver' in window && !motionPreference.matches) {
   let scrollFrame;
   links.forEach((link, position) => {
     const source = link.querySelector('img');
-    const caption = link.closest('figure').querySelector('figcaption').textContent.trim();
-    const slide = document.createElement('figure');
+// Captions are optional. Photos work with or without a figcaption.
+const caption =
+  link.closest('figure')
+    ?.querySelector('figcaption')
+    ?.textContent.trim() || '';    const slide = document.createElement('figure');
     slide.className = 'viewer-slide';
     slide.setAttribute('aria-label', `Photo ${position + 1} of ${links.length}`);
     const photo = document.createElement('img');
@@ -124,5 +127,75 @@ if ('IntersectionObserver' in window && !motionPreference.matches) {
   dialog.addEventListener('close', () => {
     document.body.classList.remove('gallery-open');
     opener?.focus({ preventScroll: true });
+  });
+})();
+
+/* Subtle scroll animations across all wedding pages.
+   Each element fades in once. No HTML classes need to be added manually. */
+(function initializeWeddingFades() {
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  );
+
+  if (reduceMotion.matches || !("IntersectionObserver" in window)) {
+    return;
+  }
+
+  const selectors = [
+    ".section-heading",
+    ".story-side",
+    ".our-story-signature",
+    ".countdown-display",
+    ".calendar-button",
+    ".event-content",
+    ".venue-map-panel",
+    ".day-timeline li",
+    ".party-heading",
+    ".party-card",
+    ".travel-intro",
+    ".hotel-copy",
+    ".travel-info-card",
+    ".place-card",
+    ".memory-grid .photo-frame",
+    ".faq details",
+    ".look-card",
+    ".registry > h2",
+    ".registry > p",
+    ".registry > a",
+    ".rsvp-inner > h2",
+    ".rsvp-inner > p",
+    ".rsvp-inner > a"
+  ].join(", ");
+
+  const elements = document.querySelectorAll(selectors);
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
+    });
+  }, {
+    threshold: 0,
+    rootMargin: "0px 0px -15px 0px"
+  });
+
+  elements.forEach((element) => {
+    // Small stagger for groups of cards; never a long delay.
+    if (element.matches(
+      ".party-card, .look-card, .travel-info-card, .place-card"
+    )) {
+      const siblings = [...element.parentElement.children];
+      const position = siblings.indexOf(element);
+
+      element.style.setProperty(
+        "--fade-delay",
+        `${Math.min(position % 5, 3) * 70}ms`
+      );
+    }
+
+    element.classList.add("fade-in-ready");
+    observer.observe(element);
   });
 })();
