@@ -2154,3 +2154,88 @@ body.wedding-party-page .party-group::after {
     padding-bottom: 170px;
   }
 }
+@media (max-width: 760px) {
+
+  /* RECEPTION: remove the existing corner flowers on mobile */
+  body.wedding-day .day-reception-section > .day-corner-floral {
+    display: none !important;
+  }
+
+  /* Undo the previous extra padding on the inner layout */
+  body.wedding-day .day-reception-section .day-venue-layout {
+    padding-bottom: 42px !important;
+  }
+
+  /* Reserve space below the photo for one floral arrangement */
+  body.wedding-day .day-reception-section {
+    position: relative;
+    padding-bottom: 140px !important;
+  }
+
+  body.wedding-day .day-reception-section::after {
+    content: "" !important;
+    position: absolute;
+    top: auto !important;
+    bottom: 0 !important;
+    left: -35px !important;
+    right: auto !important;
+    width: 190px;
+    height: 150px;
+    background: url("./assets/floral-bouquet.png")
+      left bottom / contain no-repeat;
+    opacity: 1;
+    transform: none !important;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* TITLE FLORALS: smaller and farther out toward the edges */
+  body.wedding-day .day-title-section > .day-corner-floral,
+  body.wedding-party-page .page-heading::before,
+  body.wedding-party-page .page-heading::after {
+    width: 170px !important;
+    height: 190px !important;
+    object-fit: contain;
+    top: -25px !important;
+    bottom: auto !important;
+  }
+
+  body.wedding-day .day-title-section > .day-corner-top-left,
+  body.wedding-party-page .page-heading::before {
+    left: -65px !important;
+    right: auto !important;
+  }
+
+  body.wedding-day .day-title-section > .day-corner-top-right,
+  body.wedding-party-page .page-heading::after {
+    right: -65px !important;
+    left: auto !important;
+  }
+
+  /* Soft blue clearing behind the titles, without a bordered box */
+  body.wedding-day .day-title-content,
+  body.wedding-party-page .page-title-frame {
+    position: relative;
+    z-index: 2;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(237, 243, 246, .98) 0%,
+      rgba(237, 243, 246, .90) 45%,
+      rgba(237, 243, 246, 0) 75%
+    ) !important;
+  }
+
+  /* Gentle light halo improves the cursive text's readability */
+  body.wedding-day .day-title-content h1,
+  body.wedding-party-page .page-title-frame h1 {
+    color: #263e50;
+    text-shadow:
+      0 0 5px #edf3f6,
+      0 0 12px #edf3f6;
+  }
+
+  body.wedding-day .day-title-content > p,
+  body.wedding-party-page .page-title-frame > p {
+    text-shadow: 0 0 6px #edf3f6;
+  }
+}
