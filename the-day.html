@@ -7,7 +7,7 @@
   <title>The Day • Taylor &amp; Tristan • July 24, 2027</title>
   <meta
     name="description"
-    content="Taylor and Tristan’s wedding day: ceremony, reception, timeline, and venue maps for July 24, 2027."
+    content="Celebrate Taylor and Tristan on July 24, 2027. Wedding ceremony, reception, and timeline."
   >
   <meta name="theme-color" content="#dce8f0">
 
@@ -20,143 +20,14 @@
     rel="stylesheet"
   >
 
-  <link href="./styles.css?v=45" rel="stylesheet">
-  <script src="./script.js?v=34" defer></script>
-
-  <style>
-    /* Venue information beside the lace-framed photo. */
-    .wedding-day .day-venue {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr);
-      grid-template-areas: "details visual";
-      gap: clamp(32px, 5vw, 72px);
-      align-items: center;
-    }
-
-    .wedding-day .day-venue.day-venue-reverse {
-      grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
-      grid-template-areas: "visual details";
-    }
-
-    .wedding-day .day-venue > .day-venue-details {
-      grid-area: details;
-      padding: 0;
-      min-width: 0;
-    }
-
-    .wedding-day .day-venue > .day-venue-visual {
-      grid-area: visual;
-      align-self: center;
-      min-width: 0;
-    }
-
-    .wedding-day .day-photo {
-      margin: 0;
-    }
-
-    /* Printed address on the left; miniature map on the right. */
-    .wedding-day .day-location {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 180px;
-      gap: 20px;
-      align-items: center;
-      margin: 26px 0 30px;
-    }
-
-    .wedding-day .day-location .day-address {
-      margin: 0;
-      font-style: normal;
-      font-size: 14px;
-      line-height: 1.9;
-    }
-
-    /* Clean white frame with a fine gold outline. */
-    .wedding-day .day-location .day-map {
-      display: block;
-      width: 100%;
-      min-width: 0;
-      max-width: none;
-      box-sizing: border-box;
-      margin: 0;
-      padding: 4px;
-      border: 1px solid #c7ad68;
-      border-image: none;
-      border-radius: 13px;
-      background: #fffdf9;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(38, 62, 80, 0.06);
-    }
-
-    .wedding-day .day-location .day-map::before,
-    .wedding-day .day-location .day-map::after {
-      content: none;
-    }
-
-    .wedding-day .day-location .day-map iframe {
-      display: block;
-      width: 100%;
-      height: 125px;
-      border: 0;
-      border-radius: 8px;
-    }
-
-    /* Mobile: venue information, including its map, then the photo. */
-    @media (max-width: 760px) {
-      .wedding-day .day-venue,
-      .wedding-day .day-venue.day-venue-reverse {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-areas:
-          "details"
-          "visual";
-        gap: 28px;
-      }
-
-      .wedding-day .day-location {
-        grid-template-columns: minmax(0, 1fr) 150px;
-        gap: 14px;
-      }
-
-      .wedding-day .day-location .day-map iframe {
-        height: 115px;
-      }
-    }
-
-    @media (max-width: 380px) {
-      .wedding-day .day-location {
-        grid-template-columns: minmax(0, 1fr) 120px;
-        gap: 10px;
-      }
-
-      .wedding-day .day-location .day-address {
-        font-size: 12px;
-      }
-    }
-  </style>
-  <style>
-  /* Tighten The Willow title and address */
-  .wedding-day .day-venue-reverse .day-venue-name {
-    margin-bottom: 8px !important;
-    padding-bottom: 0 !important;
-  }
-
-  .wedding-day .day-venue-reverse .day-location {
-    display: block;
-    margin: 0 0 24px !important;
-    padding: 0;
-    min-height: 0;
-  }
-
-  .wedding-day .day-venue-reverse .day-address {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-  }
-</style>
+  <link rel="stylesheet" href="./styles.css?v=48">
+  <script src="./script.js?v=48" defer></script>
 </head>
 
 <body class="wedding-day">
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- SHARED NAVIGATION: Keep these links consistent across all pages. -->
+  <!-- Keep this navigation consistent across your other pages. -->
   <header class="site-header">
     <a
       class="header-mark"
@@ -181,32 +52,45 @@
   </header>
 
   <main id="main">
-    <div class="page-heading day-invitation">
-      <div class="page-title-frame">
-        <h1>The Day</h1>
+
+    <!-- PAGE TITLE -->
+    <section class="day-scene day-title-section" aria-labelledby="day-title">
+      <img
+        class="day-corner-floral day-corner-top-left"
+        src="./assets/floral-bouquet.png"
+        alt=""
+        aria-hidden="true"
+      >
+      <img
+        class="day-corner-floral day-corner-top-right"
+        src="./assets/floral-spray.png"
+        alt=""
+        aria-hidden="true"
+      >
+
+      <div class="day-title-content" data-day-reveal>
+        <h1 id="day-title">The Day</h1>
         <p>
           <time datetime="2027-07-24">Saturday, July 24, 2027</time>
         </p>
       </div>
-    </div>
+    </section>
 
-    <!-- EDIT TIMES: Update the timeline and venue information together. -->
-    <div class="floral-scene floral-scene-forward day-timeline-frame">
-      <section
-        class="day-schedule day-wrap"
-        aria-labelledby="schedule-title"
-      >
-        <div class="day-section-title section-heading">
-          <h2 id="schedule-title">TIMELINE</h2>
-        </div>
+    <!-- TIMELINE: Update these times if your plans change. -->
+    <section class="day-scene day-timeline-section" aria-labelledby="schedule-title">
+      <div class="day-layout-width">
+        <h2 class="day-timeline-title" id="schedule-title">TIMELINE</h2>
 
         <ol class="day-agenda" aria-label="Wedding day schedule">
           <li>
             <svg
               class="day-icon"
-              width="32" height="32" viewBox="0 0 32 32"
-              fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round"
+              viewBox="0 0 32 32"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
               aria-hidden="true"
             >
               <path d="M16 2v7M13 5h6"/>
@@ -225,9 +109,12 @@
           <li>
             <svg
               class="day-icon"
-              width="32" height="32" viewBox="0 0 32 32"
-              fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round"
+              viewBox="0 0 32 32"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
               aria-hidden="true"
             >
               <path d="M5 7h22L16 19z"/>
@@ -245,9 +132,12 @@
           <li>
             <svg
               class="day-icon"
-              width="32" height="32" viewBox="0 0 32 32"
-              fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round"
+              viewBox="0 0 32 32"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
               aria-hidden="true"
             >
               <path d="M12 24V8l14-3v16M12 13l14-3"/>
@@ -265,9 +155,12 @@
           <li>
             <svg
               class="day-icon"
-              width="32" height="32" viewBox="0 0 32 32"
-              fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round"
+              viewBox="0 0 32 32"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
               aria-hidden="true"
             >
               <path d="M22 23A11 11 0 0 1 10 5a11 11 0 1 0 12 18Z"/>
@@ -280,34 +173,38 @@
             <p>Our reception comes to a close</p>
           </li>
         </ol>
-      </section>
-    </div>
+      </div>
+    </section>
 
     <!-- CEREMONY -->
-    <div class="floral-scene floral-scene-reverse">
-      <section
-        class="day-venue day-wrap"
-        aria-labelledby="ceremony-title"
+    <section class="day-scene day-ceremony-section" aria-labelledby="ceremony-title">
+      <img
+        class="day-corner-floral day-corner-bottom-left"
+        src="./assets/floral-spray.png"
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
       >
-        <div class="day-venue-details event-content">
-          <h2 class="day-script" id="ceremony-title">The Ceremony</h2>
+      <img
+        class="day-corner-floral day-corner-bottom-right"
+        src="./assets/floral-bouquet.png"
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+      >
 
-          <h3 class="day-venue-name">
-            Holy Name<br>
-            Catholic Church
-          </h3>
+      <div class="day-layout-width day-venue-layout">
+        <div class="day-venue-copy day-ivory-card" data-day-reveal>
+          <h2 class="day-script-heading" id="ceremony-title">The Ceremony</h2>
+          <h3 class="day-location-name">Holy Name<br>Catholic Church</h3>
 
-          <div class="day-location">
-            <!-- EDIT ADDRESS: Update the map URL too if this changes. -->
-            <address class="day-address">
-              500 N Julian St<br>
-              Ebensburg, PA 15931
-            </address>
+          <!-- EDIT: Ceremony address. -->
+          <address class="day-printed-address">
+            500 N Julian St<br>
+            Ebensburg, PA 15931
+          </address>
 
-            
-          </div>
-
-          <dl class="day-times">
+          <dl class="day-time-details">
             <div>
               <dt>The ceremony begins</dt>
               <dd>
@@ -319,40 +216,47 @@
           </dl>
         </div>
 
-        <div class="day-venue-visual">
-          <figure class="day-photo">
-            <!-- EDIT PHOTO: Upload assets/holy-name.jpg with this exact filename. -->
-            <img
-              src="./assets/holy-name.jpg"
-              alt="Exterior of Holy Name Catholic Church in Ebensburg"
-              loading="lazy"
-              decoding="async"
-            >
-          </figure>
-        </div>
-      </section>
-    </div>
+        <figure class="day-lace-photo" data-day-reveal>
+          <!-- EDIT: Upload the church photo as assets/holy-name.jpg. -->
+          <img
+            src="./assets/holy-name.jpg"
+            alt="Exterior of Holy Name Catholic Church in Ebensburg"
+            loading="lazy"
+            decoding="async"
+          >
+        </figure>
+      </div>
+    </section>
 
     <!-- RECEPTION -->
-    <div class="floral-scene floral-scene-forward day-reception-band">
-      <section
-        class="day-venue day-venue-reverse day-wrap"
-        aria-labelledby="reception-title"
+    <section class="day-scene day-reception-section" aria-labelledby="reception-title">
+      <img
+        class="day-corner-floral day-corner-top-left"
+        src="./assets/floral-bouquet.png"
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
       >
-        <div class="day-venue-details event-content">
-          <h2 class="day-script" id="reception-title">The Reception</h2>
-          <h3 class="day-venue-name">The Willow</h3>
+      <img
+        class="day-corner-floral day-corner-bottom-right"
+        src="./assets/floral-spray.png"
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+      >
 
-          <div class="day-location">
-            <!-- EDIT ADDRESS: Update the map URL too if this changes. -->
-            <address class="day-address">
-              650 Airport Rd<br>
-              Johnstown, PA 15904
-            </address>
+      <div class="day-layout-width day-venue-layout day-venue-layout-reversed">
+        <div class="day-venue-copy" data-day-reveal>
+          <h2 class="day-script-heading" id="reception-title">The Reception</h2>
+          <h3 class="day-location-name">The Willow</h3>
 
-          </div>
+          <!-- EDIT: Reception address. -->
+          <address class="day-printed-address">
+            650 Airport Rd<br>
+            Johnstown, PA 15904
+          </address>
 
-          <dl class="day-times">
+          <dl class="day-time-details">
             <div>
               <dt>Cocktail hour</dt>
               <dd>
@@ -372,42 +276,34 @@
             </div>
           </dl>
 
-          <p class="day-end-note">
+          <p class="day-evening-note">
             Our evening concludes at
             <time datetime="2027-07-24T22:00:00-04:00">10:00 PM</time>.
           </p>
         </div>
 
-        <div class="day-venue-visual">
-          <figure class="day-photo">
-            <!-- EDIT PHOTO: Upload assets/the-willow.jpg with this exact filename. -->
-            <img
-              src="./assets/the-willow.jpg"
-              alt="Exterior of The Willow reception venue in Johnstown"
-              loading="lazy"
-              decoding="async"
-            >
-          </figure>
-        </div>
-      </section>
-    </div>
+        <figure class="day-lace-photo" data-day-reveal>
+          <!-- EDIT: Upload the reception photo as assets/the-willow.jpg. -->
+          <img
+            src="./assets/the-willow.jpg"
+            alt="Exterior of The Willow reception venue in Johnstown"
+            loading="lazy"
+            decoding="async"
+          >
+        </figure>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <a
-      class="monogram"
-      href="./index.html"
-      aria-label="Taylor and Tristan, home"
-    >
+    <a class="monogram" href="./index.html" aria-label="Taylor and Tristan, home">
       T<span>&amp;</span>T
     </a>
-
     <p>
       Taylor &amp; Tristan
       <span aria-hidden="true">·</span>
       July 24, 2027
     </p>
-
     <p class="footer-note">Here's to forever.</p>
   </footer>
 </body>

@@ -199,3 +199,45 @@ const caption =
     observer.observe(element);
   });
 })();
+/* Fade in The Day heading, venue details, and photos when visible. */
+(function initializeDayPageAnimations() {
+  if (!document.body.classList.contains("wedding-day")) return;
+
+  const elements = document.querySelectorAll("[data-day-reveal]");
+  const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  );
+
+  if (reducedMotion.matches || !("IntersectionObserver" in window)) {
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        entry.target.classList.add("day-revealed");
+        observer.unobserve(entry.target);
+      });
+    },
+    {
+      threshold: 0,
+      rootMargin: "0px 0px -20px 0px"
+    }
+  );
+
+  elements.forEach((element) => {
+    element.classList.add("day-reveal-ready");
+    observer.observe(element);
+  });
+
+  reducedMotion.addEventListener("change", (event) => {
+    if (!event.matches) return;
+
+    observer.disconnect();
+    elements.forEach((element) => {
+      element.classList.add("day-revealed");
+    });
+  });
+})();
