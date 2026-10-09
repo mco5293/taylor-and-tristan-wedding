@@ -2141,3 +2141,16 @@ body.wedding-party-page .party-group::after {
   -webkit-mask-image: none !important;
   mask-image: none !important;
 }
+@media (max-width: 760px) {
+  body.wedding-day .day-reception-section .day-corner-top-left {
+    top: auto;
+    bottom: -30px;
+    left: -45px;
+    right: auto;
+    transform: none;
+  }
+
+  body.wedding-day .day-reception-section .day-venue-layout {
+    padding-bottom: 170px;
+  }
+}
