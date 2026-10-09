@@ -2239,3 +2239,10 @@ body.wedding-party-page .party-group::after {
     text-shadow: 0 0 6px #edf3f6;
   }
 }
+/* TEMPORARY CHECK: remove after testing */
+@media (max-width: 900px) {
+  body {
+    outline: 6px solid magenta !important;
+    outline-offset: -6px;
+  }
+}
