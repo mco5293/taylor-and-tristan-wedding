@@ -62,9 +62,6 @@
     grid.append(message);
   }
 
-  // Initialize photo animations and the full-size viewer AFTER
-  // the automatic gallery has created its photo elements.
-  const viewerScript = document.createElement("script");
-  viewerScript.src = "./script.js?v=31";
-  document.body.append(viewerScript);
+  // Notify the shared script after the gallery is ready. No duplicate script load.
+  document.dispatchEvent(new Event("gallery-ready"));
 })();

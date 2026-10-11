@@ -1,3 +1,4 @@
+/* Shared wedding interactions. EDIT: Content belongs in the HTML files. */
 /* Calendar-day countdown in the wedding's Pennsylvania time zone.
    Date-only arithmetic avoids daylight-saving and visitor-time-zone errors. */
 function weddingDaysRemaining(now = new Date()) {
@@ -19,15 +20,6 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 60000);
 document.addEventListener('visibilitychange', updateCountdown);
-document.querySelectorAll('details').forEach((current) => {
-  current.addEventListener('toggle', () => {
-    if (!current.open) return;
-    document.querySelectorAll('details').forEach((other) => {
-      if (other !== current) other.open = false;
-    });
-  });
-});
-
 /* EDIT: Map locations are configured in index.html, not here.
    Empty locations deliberately remain inactive until you supply real details. */
 document.querySelectorAll('[data-map-query]').forEach((link) => {
@@ -40,25 +32,16 @@ document.querySelectorAll('[data-map-query]').forEach((link) => {
   link.textContent = 'Explore this place ↗';
 });
 
-/* Progressive photo animation. Respect the visitor's motion preference. */
-const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
-if ('IntersectionObserver' in window && !motionPreference.matches) {
-  const photoObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('photo-arrived');
-      observer.unobserve(entry.target);
-    });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('main img:not(.hero-photo)').forEach((photo) => photoObserver.observe(photo));
-}
 
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
 /* Full-size album: native touch scrolling, buttons, keyboard, Escape, focus return.
    EDIT: Photos/captions live in gallery.html. No duplicate photo list to maintain. */
-(() => {
+function initializeGalleryViewer() {
   const dialog = document.querySelector('.photo-dialog');
   const links = [...document.querySelectorAll('[data-gallery]')];
   if (!dialog || !links.length || typeof dialog.showModal !== 'function') return;
+  if (dialog.dataset.initialized) return;
+  dialog.dataset.initialized = 'true';
   const track = dialog.querySelector('.viewer-track');
   const previous = dialog.querySelector('.viewer-prev');
   const next = dialog.querySelector('.viewer-next');
@@ -103,7 +86,7 @@ const caption =
   function goTo(position, animate = true) {
     index = Math.max(0, Math.min(links.length - 1, position));
     track.scrollTo({ left: index * track.clientWidth,
-      behavior: animate && !motionPreference.matches ? 'smooth' : 'instant' });
+      behavior: animate && !motionPreference.matches ? 'smooth' : 'auto' });
     updateControls();
   }
   previous.addEventListener('click', () => goTo(index - 1));
@@ -128,116 +111,80 @@ const caption =
     document.body.classList.remove('gallery-open');
     opener?.focus({ preventScroll: true });
   });
-})();
+}
+initializeGalleryViewer();
+document.addEventListener("gallery-ready", initializeGalleryViewer);
 
-/* Subtle scroll animations across all wedding pages.
-   Each element fades in once. No HTML classes need to be added manually. */
-(function initializeWeddingFades() {
-  const reduceMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  );
 
-  if (reduceMotion.matches || !("IntersectionObserver" in window)) {
-    return;
-  }
-
-  const selectors = [
-    ".section-heading",
-    ".story-side",
-    ".our-story-signature",
-    ".countdown-display",
-    ".calendar-button",
-    ".event-content",
-    ".venue-map-panel",
-    ".day-timeline li",
-    ".party-heading",
-    ".party-card",
-    ".travel-intro",
-    ".hotel-copy",
-    ".travel-info-card",
-    ".place-card",
-    ".memory-grid .photo-frame",
-    ".faq details",
-    ".look-card",
-    ".registry > h2",
-    ".registry > p",
-    ".registry > a",
-    ".rsvp-inner > h2",
-    ".rsvp-inner > p",
-    ".rsvp-inner > a"
-  ].join(", ");
-
-  const elements = document.querySelectorAll(selectors);
-
+/* One gentle reveal per element. Flowers keep their shared CSS opacity.
+   Content stays visible if JavaScript is disabled or reduced motion is enabled. */
+(() => {
+  const selectors = '.page-title-frame, [data-day-reveal], .section-heading, .story-side, .story-center-photo, .our-story-signature, .countdown-display, .calendar-button, .party-heading, .party-card, .travel-intro, .hotel-card, .travel-info-card, .place-card, .memory-grid .photo-frame, .look-card, .registry > h2, .registry > p, .registry-card, .rsvp-inner, .gallery-tile';
+  if (!('IntersectionObserver' in window)) return;
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
-
-      entry.target.classList.add("is-visible");
+      entry.target.classList.add('is-visible');
       observer.unobserve(entry.target);
     });
-  }, {
-    threshold: 0,
-    rootMargin: "0px 0px -15px 0px"
-  });
-
-  elements.forEach((element) => {
-    // Small stagger for groups of cards; never a long delay.
-    if (element.matches(
-      ".party-card, .look-card, .travel-info-card, .place-card"
-    )) {
-      const siblings = [...element.parentElement.children];
-      const position = siblings.indexOf(element);
-
-      element.style.setProperty(
-        "--fade-delay",
-        `${Math.min(position % 5, 3) * 70}ms`
-      );
-    }
-
-    element.classList.add("fade-in-ready");
-    observer.observe(element);
+  }, { threshold: 0, rootMargin: '0px 0px -15px 0px' });
+  function observeNewElements() {
+    if (motionPreference.matches) return;
+    document.querySelectorAll(selectors).forEach((element) => {
+      if (element.classList.contains('fade-in-ready')) return;
+      element.classList.add('fade-in-ready');
+      observer.observe(element);
+    });
+  }
+  observeNewElements();
+  document.addEventListener('gallery-ready', observeNewElements);
+  motionPreference.addEventListener('change', () => {
+    if (!motionPreference.matches) return;
+    observer.disconnect();
+    document.querySelectorAll('.fade-in-ready').forEach((el) => el.classList.add('is-visible'));
   });
 })();
-/* Fade in The Day heading, venue details, and photos when visible. */
-(function initializeDayPageAnimations() {
-  if (!document.body.classList.contains("wedding-day")) return;
 
-  const elements = document.querySelectorAll("[data-day-reveal]");
-  const reducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  );
-
-  if (reducedMotion.matches || !("IntersectionObserver" in window)) {
-    return;
-  }
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-
-        entry.target.classList.add("day-revealed");
-        observer.unobserve(entry.target);
-      });
-    },
-    {
-      threshold: 0,
-      rootMargin: "0px 0px -20px 0px"
+/* Smooth FAQ opening AND closing, with native keyboard support.
+   EDIT: Questions and answers are in faq.html; no JS changes needed. */
+(() => {
+  const items = [...document.querySelectorAll('.faq details')];
+  if (!Element.prototype.animate) return; // Native details is the fallback.
+  const states = new Map(items.map((item) => [item, { desired: item.open, animation: null }]));
+  function setOpen(item, open) {
+    const state = states.get(item);
+    const from = item.getBoundingClientRect().height;
+    if (state.animation) { state.animation.onfinish = null; state.animation.cancel(); }
+    state.desired = open;
+    if (motionPreference.matches) {
+      item.style.height = '';
+      item.open = open;
+      state.animation = null;
+      return;
     }
-  );
-
-  elements.forEach((element) => {
-    element.classList.add("day-reveal-ready");
-    observer.observe(element);
-  });
-
-  reducedMotion.addEventListener("change", (event) => {
-    if (!event.matches) return;
-
-    observer.disconnect();
-    elements.forEach((element) => {
-      element.classList.add("day-revealed");
+    item.style.height = '';
+    item.open = true; // Keep the answer rendered until a closing animation ends.
+    const summary = item.querySelector('summary');
+    const to = open ? item.getBoundingClientRect().height : summary.getBoundingClientRect().height + 2;
+    item.style.height = from + 'px';
+    state.animation = item.animate({ height: [from + 'px', to + 'px'] }, {
+      duration: 300, easing: 'cubic-bezier(.2,.7,.2,1)'
     });
+    state.animation.onfinish = () => {
+      item.open = state.desired;
+      item.style.height = '';
+      state.animation = null;
+    };
+  }
+  items.forEach((item) => {
+    item.querySelector('summary').addEventListener('click', (event) => {
+      event.preventDefault();
+      const open = !states.get(item).desired;
+      if (open) items.forEach((other) => { if (other !== item && states.get(other).desired) setOpen(other, false); });
+      setOpen(item, open);
+    });
+  });
+  motionPreference.addEventListener('change', () => {
+    if (motionPreference.matches) items.forEach((item) => setOpen(item, states.get(item).desired));
   });
 })();

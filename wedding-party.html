@@ -2,19 +2,19 @@
 <html lang="en">
  <head>
   <!-- EDITING GUIDE: Search for EDIT: in this file. Upload photos into assets/ using exact, case-sensitive filenames. Keep ./ prefixes for GitHub Pages. See README.md for the complete checklist. -->
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
   <title>
    Wedding Party • Taylor &amp; Tristan • July 24, 2027
   </title>
-  <meta content="Wedding Party for Taylor and Tristan's wedding on July 24, 2027." name="description"/>
-  <meta content="#b2cada" name="theme-color"/>
-  <link href="./favicon.svg" rel="icon" type="image/svg+xml"/>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Manrope:wght@400;500;600;700&amp;family=Pinyon+Script&amp;display=swap" rel="stylesheet"/>
-  <link href="./styles.css?v=57" rel="stylesheet"/>
-  <script defer="" src="./script.js?v=30">
+  <meta content="Wedding Party for Taylor and Tristan's wedding on July 24, 2027." name="description">
+  <meta content="#b2cada" name="theme-color">
+  <link href="./favicon.svg" rel="icon" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Lora:wght@400;500&amp;family=Manrope:wght@400;500;600;700&amp;family=Pinyon+Script&amp;display=swap" rel="stylesheet">
+  <link href="./styles.css?v=20261010-1" rel="stylesheet">
+  <script defer src="./script.js?v=20261010-1">
   </script>
  </head>
  <body class="wedding-party-page">
@@ -72,14 +72,30 @@
     </div>
    </div>
    <div class="floral-scene floral-scene-forward">
-    <section aria-labelledby="party-title" class="party-section" id="wedding-party">
-     <!-- PARTY PHOTOS: Save each portrait in assets, for example madison.jpg.
-  Replace ONLY that person's <div class="party-portrait">...</div> with:
-  <img class="party-portrait" src="./assets/madison.jpg" alt="Madison Ostinowsky" loading="lazy">
-  Keep their name, role, and description. The CSS crops the photo into an arch.
-  Adjust object-position in styles.css if you need to move faces up or down.
-  Keep party-card-honor on the Maid of Honor and Best Man cards. -->
-     <section aria-labelledby="party-title" class="party-group bridesmaids-group">
+    <section class="party-section" id="wedding-party" aria-label="Our wedding party">
+     <!-- EDIT: PARTY PHOTOS. Save portraits in assets/ with simple filenames.
+      Replace the WHOLE numbered div.party-portrait for a person with:
+      <img class="party-portrait" src="./assets/bridesmaid-01.jpg" alt="Name of person" loading="lazy">
+      Replace Coming Soon with their name and Details coming soon with their role/relationship.
+      Keep party-card-honor on the FIRST bridesmaid (Maid of Honor) and FIRST groomsman (Best Man).
+      In styles.css, img.party-portrait uses object-position: center 30%; adjust it to reposition a face. -->
+     <section class="party-group attendants-group" aria-labelledby="attendants-title">
+    <div class="section-wrap">
+      <div class="party-heading"><h2 id="attendants-title">Our Little Loves</h2></div>
+      <div class="party-grid attendants-grid">
+        <!-- EDIT: FLOWER GIRL. Replace the portrait div with an img as explained above; then add her name and details. -->
+        <article class="party-card"><p class="attendant-role">Flower Girl</p>
+<div class="party-portrait" aria-hidden="true"><span>♡</span></div>
+<h3>Coming Soon</h3>
+<p>Details coming soon</p></article>
+        <!-- EDIT: RING BEARER. Replace the portrait div with an img as explained above; then add his name and details. -->
+        <article class="party-card"><p class="attendant-role">Ring Bearer</p>
+<div class="party-portrait" aria-hidden="true"><span>♡</span></div>
+<h3>Coming Soon</h3>
+<p>Details coming soon</p></article>
+      </div>
+    </div>
+   </section><section aria-labelledby="party-title" class="party-group bridesmaids-group">
       <div class="section-wrap">
        <div class="party-heading">
         <h2 id="party-title">
@@ -95,16 +111,9 @@
            01
           </span>
          </div>
-         <h3>
-          Madison Ostinowsky
-         </h3>
-         <p class="party-role">
-          Maid of Honor
-         </p>
-         <p>
-          Sister of the bride.
-         </p>
-        </article>
+         <h3>Coming Soon</h3>
+         <p>Details coming soon</p>
+         </article>
         <article class="party-card">
          <!-- EDIT: PARTY MEMBER 2. Confirm name, role, relationship, and replace the numbered portrait with an img (see PARTY PHOTOS above). Repeated names are placeholders. -->
          <div aria-hidden="true" class="party-portrait">
@@ -112,16 +121,9 @@
            02
           </span>
          </div>
-         <h3>
-          Caroline Semelsberger
-         </h3>
-         <p class="party-role">
-          Bridesmaid
-         </p>
-         <p>
-          Cousin of the bride.
-         </p>
-        </article>
+         <h3>Coming Soon</h3>
+         <p>Details coming soon</p>
+         </article>
         <article class="party-card">
          <!-- EDIT: PARTY MEMBER 3. Confirm name, role, relationship, and replace the numbered portrait with an img (see PARTY PHOTOS above). Repeated names are placeholders. -->
          <div aria-hidden="true" class="party-portrait">
@@ -129,16 +131,9 @@
            03
           </span>
          </div>
-         <h3>
-          Faith McMullen
-         </h3>
-         <p class="party-role">
-          Bridesmaid
-         </p>
-         <p>
-          Friend of the bride.
-         </p>
-        </article>
+         <h3>Coming Soon</h3>
+         <p>Details coming soon</p>
+         </article>
         <article class="party-card">
          <!-- EDIT: PARTY MEMBER 4. Confirm name, role, relationship, and replace the numbered portrait with an img (see PARTY PHOTOS above). Repeated names are placeholders. -->
          <div aria-hidden="true" class="party-portrait">
@@ -146,16 +141,9 @@
            04
           </span>
          </div>
-         <h3>
-          Brooke Semelsberger
-         </h3>
-         <p class="party-role">
-          Bridesmaid
-         </p>
-         <p>
-          Cousin of the bride.
-         </p>
-        </article>
+         <h3>Coming Soon</h3>
+         <p>Details coming soon</p>
+         </article>
         <article class="party-card">
          <!-- EDIT: PARTY MEMBER 5. Confirm name, role, relationship, and replace the numbered portrait with an img (see PARTY PHOTOS above). Repeated names are placeholders. -->
          <div aria-hidden="true" class="party-portrait">
@@ -163,16 +151,9 @@
            05
           </span>
          </div>
-         <h3>
-          Alexa Semelsberger
-         </h3>
-         <p class="party-role">
-          Bridesmaid
-         </p>
-         <p>
-          Cousin of the bride.
-         </p>
-        </article>
+         <h3>Coming Soon</h3>
+         <p>Details coming soon</p>
+         </article>
         <article class="party-card">
          <!-- EDIT: PARTY MEMBER 6. Confirm name, role, relationship, and replace the numbered portrait with an img (see PARTY PHOTOS above). Repeated names are placeholders. -->
          <div aria-hidden="true" class="party-portrait">
@@ -180,16 +161,9 @@
            06
           </span>
          </div>
-         <h3>
-          Olivia Czap
-         </h3>
-         <p class="party-role">
-          Bridesmaid
-         </p>
-         <p>
-          Friend of the bride.
-         </p>
-        </article>
+         <h3>Coming Soon</h3>
+         <p>Details coming soon</p>
+         </article>
         <article class="party-card">
          <!-- EDIT: PARTY MEMBER 7. Confirm name, role, relationship, and replace the numbered portrait with an img (see PARTY PHOTOS above). Repeated names are placeholders. -->
          <div aria-hidden="true" class="party-portrait">
@@ -197,16 +171,9 @@
            07
           </span>
          </div>
-         <h3>
-          Alivia Yahner
-         </h3>
-         <p class="party-role">
-          Bridesmaid
-         </p>
-         <p>
-          Cousin of the bride.
-         </p>
-        </article>
+         <h3>Coming Soon</h3>
+         <p>Details coming soon</p>
+         </article>
         <article class="party-card">
          <!-- EDIT: PARTY MEMBER 8. Confirm name, role, relationship, and replace the numbered portrait with an img (see PARTY PHOTOS above). Repeated names are placeholders. -->
          <div aria-hidden="true" class="party-portrait">
@@ -214,16 +181,9 @@
            08
           </span>
          </div>
-         <h3>
-          Alyssa Yahner
-         </h3>
-         <p class="party-role">
-          Bridesmaid
-         </p>
-         <p>
-          Friend of the bride.
-         </p>
-        </article>
+         <h3>Coming Soon</h3>
+         <p>Details coming soon</p>
+         </article>
         <article class="party-card">
          <!-- EDIT: PARTY MEMBER 9. Confirm name, role, relationship, and replace the numbered portrait with an img (see PARTY PHOTOS above). Repeated names are placeholders. -->
          <div aria-hidden="true" class="party-portrait">
@@ -231,16 +191,9 @@
            09
           </span>
          </div>
-         <h3>
-          Lauren Bender
-         </h3>
-         <p class="party-role">
-          Bridesmaid
-         </p>
-         <p>
-          Friend of the bride.
-         </p>
-        </article>
+         <h3>Coming Soon</h3>
+         <p>Details coming soon</p>
+         </article>
         <article class="party-card">
          <!-- EDIT: PARTY MEMBER 10. Confirm name, role, relationship, and replace the numbered portrait with an img (see PARTY PHOTOS above). Repeated names are placeholders. -->
          <div aria-hidden="true" class="party-portrait">
@@ -248,16 +201,9 @@
            10
           </span>
          </div>
-         <h3>
-          Julianna Crisfulla
-         </h3>
-         <p class="party-role">
-          Bridesmaid
-         </p>
-         <p>
-          Friend of the bride.
-         </p>
-        </article>
+         <h3>Coming Soon</h3>
+         <p>Details coming soon</p>
+         </article>
        </div>
       </div>
      </section>
@@ -276,16 +222,9 @@
            01
           </span>
          </div>
-         <h3>
-          Nolan Burk
-         </h3>
-         <p class="party-role">
-          Best Man
-         </p>
-         <p>
-          Friend of the groom.
-         </p>
-        </article>
+         <h3>Coming Soon</h3>
+         <p>Details coming soon</p>
+         </article>
         <article class="party-card">
          <!-- EDIT: PARTY MEMBER 12. Confirm name, role, relationship, and replace the numbered portrait with an img (see PARTY PHOTOS above). Repeated names are placeholders. -->
          <div aria-hidden="true" class="party-portrait">
@@ -293,16 +232,9 @@
            02
           </span>
          </div>
-         <h3>
-          Andrew Ostinowsky
-         </h3>
-         <p class="party-role">
-          Groomsman
-         </p>
-         <p>
-          Brother of the bride.
-         </p>
-        </article>
+         <h3>Coming Soon</h3>
+         <p>Details coming soon</p>
+         </article>
         <article class="party-card">
          <!-- EDIT: PARTY MEMBER 13. Confirm name, role, relationship, and replace the numbered portrait with an img (see PARTY PHOTOS above). Repeated names are placeholders. -->
          <div aria-hidden="true" class="party-portrait">
@@ -310,16 +242,9 @@
            03
           </span>
          </div>
-         <h3>
-          Logan McDannell
-         </h3>
-         <p class="party-role">
-          Groomsman
-         </p>
-         <p>
-          Brother of the groom.
-         </p>
-        </article>
+         <h3>Coming Soon</h3>
+         <p>Details coming soon</p>
+         </article>
         <article class="party-card">
          <!-- EDIT: PARTY MEMBER 14. Confirm name, role, relationship, and replace the numbered portrait with an img (see PARTY PHOTOS above). Repeated names are placeholders. -->
          <div aria-hidden="true" class="party-portrait">
@@ -327,16 +252,9 @@
            04
           </span>
          </div>
-         <h3>
-          Logan McDannell
-         </h3>
-         <p class="party-role">
-          Groomsman
-         </p>
-         <p>
-          Brother of the groom.
-         </p>
-        </article>
+         <h3>Coming Soon</h3>
+         <p>Details coming soon</p>
+         </article>
         <article class="party-card">
          <!-- EDIT: PARTY MEMBER 15. Confirm name, role, relationship, and replace the numbered portrait with an img (see PARTY PHOTOS above). Repeated names are placeholders. -->
          <div aria-hidden="true" class="party-portrait">
@@ -344,16 +262,9 @@
            05
           </span>
          </div>
-         <h3>
-          Logan McDannell
-         </h3>
-         <p class="party-role">
-          Groomsman
-         </p>
-         <p>
-          Brother of the groom.
-         </p>
-        </article>
+         <h3>Coming Soon</h3>
+         <p>Details coming soon</p>
+         </article>
         <article class="party-card">
          <!-- EDIT: PARTY MEMBER 16. Confirm name, role, relationship, and replace the numbered portrait with an img (see PARTY PHOTOS above). Repeated names are placeholders. -->
          <div aria-hidden="true" class="party-portrait">
@@ -361,16 +272,9 @@
            06
           </span>
          </div>
-         <h3>
-          Logan McDannell
-         </h3>
-         <p class="party-role">
-          Groomsman
-         </p>
-         <p>
-          Brother of the groom.
-         </p>
-        </article>
+         <h3>Coming Soon</h3>
+         <p>Details coming soon</p>
+         </article>
         <article class="party-card">
          <!-- EDIT: PARTY MEMBER 17. Confirm name, role, relationship, and replace the numbered portrait with an img (see PARTY PHOTOS above). Repeated names are placeholders. -->
          <div aria-hidden="true" class="party-portrait">
@@ -378,16 +282,9 @@
            07
           </span>
          </div>
-         <h3>
-          Logan McDannell
-         </h3>
-         <p class="party-role">
-          Groomsman
-         </p>
-         <p>
-          Brother of the groom.
-         </p>
-        </article>
+         <h3>Coming Soon</h3>
+         <p>Details coming soon</p>
+         </article>
         <article class="party-card">
          <!-- EDIT: PARTY MEMBER 18. Confirm name, role, relationship, and replace the numbered portrait with an img (see PARTY PHOTOS above). Repeated names are placeholders. -->
          <div aria-hidden="true" class="party-portrait">
@@ -395,16 +292,9 @@
            08
           </span>
          </div>
-         <h3>
-          Logan McDannell
-         </h3>
-         <p class="party-role">
-          Groomsman
-         </p>
-         <p>
-          Brother of the groom.
-         </p>
-        </article>
+         <h3>Coming Soon</h3>
+         <p>Details coming soon</p>
+         </article>
         <article class="party-card">
          <!-- EDIT: PARTY MEMBER 19. Confirm name, role, relationship, and replace the numbered portrait with an img (see PARTY PHOTOS above). Repeated names are placeholders. -->
          <div aria-hidden="true" class="party-portrait">
@@ -412,16 +302,9 @@
            09
           </span>
          </div>
-         <h3>
-          Logan McDannell
-         </h3>
-         <p class="party-role">
-          Groomsman
-         </p>
-         <p>
-          Brother of the groom.
-         </p>
-        </article>
+         <h3>Coming Soon</h3>
+         <p>Details coming soon</p>
+         </article>
         <article class="party-card">
          <!-- EDIT: PARTY MEMBER 20. Confirm name, role, relationship, and replace the numbered portrait with an img (see PARTY PHOTOS above). Repeated names are placeholders. -->
          <div aria-hidden="true" class="party-portrait">
@@ -429,16 +312,9 @@
            10
           </span>
          </div>
-         <h3>
-          Logan McDannell
-         </h3>
-         <p class="party-role">
-          Groomsman
-         </p>
-         <p>
-          Brother of the groom.
-         </p>
-        </article>
+         <h3>Coming Soon</h3>
+         <p>Details coming soon</p>
+         </article>
        </div>
       </div>
      </section>
