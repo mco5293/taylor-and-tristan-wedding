@@ -1,17 +1,70 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Taylor and Tristan//Wedding//EN
+PRODID:-//Taylor and Tristan//Our Wedding//EN
 CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Taylor & Tristan's Wedding 💍
+X-WR-TIMEZONE:America/New_York
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+DTSTART:20070311T020000
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+DTSTART:20071104T020000
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
 BEGIN:VEVENT
-UID:taylor-tristan-wedding-20270724@wedding.invalid
-DTSTAMP:20261006T235700Z
-DTSTART;VALUE=DATE:20270724
-DTEND;VALUE=DATE:20270725
-SUMMARY:Taylor & Tristan's Wedding
-LOCATION:Ebensburg and Johnstown\, Pennsylvania
-DESCRIPTION:Ceremony: 1 PM at Holy Name Catholic Church\, 500 N Julian St\,
- Ebensburg\, PA 15931.\nReception: The Willow\, 650 Airport Rd\, Johnstown\
- ,PA 15904. Cocktail hour: 4 PM. Reception: 5 PM to 10 PM.
-TRANSP:TRANSPARENT
+UID:taylor-tristan-ceremony-20270724@taylorandtristan.com
+DTSTAMP:20261011T180123Z
+DTSTART;TZID=America/New_York:20270724T130000
+SUMMARY:💍 Taylor & Tristan Say “I Do”
+LOCATION:Holy Name Catholic Church\, 500 N Julian St\,
+ Ebensburg\, PA 15931
+DESCRIPTION:Together is a beautiful place to be. 🤍\n\n
+ Join us as Taylor & Tristan begin their forever!\n\n
+ ⛪ CEREMONY\n
+ Saturday\, July 24\, 2027\n
+ 1:00 PM — Ceremony begins\n\n
+ 📍 Holy Name Catholic Church\n
+ 500 N Julian St\n
+ Ebensburg\, PA 15931\n\n
+ 🥂 Celebrate with us afterward at The Willow!\n
+ Cocktail hour begins at 4:00 PM.\n\n
+ All times are Pennsylvania local time.\n
+ Wedding details: https://taylorandtristan.com
+URL:https://taylorandtristan.com/the-day.html
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:taylor-tristan-reception-20270724@taylorandtristan.com
+DTSTAMP:20261011T180123Z
+DTSTART;TZID=America/New_York:20270724T160000
+DTEND;TZID=America/New_York:20270724T220000
+SUMMARY:🥂 Taylor & Tristan's Wedding Celebration
+LOCATION:The Willow\, 650 Airport Rd\, Johnstown\, PA 15904
+DESCRIPTION:A little champagne\, a lot of love. 💙\n\n
+ Let's make memories together!\n\n
+ Saturday\, July 24\, 2027\n\n
+ 🥂 4:00 PM — Cocktail Hour\n
+ 🍽️ 5:00 PM — Dinner & Celebration\n
+ 🌙 10:00 PM — A Final Goodnight\n\n
+ 📍 The Willow\n
+ 650 Airport Rd\n
+ Johnstown\, PA 15904\n\n
+ We can't wait to celebrate with you!\n
+ With love\, Taylor & Tristan 🤍\n\n
+ All times are Pennsylvania local time.\n
+ Wedding details: https://taylorandtristan.com
+URL:https://taylorandtristan.com/the-day.html
+STATUS:CONFIRMED
 END:VEVENT
 END:VCALENDAR
